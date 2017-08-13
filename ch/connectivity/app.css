@@ -1,0 +1,54 @@
+svg {
+  cursor: crosshair;
+  display: block;
+  margin:auto;
+}
+
+.edge {
+  stroke: #aaa;
+  stroke-width:3px;
+  cursor: default;
+}
+
+.edge:hover, .dragLine {
+  stroke: #333;
+  stroke-width: 3px;
+}
+
+.vertex {
+  cursor: pointer;
+}
+
+.vertex:hover {
+  stroke: #333;
+  opacity: 1;
+}
+
+.dragLine.hidden {
+	stroke-width:0;
+}
+
+.vertex text {
+  text-anchor: middle;
+  pointer-events: none;
+  font-size: 12px;
+  font-weight: bold;
+  stroke: none;
+}
+
+.walk-edge {
+  stroke: #333;
+}
+
+.walk-vertex {
+  stroke: #333;
+  stroke-width:3px;
+}
+
+.walk-start {
+  stroke: #ff0;
+}
+
+.walk-end {
+  stroke: #8f3;
+}

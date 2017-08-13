@@ -1,0 +1,271 @@
+body {
+	min-width: 640px;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+a {
+	text-decoration: none;
+	color: #1f77b4;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #1f77b4;
+}
+
+#lightbox {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 2000;
+	background-color: rgba(0,0,0,0.8);
+}
+
+#map-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	height: 75%;
+	min-height: 300px;
+	width: 500px;
+	overflow-y: hidden;
+	padding-right: 4px;
+	background-color: #fff;
+	color: #1f77b4;
+	font-weight: bold;
+	border-radius: 4px;
+}
+
+#map-header {
+	padding: 10px;
+}
+
+#map-list li {
+	padding: 4px 0 4px 4px;
+}
+
+#map-list .current-chap, #map-list .current-chap a {
+	color: #2ca02c;
+}
+
+#map-list .current-chap {
+	list-style: none;
+	margin-left: -8px;
+}
+
+#map-list .current-chap:before {
+	content: "";  
+  border-color: transparent #2ca02c;  
+  border-style: solid;  
+  border-width: 0.35em 0 0.35em 0.45em;  
+  display: inline-block;  
+  height: 0;  
+  width: 0;  
+  left: -12px;  
+  top: 0px;  
+  position: relative;
+}
+
+/*
+hr.under-title {
+	border-top: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+*/
+
+/*fixing navbar to remove the effects to collapse*/
+.navbar-nav {
+	margin:0;
+}
+.navbar-nav > li {
+	float:none;
+    display:inline-block;
+}
+.navbar-nav > li > a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.navbar-nav > li.open > ul.dropdown-menu {
+  position: absolute;
+  border: 1px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+/*navbar fixed*/
+
+.navbar-default {
+	background-color: #fff;
+}
+
+.navbar-brand {
+	color: #1f77b4 !important;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.navbar-nav {
+	float: right;
+	font-size: 18px;
+}
+
+#status-container {
+	margin-top: 0px;
+}
+
+#theory-area, #app-area {
+	margin-bottom: 10px;
+}
+
+#theory-area p {
+	margin-bottom: 20px;
+	text-align: justify;
+}
+
+div.toggle-container {
+	background: #eee;
+	padding: 10px;
+	border-radius: 6px;
+	margin-bottom: 20px;
+}
+
+.toggle-link, .graph-event-link {
+	color: #2ca02c;
+	text-decoration: underline;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.toggle-link:hover, .graph-event-link {
+	font-style: italic;
+}
+
+div.hint, div.note, div.result {
+	background: #ffb;
+	padding: 10px;
+	border-radius: 6px;
+	margin-bottom: 20px;
+}
+
+div.result {
+	background-color: #dfd;
+}
+
+.hint-word, .note-word, .result-word {
+	color: #ff7f0e;
+	font-weight: 700;
+}
+
+.result-word {
+	color: #2ca02c;
+}
+
+/*To deal with resizing windows*/
+#theory-area, #app-area, #map-list {
+	overflow-y: auto;
+}
+
+/*scrollbar customization*/
+body::-webkit-scrollbar-track,
+#theory-area::-webkit-scrollbar-track,
+#app-area::-webkit-scrollbar-track,
+#map-list::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+	background-color: #ccc;
+}
+
+body::-webkit-scrollbar,
+#theory-area::-webkit-scrollbar,
+#app-area::-webkit-scrollbar,
+#map-list::-webkit-scrollbar
+{
+	width: 5px;
+	height: 5px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb,
+#theory-area::-webkit-scrollbar-thumb,
+#app-area::-webkit-scrollbar-thumb,
+#map-list::-webkit-scrollbar-thumb
+{
+	background-color: #1f77b4;
+	/*border: 2px solid #555;*/
+}
+
+#app-interface {
+	margin-top: 30px;
+}
+
+#svg-buttons {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#svg-wrap svg {
+	border: 1px solid #eee;
+}
+
+#svg-output {
+	margin-top: 15px;
+}
+
+#below-app {
+	padding: 60px 0px;
+}
+
+a.map-flow {
+	padding: 10px 20px;
+	background: #1f77b4;
+	border: solid 2px #1f77b4;
+	color: #fff;
+	font-weight: 700;
+}
+
+a.map-flow:hover {
+	background: #fff;
+	color: #1f77b4;
+	text-decoration: none;
+	border: solid 2px #333;
+}
+
+.next-wrap {
+	float:right;
+}
+
+footer {
+	background: #1f77b4;
+	color: #fff;
+}
+
+#upper-footer {
+	padding: 30px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+footer a {
+	color: #ff0;
+}
+
+footer a:hover {
+	text-decoration: underline;
+	color: #ff0;
+}
+
+#signature {
+	background: #1f77b4;
+	padding: 10px 0;
+}
+
+#signature div {
+	margin: auto;
+	min-width: 270px;
+}
