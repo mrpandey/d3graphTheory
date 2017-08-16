@@ -84,7 +84,7 @@ hr.under-title {
 }
 .navbar-nav > li {
 	float:none;
-    display:inline-block;
+  display:inline-block;
 }
 .navbar-nav > li > a {
   padding-top: 15px;
@@ -94,7 +94,8 @@ hr.under-title {
   position: absolute;
   border: 1px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 }
 /*navbar fixed*/
 
@@ -222,16 +223,17 @@ body::-webkit-scrollbar-thumb,
 a.map-flow {
 	padding: 10px 20px;
 	background: #1f77b4;
-	border: solid 2px #1f77b4;
+	border: solid 1px #1f77b4;
 	color: #fff;
 	font-weight: 700;
+	border-radius: 4px;
 }
 
 a.map-flow:hover {
 	background: #fff;
 	color: #1f77b4;
 	text-decoration: none;
-	border: solid 2px #333;
+	border: solid 1px #333;
 }
 
 .next-wrap {
