@@ -1,45 +1,5 @@
 var contentData = 
 {
-	"welcome": {
-
-		"content-title": "Welcome!!",
-
-		"theory-content":		"<p>This area will contain theory &mdash; the stuff you are supposed to read first. The text will be concise and clear.<\/p>",
-
-		"interface-title":		"App interface:",
-
-		"interface-content":		"<ul><li>If you don't know how to use the app<\/li><li>If a button isn't working the way you expected<\/li><li>Then check this area for instructions.<\/li><\/ul>",
-
-		"svg-buttons":		"<div id=\"slider\" style=\"opacity: 0;\"> <div class=\"slide showing\" style=\"background-color: #ff7f0e;\"> <div class=\"slide-content\"> <h2>Welcome to <b>D3 Graph Theory<\/b>.<br>This is an interactive fun app which you can use to teach yourself graph theory.<\/h2> <\/div><\/div ><div class=\"slide\" style=\"background-color: #2ca02c;\"> <div class=\"slide-content\"> <h2>The material consists of small chapters.<br>You can see the table of contents at <a href=\"#map-open\">map<\/a>.<\/h2> <\/div><\/div ><div class=\"slide\" style=\"background-color: #d62728;\"> <div class=\"slide-content\"> <h2>For each chapter, the <a href=\"#theory-content\">highlighted area<\/a> will contain some theory.<\/h2> <\/div><\/div ><div class=\"slide\" style=\"background-color: #9467bd;\"> <div class=\"slide-content\"> <h2>This violet area will contain the app. This is where you will be doing stuff.<\/h2> <\/div><\/div ><div class=\"slide\" style=\"background-color: #17becf;\"> <div class=\"slide-content\"> <h2>The app interface may slightly change between subsequent chapters.<br>The <a href=\"#app-interface\">highlighted area<\/a> is where you can find the instructions.<\/h2> <\/div><\/div ><div class=\"slide\" style=\"background-color: #bcbd22;\"> <div class=\"slide-content\"> <h2>Use the <a href=\"#below-app\">highlighted button<\/a> below to navigate through chapters.<br>Or you can also use map.<\/h2> <\/div><\/div ><div class=\"slide\" style=\"background-color: #8c564b;\"> <div class=\"slide-content\"> <h2>Click \"Next >\"<\/h2> <\/div><\/div><\/div><div id=\"slide-nav\" style=\"opacity: 0;\"> <div id=\"prev-slide\" class=\"col-sm-5 col-xs-5 grey\"><span class=\"glyphicon glyphicon-menu-left\"><\/span><\/div><div id=\"slide-counter\" class=\"col-sm-2 col-xs-2\"><\/div><div id=\"next-slide\" class=\"col-sm-5 col-xs-5\"><span class=\"glyphicon glyphicon-menu-right\"><\/span><\/div><\/div>",
-
-		"svg-output":		"",
-
-		"prev":		"",
-		"next":		"?before-you-begin",
-		"script":	"app.js",
-		"style":	"app.css"
-	},
-
-	"before-you-begin": {
-
-		"content-title": "Before you begin",
-
-		"theory-content":		"<p>There are few things you should know before jumping on to the actual material. This is mostly about what this app is and how you can utilize it properly. So go through the slides once.<\/p>",
-
-		"interface-title":		"",
-
-		"interface-content":		"",
-
-		"svg-buttons":		"<div id=\"slider\" style=\"opacity: 0;\"><div class=\"slide showing\" style=\"background-color:#7f7f7f\"><div class=\"slide-content\"><h1>For whom is it meant?<\/h1><h2>If you wish to learn or revisit concepts of Graph Theory for whatever reason, this is for you.<\/h2><\/div><\/div><div class=\"slide\" style=\"background-color:#2ca02c\"><div class=\"slide-content\"><h1>Any pre-requisites?<\/h1><h2>None. Basic knowledge of set theory and combinatorics would be helpful, but not required.<\/h2><\/div><\/div><div class=\"slide\" style=\"background-color:#d62728\"><div class=\"slide-content\"><h1>Tip #1<\/h1><h2>Internet is your friend. Use it whenever you need extra information or detailed explanation.<\/h2><\/div><\/div><div class=\"slide\" style=\"background-color:#9467bd\"><div class=\"slide-content\"><h1>Tip #2<\/h1><h2>You can use this app as a supplemet to your textbook or university course.<\/h2><\/div><\/div><div class=\"slide\" style=\"background-color:#17becf\"><div class=\"slide-content\"><h1>Tip #3<\/h1><h2>Re-read the theory if you don't get it in one go.<\/h2><\/div><\/div><div class=\"slide\" style=\"background-color:#bcbd22\"><div class=\"slide-content\"><h1>Tip #4<\/h1><h2>Don't hesitate to look back into previous chapters.<\/h2><\/div><\/div><div class=\"slide\" style=\"background-color:#e377c2\"><div class=\"slide-content\"><h1>Tip #5<\/h1><h2>If an idea or doubt crosses your mind, draw it out on the app.<\/h2><\/div><\/div><div class=\"slide\" style=\"background-color:#8c564b\"><div class=\"slide-content\"><h1>Tip #6<\/h1><h2>Reasoning and logic is important. Try to look for why something is true and why it works.<\/h2><\/div><\/div><div class=\"slide\" style=\"background-color:#1f77b4\"><div class=\"slide-content text-center\"><h1>Good Luck<\/h1><h3>Remember, your goal should be to grasp more in less time. This app is designed that way.<\/h3><a class=\"btn btn-huge btn-lg btn-success\" href=\"?vertices-and-edges\">Jump On!!<\/a><\/div><\/div><\/div><div id=\"slide-nav\" style=\"opacity: 0;\"><div class=\"col-sm-5 col-xs-5 grey\" id=\"prev-slide\"><span class=\"glyphicon glyphicon-menu-left\"><\/span><\/div><div class=\"col-sm-2 col-xs-2\" id=\"slide-counter\"><\/div><div class=\"col-sm-5 col-xs-5\" id=\"next-slide\"><span class=\"glyphicon glyphicon-menu-right\"><\/span><\/div><\/div>",
-
-		"svg-output":		"",
-
-		"prev":		"?welcome",
-		"next":		"?vertices-and-edges",
-		"script":	"app.js",
-		"style":	"app.css"
-	},
-
 	"vertices-and-edges": {
 
 		"content-title": "Vertices and Edges",
@@ -54,7 +14,7 @@ var contentData =
 
 		"svg-output":		"",
 
-		"prev":		"?before-you-begin",
+		"prev":		"index.html",
 		"next":		"?order-and-size",
 		"script":	"app.js",
 		"style":	"app.css"

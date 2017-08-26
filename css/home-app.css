@@ -1,0 +1,270 @@
+body {
+	min-width: 640px;
+	font-size: 16px;
+	line-height: 1.5;
+	font-family: "Open Sans", sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #1f77b4;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #1f77b4;
+}
+
+svg {
+  display: block;
+  margin:auto;
+}
+
+line {
+	stroke-width: 2px;
+	stroke: #ccc;
+}
+
+h1, h2, h3, h4, p {
+	font-family: "Open Sans", sans-serif;
+}
+
+/*scrollbar customization*/
+body::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+	background-color: #ccc;
+}
+
+body::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #1f77b4;
+	/*border: 2px solid #555;*/
+}
+
+#home-container {
+	background-color: #f8f8f8;
+}
+
+#home-navbar {
+	margin-bottom: 0;
+	border-bottom: 1px solid #ccc;
+	-webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#home-navbar.transparent {
+	background-color: transparent;
+	border-bottom: 0;
+	box-shadow: none;
+	border-bottom: 0;
+}
+
+#home-navbar.transparent .navbar-brand {
+	display: none;
+}
+
+#home-navbar.transparent .navbar-nav a {
+	color: #aaa;
+}
+
+#home-navbar.transparent .navbar-nav a:hover {
+	color: #fff;
+}
+
+/*fixing navbar to remove the effects to collapse*/
+.navbar-nav {
+	margin:0;
+}
+.navbar-nav > li {
+	float:none;
+  display:inline-block;
+}
+.navbar-nav > li > a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.navbar-nav > li.open > ul.dropdown-menu {
+  position: absolute;
+  border: 1px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+/*navbar fixed*/
+
+.navbar-default {
+	background-color: #fff;
+}
+
+.navbar-brand {
+	color: #1f77b4 !important;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.navbar-nav {
+	float: right;
+	font-size: 16px;
+}
+
+#home-screen {
+	width: 100%;
+	background-image: url('../img/repeating-scribble-dark-background.jpg');
+	background-repeat: repeat;
+	overflow: hidden;
+	border-bottom: 1px solid #ccc;
+}
+
+#home-graph {
+	width: 100%;
+	height: 720px;
+	margin: auto;
+}
+
+/*intro must have same width as home-graph*/
+#intro {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 720px;
+	pointer-events: none;
+	padding: 300px 60px;
+	color: #fff;
+	background-color: rgba(44, 44, 56, 0.5);
+	font-family: "Open Sans", sans-serif;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#intro-title {
+	font-size: 50px;
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+#intro-tagline {
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 1.2;
+}
+
+div.section-heading {
+	padding: 40px 0;
+}
+
+.section-heading h1 {
+	font-size: 40px;
+}
+
+.section-content h4 {
+	font-size: 16px;
+}
+
+.section-content p {
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight: 300;
+	margin-bottom: 24px;
+	text-align: justify;
+}
+
+div.faq-entry {
+	margin-bottom: 40px;
+	padding: 0 5px;
+}
+
+.faq-entry h4 {
+	font-weight: 700;
+}
+
+#content-list {
+	margin-top: 30px;
+	margin-bottom: 5px;
+	margin-left: 0;
+	margin-right: 0;
+	max-height: 270px;
+	overflow: hidden;
+	transition: max-height 0.3s;
+}
+
+#content-list .list-container {
+	padding: 5px;
+}
+
+#content-list .list-wrap {
+	width: 100%;
+	height: 80px;
+	display: table;
+	text-decoration: none;
+	background-color: #f0f0f0;
+	box-shadow: 0 1px 1px rgba(13, 26, 43, 0.24), 0 0 4px rgba(13, 26, 43, 0.12);
+	transition: all 0.2s;
+}
+
+#content-list .list-wrap:hover {
+	background-color: #1f77b4;
+	box-shadow: 0 3px 3px rgba(13, 26, 44, 0.23), 0 2px 2.9px 0.1px rgba(13, 26, 44, 0.16), 0 0px 3px rgba(13, 26, 44, 0.15)
+}
+
+#content-list .list-wrap:hover .list-counter {
+	color: #f8f8f8;
+}
+
+#content-list .list-wrap span {
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+	overflow: hidden;
+}
+
+#content-list .list-wrap .list-counter {
+	width: 20%;
+	color: #a4c7e4;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+#content-list .list-wrap .list-item {
+	width: 80%;
+	background-color: #f8f8f8;
+	color: #333;
+	padding: 8px;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+#more-list {
+	padding: 5px;
+	margin-bottom: 20px;
+}
+
+div.jump-on {
+	padding: 50px 0;
+}
+
+.jump-on a {
+	padding: 20px 40px;
+	border-radius: 4px;
+	border: 2px solid #1f77b4;
+	word-spacing: 3px;
+	color: #1f77b4;
+	background-color: #fff;
+	font-weight: 500;
+	font-size: 18px;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.jump-on a:hover {
+	color: #f8f8f8;
+	background-color: #1f77b4;
+}

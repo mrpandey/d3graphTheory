@@ -12,125 +12,151 @@
 
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Use this local copy in case of any trouble with cdn
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet"-->
 
-    <script type="text/javascript">
-        //to set svg dimensions throughout the app
-        //undefined by default
-    	var univSvgWidth;
-    	var univSvgHeight;
-    </script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <link href="css/home-app.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-    <!-- Overlay -->
-    <div id="lightbox" class="hidden">
-	    <div id="map-overlay">
-	    	<div id="map-header">
-		        <button type="button" id="map-close" class="close" aria-label="Close">
-		  			<span aria-hidden="true" class="glyphicon glyphicon-remove-circle"></span>
-				</button>
-		        <h2>Contents</h2>
-		        <hr class="under-title">
-	        </div>
-	        <div id="map-list">
-		        <ol>
-		        </ol>
-	        </div>
-	    </div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <nav id="home-navbar" class="navbar navbar-default navbar-fixed-top transparent" role="navigation">
         <div class="container">
             <a class="navbar-brand" href="/">D3 Graph Theory</a>
             <ul class="nav navbar-nav">
-                <li id="map-open"><a href="javascript:void(0)">Map</a></li>
-                <li><a href="https://github.com/mrpandey/d3graphTheory" target="_blank">GitHub</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contents">Contents</a></li>
+                <li><a href="https://github.com/mrpandey/d3graphTheory" target="_blank">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li>
             </ul>
         </div>
-        <!-- /.container -->
     </nav>
 
-    <div class="container-fluid" id="status-container">
-    	<div class="text-center">
-    		<h1>Loading...</h1>
-    	</div>
-    </div>
+    <div id="home-container">
+        
+        <div id="home-screen">
 
-    <!-- App Content -->
-    <div id="app-container" class="container hidden">
+            <div id="home-graph"></div>
 
-        <div class="row">
-            <div id="theory-area" class="col-md-4 col-sm-12">
-                <h2 id="content-title" class="text-center"></h2>
-                <hr class="under-title">
-                <div id="theory-content">
-                </div>
-                <div id="app-interface">
-                	<div id="interface-title">
-                		<h4></h4>
-                	</div>
-                	<div id="interface-content">
-					  			</div>
-                </div>
-            </div>
-
-            <div id="app-area" class="col-md-8 col-sm-12">
-          		<div id="svg-buttons" class="text-center">
-          		</div>
-          		<div id="svg-wrap">
-          		</div>
-            	<div id="svg-output">
-            	</div>
+            <div id="intro">
+                <span id="intro-title">D3 Graph Theory</span><br>
+                <span id="intro-tagline">Learn graph theory interactively.</span>
             </div>
 
         </div>
-        <!-- /.row -->
 
-        <div class="row" id="below-app">
-        	<div class="col-md-2 col-sm-3 col-xs-3 text-left prev-wrap">
-        		<a href="" class="map-flow prev"><span class="glyphicon glyphicon-menu-left"></span> Prev</a>
-        	</div>
-        	<div class="col-md-6 col-md-offset-1 col-sm-6 col-xs-6">
-        	</div>
-        	<div class="col-md-2 col-md-offset-1 col-sm-3 col-xs-3 text-right next-wrap">
-        		<a href="" class="map-flow next">Next <span class="glyphicon glyphicon-menu-right"></span></a>
-        	</div>
+        <div id="about" class="container">
+            
+            <div class="section-heading text-center">
+                <h1>About</h1>
+            </div>
+
+            <div class="row section-content">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+                    <p>
+                        A graph (as in "graph theory") is a discrete mathematical structure which deals with objects and pairwise relations between them. Graphs have immense applications in various disciplines of science. Knowledge of this subject is essential for mathematics and computer science enthusiasts.
+                    </p>
+                    <p>
+                        D3 Graph Theory is project aimed at anyone who wants to learn graph theory. It provides quick and interactive introduction to the subject. The visuals used in the project makes it an effective learning tool.
+                    </p>
+                    <p>
+                        And yes, it is open-source. Check the code at <a href="https://github.com/mrpandey/d3graphTheory" target="_blank">GitHub</a>. Created by Avinash Pandey, a mathematics and computer science enthusiast.
+                    </p>
+                </div>
+            </div>
+
         </div>
 
-    </div>
-    <!-- /.container -->
+        <div id="faq" class="container">
 
-    <footer class="hidden">
-    	<div id="upper-footer" class="container hidden">
-    		<div class="row">
-    			<div class="col-md-6 col-md-offset-3 col-sm-12 text-center">
-	    			Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-    			</div>
-    		</div>
-    	</div>
-    	<div id="signature" class="text-center">
-    		<div>Made by Avinash Pandey</div>
-            <div>Based on <a href="https://mrpandey.github.io/graphPlayground/" target="_blank">graphPlayground</a>.
-    		</div>
-  			<div><a href="http://mrpandey.com" target="_blank">My Website</a> | <a href="https://github.com/mrpandey" target="_blank">GitHub Profile</a></div>
-    	</div>
-    </footer>
+            <div class="section-heading text-center">
+                <h1>FAQ</h1>
+            </div>
+
+            <div class="row section-content">
+
+                <div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2">
+
+                    <div class="faq-entry">
+                        <h4>Free?</h4>
+                        <p>Yes. By the way, it's also open-source.</p>
+                    </div>
+
+                    <div class="faq-entry">
+                        <h4>Difficulty level?</h4>
+                        <p>Easy. Visuals make it easy for an average Joe to go through the material.</p>
+                    </div>
+                    
+                </div>
+
+                <div class="col-xs-5 col-sm-4">
+
+                    <div class="faq-entry">
+                        <h4>Any pre-requisites?</h4>
+                        <p>None. Very basic combinatorics and set theory might be useful, but not required.</p>
+                    </div>
+
+                    <div class="faq-entry">
+                        <h4>Is any certificate provided?</h4>
+                        <p>Sorry, no certificates. It's just you and the material.</p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div id="contents" class="container">
+            
+            <div class="section-heading text-center">
+                <h1>Contents</h1>
+            </div>
+
+            <div class="row section-content">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+                    <p>
+                        The material is divided into several small units. Each unit contains concise theory and a canvas where you can draw things. Going through small units gives the learner a sense of achievement at each step.
+                    </p>
+
+                    <div id="content-list" class="row">
+                        <!--list-containers are dynamically appended-->
+                    </div>
+
+                    <div id="more-list" class="row">
+                        <div class="col-sm-12">
+                            <div class="btn btn-primary btn-block">Show All</div>
+                        </div>
+                    </div>
+
+                    <p>
+                        <b>Note:</b> The project is still expanding. New units are added and existing ones modified from time to time.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="row text-center jump-on">
+                <div class="col-xs-8 col-xs-offset-2">
+                    <a href="unit.html">JUMP ON TO UNIT ONE</a>
+                </div>
+            </div>
+
+        </div>
+        <!--Contents Ends-->
+
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Use this local copy in case of any trouble with cdn
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     -->
 
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- Use this local copy in case of any trouble with cdn
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     -->
@@ -139,11 +165,9 @@
     <!-- Use this local copy in case of any trouble with cdn
     <script type="text/javascript" src="js/d3.v3.min.js"></script>
     -->
-
+    
     <script type="text/javascript" src="js/content.js"></script>
-    <script type="text/javascript" src="js/control.js"></script>
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full"></script>
+    <script type="text/javascript" src="js/home-app.js"></script>
 
 </body>
 

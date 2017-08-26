@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	//query = query string i.e. "?title"
 	var query = window.location.search;
-	var home = "welcome";
+	var home = "vertices-and-edges";
 	if(query.length>1){
 		query = query.substr(1);
 		if(!contentData)

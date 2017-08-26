@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Graph Theory tutorials. Interactive, visual, concise and fun. Learn more in less time.">
+    <meta name="author" content="Avinash Pandey">
+
+    <title>D3 Graph Theory</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Use this local copy in case of any trouble with cdn
+    <link href="css/bootstrap.min.css" rel="stylesheet"-->
+    
+    <link href="css/style.css" rel="stylesheet">
+
+    <script type="text/javascript">
+        //to set svg dimensions throughout the app
+        //undefined by default
+    	var univSvgWidth;
+    	var univSvgHeight;
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Overlay -->
+    <div id="lightbox" class="hidden">
+	    <div id="map-overlay">
+	    	<div id="map-header">
+		        <button type="button" id="map-close" class="close" aria-label="Close">
+		  			<span aria-hidden="true" class="glyphicon glyphicon-remove-circle"></span>
+				</button>
+		        <h2>Contents</h2>
+		        <hr class="under-title">
+	        </div>
+	        <div id="map-list">
+		        <ol>
+		        </ol>
+	        </div>
+	    </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <a class="navbar-brand" href="/">D3 Graph Theory</a>
+            <ul class="nav navbar-nav">
+                <li id="map-open"><a href="javascript:void(0)">Map</a></li>
+                <li><a href="https://github.com/mrpandey/d3graphTheory" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container-fluid" id="status-container">
+    	<div class="text-center">
+    		<h1>Loading...</h1>
+    	</div>
+    </div>
+
+    <!-- App Content -->
+    <div id="app-container" class="container hidden">
+
+        <div class="row">
+            <div id="theory-area" class="col-md-4 col-sm-12">
+                <h2 id="content-title" class="text-center"></h2>
+                <hr class="under-title">
+                <div id="theory-content">
+                </div>
+                <div id="app-interface">
+                	<div id="interface-title">
+                		<h4></h4>
+                	</div>
+                	<div id="interface-content">
+					  			</div>
+                </div>
+            </div>
+
+            <div id="app-area" class="col-md-8 col-sm-12">
+          		<div id="svg-buttons" class="text-center">
+          		</div>
+          		<div id="svg-wrap">
+          		</div>
+            	<div id="svg-output">
+            	</div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <div class="row" id="below-app">
+        	<div class="col-md-2 col-sm-3 col-xs-3 text-left prev-wrap">
+        		<a href="" class="map-flow prev"><span class="glyphicon glyphicon-menu-left"></span> Prev</a>
+        	</div>
+        	<div class="col-md-6 col-md-offset-1 col-sm-6 col-xs-6">
+        	</div>
+        	<div class="col-md-2 col-md-offset-1 col-sm-3 col-xs-3 text-right next-wrap">
+        		<a href="" class="map-flow next">Next <span class="glyphicon glyphicon-menu-right"></span></a>
+        	</div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <footer class="hidden">
+    	<div id="upper-footer" class="container hidden">
+    		<div class="row">
+    			<div class="col-md-6 col-md-offset-3 col-sm-12 text-center">
+	    			Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+    			</div>
+    		</div>
+    	</div>
+    	<div id="signature" class="text-center">
+    		<div>Made by Avinash Pandey</div>
+            <div>Based on <a href="https://mrpandey.github.io/graphPlayground/" target="_blank">graphPlayground</a>.
+    		</div>
+  			<div><a href="http://mrpandey.com" target="_blank">My Website</a> | <a href="https://github.com/mrpandey" target="_blank">GitHub Profile</a></div>
+    	</div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Use this local copy in case of any trouble with cdn
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    -->
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Use this local copy in case of any trouble with cdn
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js" integrity="sha256-dsOXGNHAo/syFnazt+KTBsCQeRmlcW1XKL0bCK4Baec=" crossorigin="anonymous"></script>
+    <!-- Use this local copy in case of any trouble with cdn
+    <script type="text/javascript" src="js/d3.v3.min.js"></script>
+    -->
+
+    <script type="text/javascript" src="js/content.js"></script>
+    <script type="text/javascript" src="js/control.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full"></script>
+
+</body>
+
+</html>
