@@ -1,7 +1,7 @@
 # d3graphTheory
 A webapp you can use to teach yourself graph theory. It is interactive, visual and fun.
 
-Click [this link](https://mrpandey.github.io/d3graphTheory/) to see it running on your browser.
+Click [**this link**](https://mrpandey.github.io/d3graphTheory/) to see it running on your browser.
 
 It is based on [this project](https://mrpandey.github.io/graphPlayground/).
 
