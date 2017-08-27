@@ -6,7 +6,7 @@ $(document).ready(function(){
   var width = svgSize.width,
       height = svgSize.height;
 
-  var nodes = d3.range(131).map(function(val) { return {radius: Math.floor(Math.random()*6) + 10, id: val}; }),
+  var nodes = d3.range(101).map(function(val) { return {radius: Math.floor(Math.random()*6) + 10, id: val}; }),
       links = [],
       root = nodes[0],
       color = d3.scale.category20();
@@ -36,7 +36,7 @@ $(document).ready(function(){
       .links(links)
       .gravity(0.05)
       .friction(0.95)
-      .charge(function(d, i) { return i ? -60 : -2000; })
+      .charge(function(d, i) { return i ? -60 : -1800; })
       .linkDistance(60)
       .chargeDistance(1.4*width)
       .size([width, height])
@@ -61,7 +61,7 @@ $(document).ready(function(){
 
     //delete edges after fixed number of ticks
     links.forEach(function(l, i){
-      if(l.tickCounter < 120) {
+      if(l.tickCounter < 100) {
         l.tickCounter++;
       }
       else {
