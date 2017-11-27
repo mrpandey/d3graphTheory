@@ -1,3 +1,15 @@
+@media (min-width: 1600){
+	.container{
+		width: 1500px;
+	}
+}
+
+@media (min-width: 1920){
+	.container{
+		width: 1710px;
+	}
+}
+
 body {
 	min-width: 640px;
 	font-size: 16px;
