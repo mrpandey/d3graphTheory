@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+	//to set dimensions of svg
+	univSvgWidth = $("nav.navbar-static-top > div.container").outerWidth() * 2/3 - 48;
+	univSvgHeight = univSvgWidth*0.54;
+	if(univSvgWidth < 616)
+		univSvgWidth = 616;
+	if(univSvgHeight < 400)
+		univSvgHeight = 400;
+
 	//query = query string i.e. "?title"
 	var query = window.location.search;
 	var home = "vertices-and-edges";
