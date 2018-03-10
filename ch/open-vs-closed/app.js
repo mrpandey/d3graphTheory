@@ -85,7 +85,7 @@ var force = d3.layout.force()
                     .linkStrength(1)
                     .charge(-565)
                     .chargeDistance((w+h)/2)
-                    .gravity(0.13)
+                    .gravity(0.1)
                     .on("tick",tick)
                     .start();
 
