@@ -17,6 +17,7 @@ var contentData =
 		"prev":		"index.html",
 		"next":		"?order-and-size",
 		"script":	"app.js",
+		"star":	"n",
 		"style":	"app.css"
 	},
 
@@ -37,6 +38,7 @@ var contentData =
 		"prev":		"?vertices-and-edges",
 		"next":		"?degree-of-vertex",
 		"script":	"app.js",
+		"star":	"n",
 		"style":	"app.css"
 	},
 
@@ -57,6 +59,7 @@ var contentData =
 		"prev":		"?order-and-size",
 		"next":		"?degree-sequence",
 		"script":	"app.js",
+		"star":	"n",
 		"style":	"app.css"
 	},
 
@@ -77,6 +80,7 @@ var contentData =
 		"prev":		"?degree-of-vertex",
 		"next":		"?graphic-sequence",
 		"script":	"app.js",
+		"star":	"n",
 		"style":	"app.css"
 	},
 
@@ -97,6 +101,7 @@ var contentData =
 		"prev":		"?degree-sequence",
 		"next":		"?havel-hakimi",
 		"script":	"app.js",
+		"star":	"n",
 		"style":	"app.css"
 	},
 
@@ -117,6 +122,7 @@ var contentData =
 		"prev":		"?graphic-sequence",
 		"next":		"?pigeonhole",
 		"script":	"app.js",
+		"star":	"y",
 		"style":	"app.css"
 	},
 
@@ -137,6 +143,7 @@ var contentData =
 		"prev":		"?havel-hakimi",
 		"next":		"?regular-graph",
 		"script":	"app.js",
+		"star":	"n",
 		"style":	"app.css"
 	},
 
@@ -157,6 +164,7 @@ var contentData =
 		"prev":		"?pigeonhole",
 		"next":		"?complete-graph",
 		"script":	"app.js",
+		"star":	"n",
 		"style":	"app.css"
 	},
 
@@ -177,6 +185,7 @@ var contentData =
 		"prev":		"?regular-graph",
 		"next":		"?bipartite",
 		"script":	"app.js",
+		"star":	"n",
 		"style":	"app.css"
 	},
 
@@ -197,6 +206,7 @@ var contentData =
 		"prev":		"?complete-graph",
 		"next":		"?complete-bipartite",
 		"script":	"app.js",
+		"star":	"n",
 		"style":	"app.css"
 	},
 
@@ -217,6 +227,7 @@ var contentData =
 		"prev":		"?bipartite",
 		"next":		"?walk",
 		"script":	"app.js",
+		"star":	"n",
 		"style":	"app.css"
 	},
 
@@ -237,6 +248,7 @@ var contentData =
 		"prev":		"?complete-bipartite",
 		"next":		"?open-vs-closed",
 		"script":	"app.js",
+		"star":	"n",
 		"style":	"app.css"
 	},
 
@@ -257,6 +269,7 @@ var contentData =
 		"prev":		"?walk",
 		"next":		"?connectivity",
 		"script":	"app.js",
+		"star":	"y",
 		"style":	"app.css"
 	},
 
@@ -277,6 +290,7 @@ var contentData =
 		"prev":		"?open-vs-closed",
 		"next":		"?eulerian-circuit",
 		"script":	"app.js",
+		"star":	"n",
 		"style":	"app.css"
 	},
 
@@ -297,6 +311,7 @@ var contentData =
 		"prev":		"?connectivity",
 		"next":		"?eulerian-trail",
 		"script":	"app.js",
+		"star":	"n",
 		"style":	"app.css"
 	},
 
@@ -317,6 +332,7 @@ var contentData =
 		"prev":		"?eulerian-circuit",
 		"next":		"",
 		"script":	"app.js",
+		"star":	"n",
 		"style":	"app.css"
 	}
 

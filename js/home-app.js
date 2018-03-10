@@ -124,9 +124,11 @@ $(document).ready(function(){
     var i = 1;
     for(var unit in contentData){
       if(contentData.hasOwnProperty(unit)){
+        var starItem = '';
+        if(contentData[unit]['star']=="y") starItem = ' star-item';
         var newEntry = '<div class="list-container col-xs-6 col-md-4"><a href="unit.html?' + unit;
-        newEntry += '" class="list-wrap"><span class="list-counter">';
-        newEntry += i + '</span><span class="list-item">' + contentData[unit]['content-title'] + '</span></a></div>';
+        newEntry += '" class="list-wrap"><span class="list-counter">' + i;
+        newEntry += '</span><span class="list-item' + starItem + '">' + contentData[unit]['content-title'] + '</span></a></div>';
         contentList.append(newEntry);
         ++i;
       }

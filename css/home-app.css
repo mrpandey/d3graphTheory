@@ -254,6 +254,12 @@ div.faq-entry {
 	font-weight: 500;
 }
 
+#content-list .list-item.star-item {
+	background-image: url("../img/star_icon.png");
+	background-position: right 5px top 5px;
+	background-repeat: no-repeat;
+}
+
 #more-list {
 	padding: 5px;
 	margin-bottom: 20px;
