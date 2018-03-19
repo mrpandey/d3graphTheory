@@ -414,7 +414,6 @@ function showGraphLatex() {
   else {
 
     var vertexRep = false;
-    
 
     l += "\\[\\text{Walk : }";
     var currentVertex = d3.select(".walk-start").datum();
@@ -427,13 +426,8 @@ function showGraphLatex() {
       else if(e.target===currentVertex)
         currentVertex = e.source;
 
-      if(currentVertex.walkDegree>2){
-        if(d3.select(".walk-start").attr("id")!=d3.select(".walk-end").attr("id"))
-          vertexRep=true;
-        else if(currentVertex!=d3.select(".walk-start").datum()){
-          vertexRep=true;
-        }
-      }
+      if(currentVertex.walkDegree>2)
+        vertexRep = true;
       
       l += "\\to v_{" + currentVertex.id + "}";
       if((i+1)%10==0)
