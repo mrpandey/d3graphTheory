@@ -365,6 +365,6 @@ function checkAndLoad(){
   if(currentProb < problems.length-1){
     setTimeout(function(){
       setGraph(++currentProb);
-    }, 1000);
+    }, 2500);
   }
 }
