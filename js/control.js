@@ -98,17 +98,17 @@ function resizeContent(){
 	}
 
 	//set height of theory-area and app-area
-	var h = $(window).height()-90;
+	var h = $(window).height()-80;
 	var w = $(window).width();
 
 	if(w<992) {
 		$('#theory-area').css('max-height', '');
-		$('#app-area').css('max-height', '');
+		//$('#app-area').css('max-height', '');
 		return;
 	}
-	if(h<300)	return;
-	$('#theory-area').css('max-height', '' + h + 'px');
-	$('#app-area').css('max-height', '' + h + 'px');
+	//if(h<400)	return;
+	$('#theory-area').css('max-height', '' + Math.max(h, 450) + 'px');
+	//$('#app-area').css('max-height', '' + h + 'px');
 }
 
 function loadContent(query){

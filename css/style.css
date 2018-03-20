@@ -146,6 +146,7 @@ div.toggle-container {
 	margin-bottom: 20px;
 }
 
+/*text coloring*/
 .toggle-link, .graph-event-link {
 	color: #2ca02c;
 	text-decoration: underline;
@@ -176,13 +177,15 @@ div.result {
 .result-word {
 	color: #2ca02c;
 }
+/*text coloring ends*/
 
 /*To deal with resizing windows*/
+/*app-area isn't needed when disabled max-height*/
 #theory-area, #app-area, #map-list {
 	overflow-y: auto;
 }
 
-/*scrollbar customization*/
+/*scrollbar customization
 body::-webkit-scrollbar-track,
 #theory-area::-webkit-scrollbar-track,
 #app-area::-webkit-scrollbar-track,
@@ -208,8 +211,9 @@ body::-webkit-scrollbar-thumb,
 #map-list::-webkit-scrollbar-thumb
 {
 	background-color: #1f77b4;
-	/*border: 2px solid #555;*/
+	//border: 2px solid #555;
 }
+scrollbar customization ends*/
 
 #app-interface {
 	margin-top: 30px;
