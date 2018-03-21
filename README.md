@@ -6,7 +6,7 @@
 
 A graph (as in "graph theory") is a discrete mathematical structure which deals with objects and pairwise relations between them. Graphs have immense applications in various disciplines of science. Knowledge of this subject is essential for mathematics and computer science enthusiasts.
 
-D3 Graph Theory is project aimed at anyone who wants to learn graph theory. It provides quick and interactive introduction to the subject. The visuals used in the project makes it an effective learning tool.
+D3 Graph Theory is a project aimed at anyone who wants to learn graph theory. It provides a quick and interactive introduction to the subject. The visuals used in the project makes it an effective learning tool.
 
 ![Home Page](https://ds055uzetaobb.cloudfront.net/uploads/A8m6jPwka4-d3home.png)
 
