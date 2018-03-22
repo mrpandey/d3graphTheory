@@ -139,6 +139,15 @@ hr.under-title {
 	text-align: justify;
 }
 
+#theory-area {
+	display: inline-block;
+}
+
+#theory-area svg {
+	display: inline-block;
+	vertical-align: middle
+}
+
 div.toggle-container {
 	background: #eee;
 	padding: 10px;
