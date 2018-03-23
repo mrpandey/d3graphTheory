@@ -145,7 +145,8 @@ hr.under-title {
 
 #theory-area svg {
 	display: inline-block;
-	vertical-align: middle
+	vertical-align: middle;
+	cursor: auto;
 }
 
 div.toggle-container {
