@@ -48,7 +48,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar {
-	width: 5px;
+	width: 10px;
 	height: 5px;
 	background-color: #F5F5F5;
 }
@@ -60,6 +60,11 @@ body::-webkit-scrollbar-thumb {
 
 #home-container {
 	background-color: #f8f8f8;
+	padding-bottom: 100px;
+}
+
+#home-container > .container {
+		padding-bottom: 40px;
 }
 
 #home-navbar {
@@ -298,4 +303,83 @@ ul.share-buttons{
 
 ul.share-buttons li{
   display: inline;
+}
+
+#share ul.share-buttons li {
+	margin-left: 25px;
+}
+
+#myFooter ul.share-buttons li{
+	margin-left: 15px;
+}
+
+#myFooter {
+    background-color: #272822;
+    color: white;
+    font-size: 14px;
+    line-height: 1.42;
+}
+
+#myFooter .first-bar .row {
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+#myFooter ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
+}
+
+#myFooter h5 {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#myFooter a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+#myFooter a:hover,
+#myFooter a:focus {
+    text-decoration: underline;
+}
+
+#myFooter .second-bar {
+    background-color: #33373e;
+}
+
+#myFooter .second-bar .row > div {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	line-height: 40px;
+}
+
+#myFooter .second-bar .logo{
+	font-size: 28px;
+  font-weight: bold;
+  padding-right: 12px;
+  border-right: solid 1px #888;
+  line-height: 30px;
+}
+
+#myFooter .second-bar .logo a{
+    color:white;
+}
+
+#myFooter .second-bar a:hover {
+    text-decoration: none;
+}
+
+#myFooter .second-bar .copyright {
+	padding-left: 8px;
+}
+
+@media screen and (max-width: 991px) {
+    #myFooter .second-bar {
+        text-align: center;
+    }
 }
