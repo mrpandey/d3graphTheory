@@ -255,7 +255,7 @@ div.faq-entry {
 }
 
 #content-list .list-item.star-item {
-	background-image: url("../img/star_icon.png");
+	background-image: url("../img/icons/star-icon.png");
 	background-position: right 5px top 5px;
 	background-repeat: no-repeat;
 }
@@ -285,4 +285,17 @@ div.jump-on {
 .jump-on a:hover {
 	color: #f8f8f8;
 	background-color: #1f77b4;
+}
+
+a.dbox-donation-button:hover {
+	background-color: #3ea83c !important;
+}
+
+ul.share-buttons{
+  list-style: none;
+  padding: 0;
+}
+
+ul.share-buttons li{
+  display: inline;
 }
