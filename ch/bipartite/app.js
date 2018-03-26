@@ -375,6 +375,21 @@ function showGraphLatex (isBipartite) {
           setB += "\\\\";
       }
     });
+
+    //modify sets to make Latex text look nicer
+    if(countA%12==0){
+      setA = setA.slice(0,-3);
+    }
+    else{
+      setA = setA.slice(0,-1);
+    }
+
+    if(countB%12==0){
+      setB = setB.slice(0,-3);
+    }
+    else{
+      setB = setB.slice(0,-1);
+    }
     l = "\\[\\text{Set } A = \\{" + setA + "\\} \\]";
     l += "\\[\\text{Set } B = \\{" + setB + "\\} \\]";
   }
