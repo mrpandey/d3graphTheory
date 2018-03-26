@@ -191,14 +191,13 @@ div.result {
 
 /*To deal with resizing windows*/
 /*app-area isn't needed when disabled max-height*/
-#theory-area, #app-area, #map-list {
+#theory-area, #map-list {
 	overflow-y: auto;
 }
 
-/*scrollbar customization
+/*scrollbar customization*/
 body::-webkit-scrollbar-track,
 #theory-area::-webkit-scrollbar-track,
-#app-area::-webkit-scrollbar-track,
 #map-list::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
@@ -207,23 +206,20 @@ body::-webkit-scrollbar-track,
 
 body::-webkit-scrollbar,
 #theory-area::-webkit-scrollbar,
-#app-area::-webkit-scrollbar,
 #map-list::-webkit-scrollbar
 {
-	width: 5px;
+	width: 10px;
 	height: 5px;
 	background-color: #F5F5F5;
 }
 
 body::-webkit-scrollbar-thumb,
 #theory-area::-webkit-scrollbar-thumb,
-#app-area::-webkit-scrollbar-thumb,
 #map-list::-webkit-scrollbar-thumb
 {
 	background-color: #1f77b4;
-	//border: 2px solid #555;
 }
-scrollbar customization ends*/
+/*scrollbar customizations end*/
 
 #app-interface {
 	margin-top: 30px;
