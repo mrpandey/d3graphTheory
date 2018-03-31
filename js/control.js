@@ -118,7 +118,6 @@ function loadContent(query){
 	//initially: status -> not hidden; app, footer -> hidden
 	$("#status-container").toggleClass("hidden");
 	$("#app-container").toggleClass("hidden");
-	$("footer").toggleClass("hidden");
 
 	//Set text contents
 	$("#content-title").html(currentChap["content-title"]);

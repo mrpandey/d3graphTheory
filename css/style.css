@@ -117,7 +117,7 @@ hr.under-title {
 
 .navbar-brand {
 	color: #1f77b4 !important;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 700;
 }
 
@@ -262,34 +262,58 @@ a.map-flow:hover {
 	float:right;
 }
 
-footer {
-	background: #1f77b4;
-	color: #fff;
+#myFooter {
+    background-color: #272822;
+    color: white;
+    font-size: 14px;
 }
 
-#upper-footer {
-	padding: 30px;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 20px;
-	font-weight: 700;
-	line-height: 1.5;
+ul.share-buttons{
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
 }
 
-footer a {
-	color: #ff0;
+ul.share-buttons li{
+  display: inline;
+  margin-left: 15px;
 }
 
-footer a:hover {
-	text-decoration: underline;
-	color: #ff0;
+#myFooter a {
+    color: #aaa;
+    text-decoration: none;
 }
 
-#signature {
-	background: #1f77b4;
-	padding: 10px 0;
+#myFooter a:hover,
+#myFooter a:focus {
+    text-decoration: underline;
 }
 
-#signature div {
-	margin: auto;
-	min-width: 270px;
+#myFooter .second-bar .row > div {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	line-height: 32px;
+}
+
+#myFooter .second-bar .logo{
+	font-size: 24px;
+}
+
+#myFooter .second-bar .logo a{
+    color:white;
+}
+
+#myFooter .second-bar .logo a:hover {
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 991px) {
+    #myFooter .second-bar {
+        text-align: center;
+    }
+
+    #myFooter div.social-icons {
+    	text-align: center;
+    }
 }
