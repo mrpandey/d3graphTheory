@@ -291,9 +291,61 @@ div.jump-on {
 	background-color: #1f77b4;
 }
 
-a.dbox-donation-button:hover {
+.grey {
+	color: #888;
+	font-size: 12px;
+	font-family: "Courier New", Courier, monospace;
+}
+
+div.donation {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+a#dbox-donation-button:hover {
 	background-color: #3ea83c !important;
 }
+
+a.donation-button:hover {
+	background-color: #ddd !important;
+}
+
+div.donation-target {
+	width: 320px;
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	margin: auto;
+	background: #fff;
+	position: relative;
+}
+
+/*For css arrow on donation-target*/
+/*Taken from http://www.cssarrowplease.com/*/
+.donation-target:after, .donation-target:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.donation-target:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #fff;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.donation-target:before {
+	border-color: rgba(204, 204, 204, 0);
+	border-bottom-color: #ccc;
+	border-width: 11px;
+	margin-left: -11px;
+}
+/*arrow ends*/
 
 ul.share-buttons{
   list-style: none;

@@ -34,7 +34,7 @@
 
 <body>
 
-	<nav id="home-navbar" class="navbar navbar-default navbar-fixed-top transparent" role="navigation">
+	<nav id="home-navbar" class="navbar navbar-default navbar-fixed-top transparent">
 		<div class="container">
 			<a class="navbar-brand" href="index.html">D3 Graph Theory</a>
 			<ul class="nav navbar-nav">
@@ -48,7 +48,7 @@
 	</nav>
 
 	<div id="home-container">
-		
+
 		<div id="home-screen">
 
 			<div id="home-graph"></div>
@@ -61,7 +61,7 @@
 		</div>
 
 		<div id="about" class="container">
-			
+
 			<div class="section-heading text-center">
 				<h1>About</h1>
 			</div>
@@ -107,7 +107,7 @@
 						<h4>Difficulty level?</h4>
 						<p>Easy. Visuals make it easy for an average Joe to go through the material.</p>
 					</div>
-					
+
 				</div>
 
 				<div class="col-xs-5 col-sm-4">
@@ -121,9 +121,9 @@
 						<h4>Is any certificate provided?</h4>
 						<p>Sorry, no certificates. It's just you and the material.</p>
 					</div>
-					
+
 				</div>
-				
+
 			</div>
 
 			<div class="row text-center jump-on">
@@ -135,7 +135,7 @@
 		</div>
 
 		<div id="contents" class="container">
-			
+
 			<div class="section-heading text-center">
 				<h1>Contents</h1>
 			</div>
@@ -173,7 +173,7 @@
 		<!--Contents Ends-->
 
 		<div id="donate" class="container">
-			
+
 			<div class="section-heading text-center">
 				<h1>Loved the Content?</h1>
 			</div>
@@ -185,19 +185,43 @@
 						This project is developed and maintained by a one-man team. The developer is still completing his education and has no source of income.
 					</p>
 					<p>
-						Your donation will support the developer and help him expand this project. <em>"So, wanna buy me a cup of coffee?"</em>.
+						Your donation, <b>however small</b>, will support the developer and help him expand this project. <em><b>"So, wanna buy me a cup of coffee?"</b></em>.
 					</p>
-					<div class="text-center">
-						<a class="dbox-donation-button" href="https://donorbox.org/d3graphtheory" target="_blank" style="background:#5cb85c url(https://d1iczxrky3cnb2.cloudfront.net/white_logo.png) no-repeat 56px center; color: #fff;text-decoration: none;font-family: Verdana,sans-serif;display: inline-block;font-size: 16px;padding: 17px 64px 17px 94px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; box-shadow: 0 2px 0 0 #408040; text-shadow: 0 1px rgba(0, 0, 0, 0.3);" >Donate</a>
+
+					<div class="donation text-center hidden">
+						<a id="dbox-donation-button" href="https://donorbox.org/d3graphtheory" target="_blank" style="background:#5cb85c url(https://d1iczxrky3cnb2.cloudfront.net/white_logo.png) no-repeat 56px center; color: #fff; text-decoration: none;font-family: Verdana,sans-serif;display: inline-block;font-size: 16px; padding: 17px 64px 17px 94px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; box-shadow: 0 2px 0 0 #408040; text-shadow: 0 1px rgba(0, 0, 0, 0.3);" >Donate</a>
 					</div>
+
+					<div class="donation text-center">
+						<a id="paypal-donation-button" class="donation-button" href="https://www.paypal.me/mrpandey" target="_blank" style="background:#ffc439; color:#444; text-decoration: none; font-family: Verdana,sans-serif; display: inline-block; font-size: 14px; padding: 17px 50px; border-radius: 4px; box-shadow: 2px 2px 0 0 #aaa; text-shadow: 0 0px rgba(0, 0, 0, 0.3);" >Donate with &nbsp;&nbsp;<img src="https://d1sssn74k2rfxk.cloudfront.net/assets/paypal-logo-5a20b072b1e631083fe3102a4e58e316.png" style="width:80px; height:auto;" alt="PayPal"></a>
+					</div>
+
+					<div class="donation grey text-center" style="font-size:12px;">&mdash; OR &mdash;</div>
+
+					<div class="donation text-center">
+						<a id="upi-donation-button" class="donation-button" href="#upi-donation-button" style="background:#4cc; color: #333; text-decoration: none; font-family: Verdana,sans-serif;display: inline-block; font-size: 14px; padding: 17px 50px; border-radius: 4px; box-shadow: 2px 2px 0 0 #aaa; text-shadow: 0 0px rgba(0, 0, 0, 0.3);" >Donate with &nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/UPI-Logo-vector.svg/320px-UPI-Logo-vector.svg.png" style="width:80px; height:auto;" alt="UPI"></a>
+					</div>
+
+					<div id="upi-target" class="donation donation-target grey">
+						<div>1. Open your UPI app (Tez, PhonePe, etc.)</div>
+						<br>
+						<div>2. Pay to UPI ID: <span style="color:#333;"><b>avi.pandey360@ybl</b></span></div>
+						<br>
+						<div class="text-center">&mdash; OR &mdash;</div>
+						<br>
+						<div class="text-center">
+							Scan QR Code & Pay<br>
+							<img src="/img/upi-qr.png" style="width: 250px; height:auto;" alt="UPI QR Code">
+						</div>
+					</div>
+
 				</div>
-				
 			</div>
 
 		</div>
 
 		<div id="share" class="container">
-			
+
 			<div class="section-heading text-center">
 				<h1>Spread the Word</h1>
 			</div>
@@ -218,7 +242,7 @@
 						</ul>
 					</div>
 				</div>
-				
+
 			</div>
 
 		</div>
@@ -238,7 +262,7 @@
                 		If you liked this project, please consider a <a href="https://donorbox.org/d3graphtheory" target="_blank" style="color:#f92672;">small donation</a>.
                 	</p>
                     <p>
-                    	<img src="img/icons/github.png">&nbsp;&nbsp;&nbsp;<a href="https://github.com/mrpandey" target="_blank" style="color:#3e75c3;">My GitHub Profile</a>
+                    	<img src="img/icons/github.png" alt="ico">&nbsp;&nbsp;&nbsp;<a href="https://github.com/mrpandey" target="_blank" style="color:#3e75c3;">My GitHub Profile</a>
                     </p>
                     <p>
                     	<span class="glyphicon glyphicon-globe" style="color:#3e75c3; font-size:16px;"></span>&nbsp;&nbsp;&nbsp;<a href="http://mrpandey.com/" target="_blank" style="color:#3e75c3;">mrpandey.com</a>
@@ -257,8 +281,8 @@
                     	Based on <a href="https://mrpandey.github.io/graphPlayground/" target="_blank" style="color:#edde45;">graphPlayground</a>.
                     </p>
                     <p style="padding-top:8px;">
-                    	<iframe src="https://ghbtns.com/github-btn.html?user=mrpandey&repo=d3graphTheory&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
-                    	<iframe src="https://ghbtns.com/github-btn.html?user=mrpandey&repo=d3graphTheory&type=fork&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+                    	<iframe src="https://ghbtns.com/github-btn.html?user=mrpandey&repo=d3graphTheory&type=star&count=true" style="overflow:hidden; border:0;" width="100" height="20"></iframe>
+                    	<iframe src="https://ghbtns.com/github-btn.html?user=mrpandey&repo=d3graphTheory&type=fork&count=true" style="overflow:hidden; border:0;" width="100" height="20"></iframe>
                     </p>
                 </div>
 
@@ -297,21 +321,32 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<!-- Use this local copy in case of any trouble with cdn
-	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script  src="js/jquery-3.2.1.min.js"></script>
 	-->
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<!-- Use this local copy in case of any trouble with cdn
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script  src="js/bootstrap.min.js"></script>
 	-->
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js" integrity="sha256-dsOXGNHAo/syFnazt+KTBsCQeRmlcW1XKL0bCK4Baec=" crossorigin="anonymous"></script>
 	<!-- Use this local copy in case of any trouble with cdn
-	<script type="text/javascript" src="js/d3.v3.min.js"></script>
+	<script  src="js/d3.v3.min.js"></script>
 	-->
-	
-	<script type="text/javascript" src="js/content.js"></script>
-	<script type="text/javascript" src="js/home-app.js"></script>
+
+	<script  src="js/content.js"></script>
+	<script  src="js/home-app.js"></script>
+
+	<script>
+		//hide donation-target by default
+		$(".donation-target").each(function(){
+			$(this).hide();
+		});
+		//reveal on clicking respective buttons
+		$("#upi-donation-button").click(function(){
+			$("#upi-target").slideToggle();
+		});
+	</script>
 
 </body>
 
