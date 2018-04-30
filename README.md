@@ -16,5 +16,5 @@ Made using [D3](https://d3js.org), [bootstrap](http://getbootstrap.com/), [jQuer
 
 ## License
 
-Copyright (c) 2017 Avinash Pandey.
+Copyright (c) 2017-18 Avinash Pandey.
 All the contents of this repository is bound by [GNU GPLv3 License](https://github.com/mrpandey/d3graphTheory/blob/master/LICENSE).
