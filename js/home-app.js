@@ -1,10 +1,14 @@
 $(document).ready(function(){
 
-  //graph
+  /*
+    GRAPH STUFF BEGINS
+  */
 
-  var svgSize = d3.select("#home-graph").node().getBoundingClientRect();
-  var width = svgSize.width,
-      height = svgSize.height;
+  var width = $(window).width(),
+      height = $(window).height();
+
+  var introH = $("#intro").height();
+  $("#intro").css('margin-top', '' + (height-introH)/2 + 'px');
 
   var nodes = d3.range(101).map(function(val) { return {radius: Math.floor(Math.random()*6) + 10, id: val}; }),
       links = [],
@@ -115,7 +119,22 @@ $(document).ready(function(){
     edges.exit().remove();
     force.start();
   }
-  //graph stuffs ends
+
+  $(window).on('resize', function(){
+    width = Math.max($(window).width(), 640);
+    height = Math.min($(window).height(), width);
+    svg.attr("width", width)
+       .attr("height", height);
+    force.size([width, height]);
+    introH = $("#intro").height();
+    $("#intro").css('margin-top', '' + (height-introH)/2 + 'px');
+    root.px = width/2;
+    root.py = height/2;
+  });
+
+  /*
+    GRAPH STUFF ENDS
+  */
 
   //generate content-list from content.js
   var contentList = $("#content-list");
@@ -173,6 +192,16 @@ $(document).ready(function(){
           scrollTop: $( $.attr(this, 'href') ).offset().top
       }, 300);
       return false;
+  });
+
+  //hide donation-target by default
+  $(".donation-target").each(function(){
+    $(this).hide();
+  });
+  
+  //reveal on clicking respective buttons
+  $("#upi-donation-button").click(function(){
+    $("#upi-target").slideToggle();
   });
 
 });

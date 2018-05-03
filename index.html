@@ -53,9 +53,11 @@
 
 			<div id="home-graph"></div>
 
-			<div id="intro">
-				<span id="intro-title">D3 Graph Theory</span><br>
-				<span id="intro-tagline">Learn graph theory interactively.</span>
+			<div id="intro-container">
+				<div id="intro">
+					<span id="intro-title">D3 Graph Theory</span><br>
+					<span id="intro-tagline">Learn graph theory interactively.</span>
+				</div>
 			</div>
 
 		</div>
@@ -196,9 +198,9 @@
 						<a id="paypal-donation-button" class="donation-button" href="https://www.paypal.me/mrpandey/3usd" target="_blank" style="background:#ffc439; color:#444; text-decoration: none; font-family: Verdana,sans-serif; display: inline-block; font-size: 14px; padding: 17px 50px; border-radius: 4px; box-shadow: 2px 2px 0 0 #aaa; text-shadow: 0 0px rgba(0, 0, 0, 0.3);" >Donate with &nbsp;&nbsp;<img src="https://d1sssn74k2rfxk.cloudfront.net/assets/paypal-logo-5a20b072b1e631083fe3102a4e58e316.png" style="width:80px; height:auto;" alt="PayPal"></a>
 					</div>
 
-					<div class="donation grey text-center" style="font-size:12px;">&mdash; OR &mdash;</div>
+					<div class="donation grey text-center hidden" style="font-size:12px;">&mdash; OR &mdash;</div>
 
-					<div class="donation text-center">
+					<div class="donation text-center hidden">
 						<a id="upi-donation-button" class="donation-button" href="#upi-donation-button" style="background:#4cc; color: #333; text-decoration: none; font-family: Verdana,sans-serif;display: inline-block; font-size: 14px; padding: 17px 50px; border-radius: 4px; box-shadow: 2px 2px 0 0 #aaa; text-shadow: 0 0px rgba(0, 0, 0, 0.3);" >Donate with &nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/UPI-Logo-vector.svg/320px-UPI-Logo-vector.svg.png" style="width:80px; height:auto;" alt="UPI"></a>
 					</div>
 
@@ -336,17 +338,6 @@
 
 	<script  src="js/content.js"></script>
 	<script  src="js/home-app.js"></script>
-
-	<script>
-		//hide donation-target by default
-		$(".donation-target").each(function(){
-			$(this).hide();
-		});
-		//reveal on clicking respective buttons
-		$("#upi-donation-button").click(function(){
-			$("#upi-target").slideToggle();
-		});
-	</script>
 
 </body>
 
