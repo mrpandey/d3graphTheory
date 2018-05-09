@@ -26,6 +26,20 @@
 	<!-- Use this local copy in case of any trouble with cdn
 	<link href="css/bootstrap.min.css" rel="stylesheet"-->
 
+	<style>
+	.bmc-button img{
+		width: 50px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;
+	}
+	.bmc-button{
+		line-height: 60px !important;height:62px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#FF813F !important;border-radius: 3px !important;border: 1px solid transparent !important;padding: 5px 15px !important;font-size: 32px !important;letter-spacing:1px !important; box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;
+	}
+	.bmc-button:hover, .bmc-button:active, .bmc-button:focus {
+		-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;
+	}
+	</style>
+
+	<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 	<link href="css/home-app.css" rel="stylesheet">
@@ -190,16 +204,20 @@
 						Your donation, <b>however small</b>, will support the developer and help him expand this project. <em><b>"So, wanna buy me a cup of coffee?"</b></em>.
 					</p>
 
+					<div class="text-center"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/mrpandey"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a></div>
+
 					<div class="donation text-center hidden">
 						<a id="dbox-donation-button" href="https://donorbox.org/d3graphtheory" target="_blank" style="background:#5cb85c url(https://d1iczxrky3cnb2.cloudfront.net/white_logo.png) no-repeat 56px center; color: #fff; text-decoration: none;font-family: Verdana,sans-serif;display: inline-block;font-size: 16px; padding: 17px 64px 17px 94px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; box-shadow: 0 2px 0 0 #408040; text-shadow: 0 1px rgba(0, 0, 0, 0.3);" >Donate</a>
 					</div>
 
-					<div class="donation text-center">
+					<div class="donation text-center hidden">
 						<a id="paypal-donation-button" class="donation-button" href="https://www.paypal.me/mrpandey/3usd" target="_blank" style="background:#ffc439; color:#444; text-decoration: none; font-family: Verdana,sans-serif; display: inline-block; font-size: 14px; padding: 17px 50px; border-radius: 4px; box-shadow: 2px 2px 0 0 #aaa; text-shadow: 0 0px rgba(0, 0, 0, 0.3);" >Donate with &nbsp;&nbsp;<img src="https://d1sssn74k2rfxk.cloudfront.net/assets/paypal-logo-5a20b072b1e631083fe3102a4e58e316.png" style="width:80px; height:auto;" alt="PayPal"></a>
 					</div>
 
 					<div class="donation grey text-center hidden" style="font-size:12px;">&mdash; OR &mdash;</div>
 
+					<!--Yeah, I know I look desperate for donations. But I need to pay my college fees.-->
+					
 					<div class="donation text-center hidden">
 						<a id="upi-donation-button" class="donation-button" href="#upi-donation-button" style="background:#4cc; color: #333; text-decoration: none; font-family: Verdana,sans-serif;display: inline-block; font-size: 14px; padding: 17px 50px; border-radius: 4px; box-shadow: 2px 2px 0 0 #aaa; text-shadow: 0 0px rgba(0, 0, 0, 0.3);" >Donate with &nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/UPI-Logo-vector.svg/320px-UPI-Logo-vector.svg.png" style="width:80px; height:auto;" alt="UPI"></a>
 					</div>
