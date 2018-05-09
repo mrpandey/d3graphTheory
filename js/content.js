@@ -1,4 +1,4 @@
-var contentData = 
+var contentData =
 {
 	"vertices-and-edges": {
 
@@ -17,7 +17,7 @@ var contentData =
 		"prev":		"index.html",
 		"next":		"?order-and-size",
 		"script":	"app.js",
-		"star":	"n",
+		"star":		"n",
 		"style":	"app.css"
 	},
 
@@ -38,7 +38,7 @@ var contentData =
 		"prev":		"?vertices-and-edges",
 		"next":		"?degree-of-vertex",
 		"script":	"app.js",
-		"star":	"n",
+		"star":		"n",
 		"style":	"app.css"
 	},
 
@@ -59,7 +59,7 @@ var contentData =
 		"prev":		"?order-and-size",
 		"next":		"?degree-sequence",
 		"script":	"app.js",
-		"star":	"n",
+		"star":		"n",
 		"style":	"app.css"
 	},
 
@@ -80,7 +80,7 @@ var contentData =
 		"prev":		"?degree-of-vertex",
 		"next":		"?graphic-sequence",
 		"script":	"app.js",
-		"star":	"n",
+		"star":		"n",
 		"style":	"app.css"
 	},
 
@@ -101,7 +101,7 @@ var contentData =
 		"prev":		"?degree-sequence",
 		"next":		"?havel-hakimi",
 		"script":	"app.js",
-		"star":	"n",
+		"star":		"n",
 		"style":	"app.css"
 	},
 
@@ -122,7 +122,7 @@ var contentData =
 		"prev":		"?graphic-sequence",
 		"next":		"?pigeonhole",
 		"script":	"app.js",
-		"star":	"y",
+		"star":		"y",
 		"style":	"app.css"
 	},
 
@@ -143,7 +143,7 @@ var contentData =
 		"prev":		"?havel-hakimi",
 		"next":		"?regular-graph",
 		"script":	"app.js",
-		"star":	"n",
+		"star":		"n",
 		"style":	"app.css"
 	},
 
@@ -164,7 +164,7 @@ var contentData =
 		"prev":		"?pigeonhole",
 		"next":		"?complete-graph",
 		"script":	"app.js",
-		"star":	"n",
+		"star":		"n",
 		"style":	"app.css"
 	},
 
@@ -185,7 +185,7 @@ var contentData =
 		"prev":		"?regular-graph",
 		"next":		"?bipartite",
 		"script":	"app.js",
-		"star":	"n",
+		"star":		"n",
 		"style":	"app.css"
 	},
 
@@ -206,7 +206,7 @@ var contentData =
 		"prev":		"?complete-graph",
 		"next":		"?complete-bipartite",
 		"script":	"app.js",
-		"star":	"n",
+		"star":		"n",
 		"style":	"app.css"
 	},
 
@@ -227,7 +227,7 @@ var contentData =
 		"prev":		"?bipartite",
 		"next":		"?walk",
 		"script":	"app.js",
-		"star":	"n",
+		"star":		"n",
 		"style":	"app.css"
 	},
 
@@ -248,7 +248,7 @@ var contentData =
 		"prev":		"?complete-bipartite",
 		"next":		"?open-vs-closed",
 		"script":	"app.js",
-		"star":	"n",
+		"star":		"n",
 		"style":	"app.css"
 	},
 
@@ -269,7 +269,7 @@ var contentData =
 		"prev":		"?walk",
 		"next":		"?connectivity",
 		"script":	"app.js",
-		"star":	"y",
+		"star":		"y",
 		"style":	"app.css"
 	},
 
@@ -290,7 +290,7 @@ var contentData =
 		"prev":		"?open-vs-closed",
 		"next":		"?eulerian-circuit",
 		"script":	"app.js",
-		"star":	"n",
+		"star":		"n",
 		"style":	"app.css"
 	},
 
@@ -311,7 +311,7 @@ var contentData =
 		"prev":		"?connectivity",
 		"next":		"?eulerian-trail",
 		"script":	"app.js",
-		"star":	"n",
+		"star":		"n",
 		"style":	"app.css"
 	},
 
@@ -330,11 +330,31 @@ var contentData =
 		"svg-output": "<div class=\"text-center\"> <ul class=\"pagination\" id=\"prob-list\"> <li><a class=\"prob-current\">1<\/a><\/li><li><a>2<\/a><\/li><li><a>3<\/a><\/li><li><a>4<\/a><\/li><li><a>5<\/a><\/li><\/ul> <\/div>",
 
 		"prev":		"?eulerian-circuit",
+		"next":		"?graph-coloring",
+		"script":	"app.js",
+		"star":		"n",
+		"style":	"app.css"
+	},
+
+	"graph-coloring": {
+
+		"content-title": "Graph Coloring",
+
+		"theory-content":		"<p><b>Graph coloring<\/b> is the assignment of colors to each vertex in a graph such that no two adjacent vertices get the same color.<\/p><p>Sometimes, this is also referred to as <b>proper coloring<\/b> of graph.<\/p><p>You can change color of a vertex by left-clicking on it. In this unit you have 10 colors available for each vertex.<\/p><p>Try your hands on the graph and see it for yourself!<\/p>",
+
+		"interface-title":		"App interface:",
+
+		"interface-content":		"<ul><li>To change <span style=\"color:#fff; background-color:#d62728; padding:0 2px;\">color<\/span> of a vertex <b>left click<\/b> on it.<\/li><li>To add a vertex <b>left click<\/b> on whitespace.<\/li><li>To add an edge <b>drag<\/b> from one vertex to another.<\/li><li>To delete a vertex\/edge <b>right click<\/b> on it.<\/li><li>To move a vertex <b>hold Ctrl and drag<\/b> it.<\/li><li>To see name of a vertex\/edge just <b>hover your cursor<\/b> on it.<\/li><\/ul>",
+
+		"svg-buttons":		"<button type=\"button\" id=\"clear-graph\" class=\"btn btn-default\">Clear All<\/button>",
+
+		"svg-output": "",
+
+		"prev":		"?eulerian-trail",
 		"next":		"",
 		"script":	"app.js",
-		"star":	"n",
+		"star":		"n",
 		"style":	"app.css"
 	}
 
 };
-
