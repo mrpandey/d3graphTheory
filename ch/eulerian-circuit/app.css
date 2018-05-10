@@ -9,7 +9,7 @@ svg {
   cursor: pointer;
 }
 
-.edge:hover, .dragLine {
+.edge:hover {
   stroke: #333;
   stroke-width: 3px;
 }
@@ -21,10 +21,6 @@ svg {
 .vertex:hover {
   stroke: #333;
   opacity: 1;
-}
-
-.dragLine.hidden {
-	stroke-width:0;
 }
 
 .vertex text {

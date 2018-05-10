@@ -49,10 +49,6 @@ var svg = d3.select("#svg-wrap")
             .attr("width", w)
             .attr("height", h);
 
-var dragLine = svg.append("path")
-									.attr("class", "dragLine hidden")
-									.attr("d", "M0,0L0,0");
-
 var edges = svg.append("g")
 								.selectAll(".edge");
 
@@ -193,14 +189,14 @@ function restart(){
     .attr("x", 0)
     .attr("y", 4)
     .text(function(d){return d.degree;});
-    
+
   vertices.exit().remove();
   force.start();
 }
 
 svg.on("mouseleave", restart)
     .on("contextmenu", function(){d3.event.preventDefault();});
-	  
+
 d3.select(window)
   .on('keydown', keydown)
   .on('keyup', keyup);
@@ -354,7 +350,7 @@ function setGraph(index){
 function checkAndLoad(){
   if($(".walk-edge").length!=links.length)
     return;
-  //set currentProb as solved 
+  //set currentProb as solved
   paginationLinks.selectAll("a")
                   .each(function(d, i){
                     if(i==currentProb)
