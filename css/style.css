@@ -70,15 +70,15 @@ a:hover {
 }
 
 #map-list .current-chap:before {
-	content: "";  
-  border-color: transparent #2ca02c;  
-  border-style: solid;  
-  border-width: 0.35em 0 0.35em 0.45em;  
-  display: inline-block;  
-  height: 0;  
-  width: 0;  
-  left: -12px;  
-  top: 0px;  
+	content: "";
+  border-color: transparent #2ca02c;
+  border-style: solid;
+  border-width: 0.35em 0 0.35em 0.45em;
+  display: inline-block;
+  height: 0;
+  width: 0;
+  left: -12px;
+  top: 0px;
   position: relative;
 }
 
@@ -124,6 +124,10 @@ hr.under-title {
 .navbar-nav {
 	float: right;
 	font-size: 18px;
+}
+
+.navbar span.glyphicon-new-window {
+	font-size: 0.8em;
 }
 
 #status-container {
