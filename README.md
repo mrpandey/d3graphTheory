@@ -22,7 +22,7 @@ D3 Graph Theory is a front-end project aimed at anyone who wants to learn graph 
 ## How to Use
 
 Follow these steps:
-1. Smile :simple_smile:
+1. Smile :smile:
 2. Just <b><a href="https://mrpandey.github.io/d3graphTheory/" target="_blank">click here</a></b> to see it running in your browser.
 
 ## Topics Covered So Far
