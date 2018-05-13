@@ -1,4 +1,6 @@
-<div style="text-align:center; padding: 50px 0;"><img src="img/banner.png" style="max-width:100%; width: 400px;"></div>
+<p align="center">
+  <img src="img/banner.png" style="max-width:100%;">
+</p>
 
 # D3 Graph Theory
 
