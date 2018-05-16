@@ -54,7 +54,7 @@ The project is still expanding. New topics are added from time to time.
 
 These topics are planned to be added.
 
-- [ ] Chromatic Number
+- [x] ~~Chromatic Number~~
 - [ ] Trees and Forests
 - [ ] Properties of Tree
 - [ ] Spanning Tree
