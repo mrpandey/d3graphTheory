@@ -47,6 +47,7 @@ The whole content is broken in several units. So far these units have been added
 16. [Eulerian Trail](https://mrpandey.github.io/d3graphTheory/unit.html?eulerian-trail)
 17. [Graph Coloring](https://mrpandey.github.io/d3graphTheory/unit.html?graph-coloring)
 18. [k-Colorable Graph](https://mrpandey.github.io/d3graphTheory/unit.html?k-colorable)
+19. [Chromatic Number](https://mrpandey.github.io/d3graphTheory/unit.html?chromatic-number)
 
 The project is still expanding. New topics are added from time to time.
 
