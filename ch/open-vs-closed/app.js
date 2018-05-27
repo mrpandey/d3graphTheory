@@ -115,12 +115,12 @@ function clearGraph(){
   restart();
 }
 
-//set initial positions for quick convergence
+//randomize the node positions a bit
+//so it looks cool while loading
 function positionNodes(){
   nodes.forEach(function(d, i) {
-    //d.x = d.y = w / lastNodeId * i;
-    d.x += Math.random()*200 - 100;
-    d.y += Math.random()*200 - 100;
+    d.x += Math.random()*100 - 50;
+    d.y += Math.random()*100 - 50;
   });
 }
 
