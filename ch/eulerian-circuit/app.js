@@ -11,6 +11,7 @@ var problems = [
 
   {
     "order": 6,
+    "coords": [ [378, 275], [249, 295], [307, 149], [374, 47], [443, 163], [492, 268] ],
     "links": [ [0,1], [1,2], [2,3], [3,4], [4,5], [5,0], [0,2], [2,4], [4,0] ]
   },
 
@@ -26,6 +27,7 @@ var problems = [
 
   {
     "order": 6,
+    "coords": [ [246, 240], [468, 216], [398, 299], [302, 308], [361, 189], [343, 128] ],
     "links": [ [0,5], [5,1], [0,2], [0,3], [0,4], [1,2], [1,3], [1,4], [2,3], [2,4], [3,4] ]
   }
 
@@ -41,7 +43,6 @@ var w = univSvgWidth ? univSvgWidth : 616,
     h = univSvgHeight ? univSvgHeight : 400,
     rad = 14;
 
-positionNodes();
 setWalkDegree();
 
 var svg = d3.select("#svg-wrap")
@@ -307,13 +308,16 @@ function setGraph(index){
   restart();
   //push nodes and links
   for(var i=0; i<graphToLoad.order; i++){
-    nodes.push({id:i+1, degree:0});
+    if(graphToLoad.coords)
+      nodes.push({id:i+1, degree:0, x:graphToLoad.coords[i][0], y:graphToLoad.coords[i][1]});
+    else
+      nodes.push({id:i+1, degree:0});
   }
   graphToLoad.links.forEach(function(d){
     links.push({source:d[0], target:d[1]});
   });
   lastNodeId = graphToLoad.order;
-  positionNodes();
+  if(!graphToLoad.coords) positionNodes();
   force.start();
   links.forEach(function(d){
     d.source.degree++;

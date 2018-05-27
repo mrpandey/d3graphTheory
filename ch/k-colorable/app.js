@@ -32,6 +32,7 @@ var problems = [
 
   {
     "order": 6,
+    "coords": [ [338, 194], [319, 193], [273, 156], [260, 124], [308, 253], [232, 188] ],
     "links": [ [1,2], [2,4], [2,3], [0,4], [1,3], [2,5], [5,4], [5,3], [0,1], [0,2] ],
     "k": 4
   },
@@ -63,6 +64,7 @@ var problems = [
 
   {
     "order": 12,
+    "coords": [ [294, 272], [328, 250], [339, 264], [227, 249], [254, 221], [304, 222], [423, 256], [316, 222], [262, 197], [279, 88], [386, 108], [381, 113] ],
     "links": [ [1, 2], [2, 3], [3, 4], [4, 5], [5, 1], [6, 1], [6, 2], [7, 2], [7, 3], [8, 3], [8, 4], [9, 4], [9, 5], [10, 5], [10, 1], [6, 7], [7, 8], [8, 9], [9, 10], [10, 6], [11, 6], [11, 7], [11, 8], [11, 9], [11, 10], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5] ],
     "k": 4
   }
@@ -243,14 +245,17 @@ function setGraph(index){
   restart();
   //push nodes and links
   for(var i=0; i<graphToLoad.order; i++){
-    nodes.push({id:i+1, color:1});
+    if(graphToLoad.coords)
+      nodes.push({id:i+1, color:1, x:graphToLoad.coords[i][0], y:graphToLoad.coords[i][1]});
+    else
+      nodes.push({id:i+1, color:1});
   }
   graphToLoad.links.forEach(function(d){
     links.push({source:d[0], target:d[1]});
   });
   numOfColors = graphToLoad.k;
   lastNodeId = graphToLoad.order;
-  positionNodes();
+  if(!graphToLoad.coords) positionNodes();
   force.start();
   links.forEach(function(d){
     d.source.degree++;
