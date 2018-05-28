@@ -48,6 +48,7 @@ The whole content is broken in several units. So far these units have been added
 17. [Graph Coloring](https://mrpandey.github.io/d3graphTheory/unit.html?graph-coloring)
 18. [k-Colorable Graph](https://mrpandey.github.io/d3graphTheory/unit.html?k-colorable)
 19. [Chromatic Number](https://mrpandey.github.io/d3graphTheory/unit.html?chromatic-number)
+20. [Trees](https://mrpandey.github.io/d3graphTheory/unit.html?trees)
 
 The project is still expanding. New topics are added from time to time.
 
@@ -56,7 +57,7 @@ The project is still expanding. New topics are added from time to time.
 These topics are planned to be added.
 
 - [x] ~~Chromatic Number~~
-- [ ] Trees and Forests
+- [x] ~~Trees and Forests~~
 - [ ] Properties of Tree
 - [ ] Spanning Tree
 - [ ] Prim's Algorithm
