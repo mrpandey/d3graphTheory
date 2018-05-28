@@ -393,6 +393,27 @@ var contentData =
 		"svg-output": "<div id=\"output-text\"><\/div><div class=\"text-center\"> <ul class=\"pagination\" id=\"prob-list\"> <li><a class=\"prob-current\">1<\/a><\/li><li><a>2<\/a><\/li><li><a>3<\/a><\/li><li><a>4<\/a><\/li><li><a>5<\/a><\/li><li><a>6<\/a><\/li><li><a>7<\/a><\/li><li><a>8<\/a><\/li><\/ul> <\/div>",
 
 		"prev":		"?k-colorable",
+		"next":		"?trees",
+		"script":	"app.js",
+		"star":		"n",
+		"style":	"app.css"
+	},
+
+	"trees": {
+
+		"content-title": "Trees",
+
+		"theory-content":		"<p>It's time to learn about trees. Trees are special type of graphs which have immense application as a data structure in computational sciences.<\/p><p>But first, we talk about forests.<\/p><p>A <b>forest<\/b> is an acyclic graph, that is a graph without any cycles. It can be a single connected graph or have multiple disconnected components. When its a single connected graph, we call it a tree.<\/p><p>So, a <b>tree<\/b> is a connected acyclic graph. And a forest is just a collection of one or more trees.<\/p><p>Play around to see what is a tree and what is not. And try to observe the following properties as you draw things.<\/p><div class=\"result\"><span class=\"result-word\">Theorem:<\/span> A connected graph is a tree iff its order is one more than its size. In mathematical notation, we can write this as \\[|V|=|E|+1\\]<p>Note that statement is biconditional. So it also says that a connected graph satisfying the above equation is a tree.<\/p><\/div><div class=\"result\"><span class=\"result-word\">Property:<\/span> For a tree with more than one vertices, there is a <b>unique path<\/b> between any two of its vertices.<\/div><div class=\"result\"><span class=\"result-word\">Property:<\/span> A tree is <b>minimally connected<\/b>, which means that removal of any arbitrary edge from it will convert it into a disconnected graph.<\/div>",
+
+		"interface-title":		"App interface:",
+
+		"interface-content":		"<ul><li>To add a vertex <b>left click<\/b> on whitespace.<\/li><li>To add an edge <b>drag<\/b> from one vertex to another.<\/li><li>To delete a vertex\/edge <b>right click<\/b> on it.<\/li><li>To move a vertex <b>hold Ctrl and drag<\/b> it.<\/li><li>To see name of a vertex\/edge just <b>hover your cursor<\/b> on it.<\/li><\/ul>",
+
+		"svg-buttons":		"<button type=\"button\" id=\"clear-graph\" class=\"btn btn-default\">Clear All<\/button>",
+
+		"svg-output": "",
+
+		"prev":		"?chromatic-number",
 		"next":		"",
 		"script":	"app.js",
 		"star":		"n",
