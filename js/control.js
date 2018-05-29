@@ -114,6 +114,8 @@ function resizeContent(){
 function loadContent(query){
 	
 	var currentChap = contentData[query];
+	
+	document.title = currentChap["content-title"] + " - D3 Graph Theory";
 
 	//initially: status -> not hidden; app, footer -> hidden
 	$("#status-container").toggleClass("hidden");
