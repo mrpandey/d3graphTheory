@@ -1,0 +1,36 @@
+svg {
+  cursor: default;
+  display: block;
+  margin:auto;
+}
+
+.edge {
+  stroke: #888;
+  stroke-width:2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  cursor: default;
+}
+
+.edge:hover, .dragLine {
+  stroke: #333;
+  stroke-width: 3px;
+}
+
+.vertex.root {
+  stroke: #000;
+  stroke-width: 3px;
+}
+
+.vertex {
+  cursor: crosshair;
+}
+
+.vertex:hover {
+  stroke: #333;
+  opacity: 0.8;
+}
+
+.dragLine.hidden {
+	stroke-width:0;
+}
