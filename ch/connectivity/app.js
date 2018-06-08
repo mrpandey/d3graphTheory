@@ -121,7 +121,7 @@ function clearGraph(){
 
 //whether nodes are visited or not
 function setVisited(){
-  
+
 }
 
 function setColor(){
@@ -209,13 +209,13 @@ function beginDragLine(d){
 	if(d3.event.ctrlKey || d3.event.button!=0) return;
 	mousedownNode = d;
 	dragLine.classed("hidden", false)
-					.attr("d", "M" + mousedownNode.x + "," + mousedownNode.y + 
+					.attr("d", "M" + mousedownNode.x + "," + mousedownNode.y +
 						"L" + mousedownNode.x + "," + mousedownNode.y);
 }
 
 function updateDragLine(){
 	if(!mousedownNode) return;
-	dragLine.attr("d", "M" + mousedownNode.x + "," + mousedownNode.y + 
+	dragLine.attr("d", "M" + mousedownNode.x + "," + mousedownNode.y +
 									"L" + d3.mouse(this)[0] + "," + d3.mouse(this)[1]);
 }
 
@@ -273,13 +273,8 @@ function restart(){
         .on("mousedown", function(){d3.event.stopPropagation();})
         .on("contextmenu", removeEdge)
         .on("click", extendWalk)
-        .on("mouseover", function(d){
-        	var thisEdge = d3.select(this);
-          if(thisEdge.select("title").empty()){
-            thisEdge.append("title")
-        		        .text("v"+d.source.id+"-v"+d.target.id);
-          }
-        });
+        .append("title")
+        .text(function(d){return "v"+d.source.id+"-v"+d.target.id;});
 
   edges.exit().remove();
 
@@ -306,20 +301,17 @@ function restart(){
     })
     .on("mousedown", beginDragLine)
     .on("mouseup", endDragLine)
-    .on("mouseover", function(d){
-    	var thisVertex = d3.select(this);
-      if(thisVertex.select("title").empty()){
-        thisVertex.append("title")
-    		          .text("v"+d.id);
-      }
-    })
-    .on("contextmenu", removeNode);
+    .on("contextmenu", removeNode)
+    .append("title")
+    .text(function(d){
+      return "v"+d.id;
+    });
 
   g.append("text")
     .attr("x", 0)
     .attr("y", 4)
     .text(function(d){});
-    
+
   vertices.exit().remove();
   force.start();
 }

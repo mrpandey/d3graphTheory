@@ -185,13 +185,8 @@ function restart(){
         .append("line")
         .attr("class","edge")
         .on("mousedown", function(){d3.event.stopPropagation();})
-        .on("mouseover", function(d){
-        	var thisEdge = d3.select(this);
-          if(thisEdge.select("title").empty()){
-            thisEdge.append("title")
-                    .text("v"+d.source.id+"-v"+d.target.id);
-          }
-        });
+        .append("title")
+        .text(function(d){return "v"+d.source.id+"-v"+d.target.id;});
 
   edges.exit().remove();
 
@@ -205,12 +200,9 @@ function restart(){
           .style("fill", function(d,i){
           	return colors(d.color);
           })
-          .on("mouseover", function(d){
-          	var thisVertex = d3.select(this);
-            if(thisVertex.select("title").empty()){
-              thisVertex.append("title")
-                        .text("v"+d.id);
-            }
+          .append("title")
+          .text(function(d){
+            return "v"+d.id;
           });
 
   vertices.exit().remove();

@@ -130,13 +130,13 @@ function beginDragLine(d){
   if(d.targetDegree==0) return;
 	mousedownNode = d;
 	dragLine.classed("hidden", false)
-					.attr("d", "M" + mousedownNode.x + "," + mousedownNode.y + 
+					.attr("d", "M" + mousedownNode.x + "," + mousedownNode.y +
 						"L" + mousedownNode.x + "," + mousedownNode.y);
 }
 
 function updateDragLine(){
 	if(!mousedownNode) return;
-	dragLine.attr("d", "M" + mousedownNode.x + "," + mousedownNode.y + 
+	dragLine.attr("d", "M" + mousedownNode.x + "," + mousedownNode.y +
 									"L" + d3.mouse(this)[0] + "," + d3.mouse(this)[1]);
 }
 
@@ -195,13 +195,8 @@ function restart(){
         .append("line")
         .attr("class","edge")
         .on("contextmenu", removeEdge)
-        .on("mouseover", function(d){
-        	var thisEdge = d3.select(this);
-          if(thisEdge.select("title").empty()){
-            thisEdge.append("title")
-        		        .text("v"+d.source.id+"-v"+d.target.id);
-          }
-        });
+        .append("title")
+        .text(function(d){return "v"+d.source.id+"-v"+d.target.id;});
 
   edges.exit().remove();
 
@@ -226,12 +221,9 @@ function restart(){
     })
     .on("mousedown", beginDragLine)
     .on("mouseup", endDragLine)
-    .on("mouseover", function(d){
-    	var thisVertex = d3.select(this);
-      if(thisVertex.select("title").empty()){
-        thisVertex.append("title")
-    		          .text("v"+d.id);
-      }
+    .append("title")
+    .text(function(d){
+      return "v"+d.id;
     });
 
   g.append("text")
@@ -240,7 +232,7 @@ function restart(){
     .text(function(d){
       return d.targetDegree;
     });
-    
+
   vertices.exit().remove();
   force.start();
 }
@@ -304,7 +296,7 @@ function checkAndLoad(){
     if(nodes[i].targetDegree!=0)
       return;
   }
-  //set currentProb as solved 
+  //set currentProb as solved
   paginationLinks.selectAll("a")
                   .each(function(d, i){
                     if(i==currentProb)
