@@ -18,6 +18,14 @@
 	<meta name="description" content="Graph Theory tutorials. Interactive, visual, concise and fun. Learn more in less time.">
 	<meta name="author" content="Avinash Pandey">
 
+	<meta name="twitter:card" content="summary_large_image">
+	
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="D3 Graph Theory - Interactive Graph Theory Tutorials">
+	<meta property="og:description" content="Graph Theory tutorials. Interactive, visual, concise and fun. Learn more in less time.">
+	<meta property="og:url" content="https://mrpandey.github.io/d3graphTheory/">
+	<meta property="og:image" content="https://github.com/mrpandey/d3graphTheory/blob/master/img/banner.png">
+
 	<title>D3 Graph Theory - Interactive Graph Theory Tutorials</title>
 
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -25,6 +33,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!-- Use this local copy in case of any trouble with cdn
 	<link href="css/bootstrap.min.css" rel="stylesheet"-->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<style>
 	.bmc-button img{
@@ -74,6 +84,14 @@
 				</div>
 			</div>
 
+		</div>
+
+		<div id="share-wrap-top" class="text-center" style="margin-top:40px; line-height: 150%;">
+			<a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&text=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials:%20https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&hashtags=d3.js,graph-theory,maths&via=mrpandey360" target="_blank" style="background:#0c7abf;"><i class="fa fa-twitter"></i>&nbsp;&nbsp;Tweet</a>
+
+			<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&quote=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials" target="_blank" style="background:#42609c;"><i class="fa fa-facebook"></i>&nbsp;&nbsp;Share</a>
+
+			<a href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&media=https%3A%2F%2Fraw.githubusercontent.com%2Fmrpandey%2Fd3graphTheory%2Fmaster%2Fimg%2Fbanner.png&description=Interactive%20and%20colorful%20graph%20theory%20tutorials.%20Visual%2C%20concise%20and%20fun.&hashtags=graph-theory,tutorials,d3.js,maths,computer-science" target="_blank" style="background:#ad081b;"><i class="fa fa-pinterest"></i>&nbsp;&nbsp;Save</a>
 		</div>
 
 		<div id="about" class="container">
@@ -209,17 +227,17 @@
 
 					<div class="text-center"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/mrpandey"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a></div>
 
-					<div class="donation text-center hidden">
+					<!--div class="donation text-center">
 						<a id="dbox-donation-button" href="https://donorbox.org/d3graphtheory" target="_blank" style="background:#5cb85c url(https://d1iczxrky3cnb2.cloudfront.net/white_logo.png) no-repeat 56px center; color: #fff; text-decoration: none;font-family: Verdana,sans-serif;display: inline-block;font-size: 16px; padding: 17px 64px 17px 94px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; box-shadow: 0 2px 0 0 #408040; text-shadow: 0 1px rgba(0, 0, 0, 0.3);" >Donate</a>
 					</div>
 
-					<div class="donation text-center hidden">
+					<div class="donation text-center">
 						<a id="paypal-donation-button" class="donation-button" href="https://www.paypal.me/mrpandey/3usd" target="_blank" style="background:#ffc439; color:#444; text-decoration: none; font-family: Verdana,sans-serif; display: inline-block; font-size: 14px; padding: 17px 50px; border-radius: 4px; box-shadow: 2px 2px 0 0 #aaa; text-shadow: 0 0px rgba(0, 0, 0, 0.3);" >Donate with &nbsp;&nbsp;<img src="https://d1sssn74k2rfxk.cloudfront.net/assets/paypal-logo-5a20b072b1e631083fe3102a4e58e316.png" style="width:80px; height:auto;" alt="PayPal"></a>
 					</div>
 
-					<div class="donation grey text-center hidden" style="font-size:12px;">&mdash; OR &mdash;</div>
+					<div class="donation grey text-center" style="font-size:12px;">&mdash; OR &mdash;</div>
 
-					<div class="donation text-center hidden">
+					<div class="donation text-center">
 						<a id="upi-donation-button" class="donation-button" href="#upi-donation-button" style="background:#4cc; color: #333; text-decoration: none; font-family: Verdana,sans-serif;display: inline-block; font-size: 14px; padding: 17px 50px; border-radius: 4px; box-shadow: 2px 2px 0 0 #aaa; text-shadow: 0 0px rgba(0, 0, 0, 0.3);" >Donate with &nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/UPI-Logo-vector.svg/320px-UPI-Logo-vector.svg.png" style="width:80px; height:auto;" alt="UPI"></a>
 					</div>
 
@@ -234,7 +252,7 @@
 							Scan QR Code & Pay<br>
 							<img src="img/upi-qr.png" style="width: 204px; height:auto;" alt="UPI QR Code">
 						</div>
-					</div>
+					</div-->
 
 				</div>
 			</div>
@@ -255,11 +273,12 @@
 					</p>
 					<div class="text-center">
 						<ul class="share-buttons">
-							<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&quote=D3%20Graph%20Theory" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="img/icons/social-color-large/facebook.png" /></a></li>
-							<li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&text=D3%20Graph%20Theory:%20https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&via=mrpandey360" target="_blank" title="Tweet"><img alt="Tweet" src="img/icons/social-color-large/twitter.png" /></a></li>
+							<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&quote=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="img/icons/social-color-large/facebook.png" /></a></li>
+							<li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&text=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials:%20https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&hashtags=d3.js,graph-theory,maths&via=mrpandey360" target="_blank" title="Tweet"><img alt="Tweet" src="img/icons/social-color-large/twitter.png" /></a></li>
 							<li><a href="https://plus.google.com/share?url=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F" target="_blank" title="Share on Google+"><img alt="Share on Google+" src="img/icons/social-color-large/googleplus.png" /></a></li>
-							<li><a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&description=d3graphTheory%20is%20an%20interactive%20tool%20to%20learn%20graph%20theory%20in%20a%20fun%20way." target="_blank" title="Pin it"><img alt="Pin it" src="img/icons/social-color-large/pinterest.png" /></a></li>
-							<li><a href="http://www.reddit.com/submit?url=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&title=D3%20Graph%20Theory" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="img/icons/social-color-large/reddit.png" /></a></li>
+							<li><a href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&media=https%3A%2F%2Fraw.githubusercontent.com%2Fmrpandey%2Fd3graphTheory%2Fmaster%2Fimg%2Fbanner.png&description=Interactive%20and%20colorful%20graph%20theory%20tutorials.%20Visual%2C%20concise%20and%20fun.&hashtags=graph-theory,tutorials,d3.js,maths,computer-science" target="_blank" title="Save"><img alt="Save" src="img/icons/social-color-large/pinterest.png" /></a></li>
+							<!--li><a href="http://www.reddit.com/submit?url=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&title=D3%20Graph%20Theory" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="img/icons/social-color-large/reddit.png" /></a></li-->
+							<li><a href="http://www.tumblr.com/share?v=3&u=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&quote=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials&tags=graph-theory,tutorials,maths,d3.js,computer-science" target="_blank" title="Post to Tumblr"><img alt="Post to Tumblr" src="img/icons/social-color-large/tumblr.png" /></a></li>
 						</ul>
 					</div>
 				</div>
@@ -328,12 +347,13 @@
 	                </div>
 	                <div class="col-md-4 social-icons">
 	                	<ul class="share-buttons">
-							<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&quote=D3%20Graph%20Theory" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="img/icons/social-inverted/facebook.png" /></a></li>
-							<li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&text=D3%20Graph%20Theory:%20https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&via=mrpandey360" target="_blank" title="Tweet"><img alt="Tweet" src="img/icons/social-inverted/twitter.png" /></a></li>
-							<li><a href="https://plus.google.com/share?url=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F" target="_blank" title="Share on Google+"><img alt="Share on Google+" src="img/icons/social-inverted/googleplus.png" /></a></li>
-							<li><a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&description=d3graphTheory%20is%20an%20interactive%20tool%20to%20learn%20graph%20theory%20in%20a%20fun%20way." target="_blank" title="Pin it"><img alt="Pin it" src="img/icons/social-inverted/pinterest.png" /></a></li>
-							<li><a href="http://www.reddit.com/submit?url=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&title=D3%20Graph%20Theory" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="img/icons/social-inverted/reddit.png" /></a></li>
-						</ul>
+											<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&quote=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="img/icons/social-inverted/facebook.png" /></a></li>
+											<li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&text=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials:%20https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&hashtags=d3.js,graph-theory,maths&via=mrpandey360" target="_blank" title="Tweet"><img alt="Tweet" src="img/icons/social-inverted/twitter.png" /></a></li>
+											<li><a href="https://plus.google.com/share?url=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F" target="_blank" title="Share on Google+"><img alt="Share on Google+" src="img/icons/social-inverted/googleplus.png" /></a></li>
+											<li><a href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&media=https%3A%2F%2Fraw.githubusercontent.com%2Fmrpandey%2Fd3graphTheory%2Fmaster%2Fimg%2Fbanner.png&description=Interactive%20and%20colorful%20graph%20theory%20tutorials.%20Visual%2C%20concise%20and%20fun.&hashtags=graph-theory,tutorials,d3.js,maths,computer-science" target="_blank" title="Save"><img alt="Save" src="img/icons/social-inverted/pinterest.png" /></a></li>
+											<!--li><a href="http://www.reddit.com/submit?url=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&title=D3%20Graph%20Theory" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="img/icons/social-inverted/reddit.png" /></a></li-->
+											<li><a href="http://www.tumblr.com/share?v=3&u=https%3A%2F%2Fmrpandey.github.io%2Fd3graphTheory%2F&quote=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials&tags=graph-theory,tutorials,maths,d3.js,computer-science" target="_blank" title="Post to Tumblr"><img alt="Post to Tumblr" src="img/icons/social-inverted/tumblr.png" /></a></li>
+										</ul>
 	                </div>
 	            </div>
             </div>
@@ -357,6 +377,7 @@
 
 	<script  src="js/content.js"></script>
 	<script  src="js/home-app.js"></script>
+
 
 </body>
 

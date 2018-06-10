@@ -170,6 +170,23 @@ body::-webkit-scrollbar-thumb {
 	line-height: 1.2;
 }
 
+#share-wrap-top a {
+	margin-left: 5px;
+	color:#fff;
+	font-size:11px;
+	text-decoration:none;
+	padding:3px 8px;
+	border-radius: 4px;
+}
+
+#share-wrap-top a i {
+	font-size: 1.2em;
+}
+
+#share-wrap-top a:hover {
+	background-color: #888 !important;
+}
+
 .quote-wrap {
 	border-left: 10px solid #CCC;
 	padding: 10px;
