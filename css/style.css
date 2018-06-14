@@ -238,6 +238,10 @@ body::-webkit-scrollbar-thumb,
 	border: 1px solid #eee;
 }
 
+#svg-wrap svg text {
+	user-select: none;
+}
+
 #svg-output {
 	margin-top: 15px;
 }
