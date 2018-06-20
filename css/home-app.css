@@ -158,6 +158,10 @@ body::-webkit-scrollbar-thumb {
 	text-align: center;
 }
 
+#intro span {
+	display: inline-block;
+}
+
 #intro-title {
 	font-size: 50px;
 	font-weight: 500;
@@ -168,6 +172,21 @@ body::-webkit-scrollbar-thumb {
 	font-size: 20px;
 	font-weight: 300;
 	line-height: 1.2;
+}
+
+#intro-button a {
+	padding:10px 50px;
+	background:transparent;
+	color:#fff;
+	font-size:18px;
+	font-weight: 500;
+	pointer-events: auto;
+	border: 2px solid #fff;
+}
+
+#intro-button a:hover {
+	background: rgba(0, 0, 0, 0.2);
+	text-decoration: none;
 }
 
 #share-wrap-top a {
@@ -318,7 +337,7 @@ div.jump-on {
 }
 
 .jump-on a {
-	padding: 20px 40px;
+	padding: 20px 80px;
 	border-radius: 4px;
 	border: 2px solid #1f77b4;
 	word-spacing: 3px;
