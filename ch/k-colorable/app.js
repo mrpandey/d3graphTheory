@@ -249,10 +249,6 @@ function setGraph(index){
   lastNodeId = graphToLoad.order;
   if(!graphToLoad.coords) positionNodes();
   force.start();
-  links.forEach(function(d){
-    d.source.degree++;
-    d.target.degree++;
-  });
   restart();
   showGraphLatex();
   //hide and show prev, next buttons
