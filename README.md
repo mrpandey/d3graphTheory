@@ -29,27 +29,15 @@ Follow these steps:
 
 The whole content is broken in several units. So far these units have been added.
 
-1. [Vertices and Edges](https://mrpandey.github.io/d3graphTheory/unit.html?vertices-and-edges)
-2. [Order and Size of a Graph](https://mrpandey.github.io/d3graphTheory/unit.html?order-and-size)
-3. [Degree of a Vertex](https://mrpandey.github.io/d3graphTheory/unit.html?degree-of-vertex)
-4. [Degree Sequence of a Graph](https://mrpandey.github.io/d3graphTheory/unit.html?degree-sequence)
-5. [Graphic Sequence](https://mrpandey.github.io/d3graphTheory/unit.html?graphic-sequence)
-6. [Havel-Hakimi Algorithm](https://mrpandey.github.io/d3graphTheory/unit.html?havel-hakimi)
-7. [Pigeonhole Principle](https://mrpandey.github.io/d3graphTheory/unit.html?pigeonhole)
-8. [Regular Graph](https://mrpandey.github.io/d3graphTheory/unit.html?regular-graph)
-9. [Complete Graph](https://mrpandey.github.io/d3graphTheory/unit.html?complete-graph)
-10. [Bipartite Graph](https://mrpandey.github.io/d3graphTheory/unit.html?bipartite)
-11. [Complete Bipartite Graph](https://mrpandey.github.io/d3graphTheory/unit.html?complete-bipartite)
-12. [Walk](https://mrpandey.github.io/d3graphTheory/unit.html?walk)
-13. [Open vs Closed Walks](https://mrpandey.github.io/d3graphTheory/unit.html?open-vs-closed)
-14. [Connectivity](https://mrpandey.github.io/d3graphTheory/unit.html?connectivity)
-15. [Eulerian Circuit](https://mrpandey.github.io/d3graphTheory/unit.html?eulerian-circuit)
-16. [Eulerian Trail](https://mrpandey.github.io/d3graphTheory/unit.html?eulerian-trail)
-17. [Graph Coloring](https://mrpandey.github.io/d3graphTheory/unit.html?graph-coloring)
-18. [k-Colorable Graph](https://mrpandey.github.io/d3graphTheory/unit.html?k-colorable)
-19. [Chromatic Number](https://mrpandey.github.io/d3graphTheory/unit.html?chromatic-number)
-20. [Trees](https://mrpandey.github.io/d3graphTheory/unit.html?trees)
-21. [Rooted Trees](https://mrpandey.github.io/d3graphTheory/unit.html?rooted-trees)
+| Table | Of | Contents |
+| --- | --- | --- |
+|1. [Vertices and Edges](https://mrpandey.github.io/d3graphTheory/unit.html?vertices-and-edges)|2. [Order and Size of a Graph](https://mrpandey.github.io/d3graphTheory/unit.html?order-and-size)|3. [Degree of a Vertex](https://mrpandey.github.io/d3graphTheory/unit.html?degree-of-vertex)|
+|4. [Degree Sequence of a Graph](https://mrpandey.github.io/d3graphTheory/unit.html?degree-sequence)|5. [Graphic Sequence](https://mrpandey.github.io/d3graphTheory/unit.html?graphic-sequence)|6. [Havel-Hakimi Algorithm](https://mrpandey.github.io/d3graphTheory/unit.html?havel-hakimi)|
+|7. [Pigeonhole Principle](https://mrpandey.github.io/d3graphTheory/unit.html?pigeonhole)|8. [Regular Graph](https://mrpandey.github.io/d3graphTheory/unit.html?regular-graph)|9. [Complete Graph](https://mrpandey.github.io/d3graphTheory/unit.html?complete-graph)|
+|10. [Bipartite Graph](https://mrpandey.github.io/d3graphTheory/unit.html?bipartite)|11. [Complete Bipartite Graph](https://mrpandey.github.io/d3graphTheory/unit.html?complete-bipartite)|12. [Walk](https://mrpandey.github.io/d3graphTheory/unit.html?walk)|
+|13. [Open vs Closed Walks](https://mrpandey.github.io/d3graphTheory/unit.html?open-vs-closed)|14. [Connectivity](https://mrpandey.github.io/d3graphTheory/unit.html?connectivity)|15. [Eulerian Circuit](https://mrpandey.github.io/d3graphTheory/unit.html?eulerian-circuit)|
+|16. [Eulerian Trail](https://mrpandey.github.io/d3graphTheory/unit.html?eulerian-trail)|17. [Graph Coloring](https://mrpandey.github.io/d3graphTheory/unit.html?graph-coloring)|18. [k-Colorable Graph](https://mrpandey.github.io/d3graphTheory/unit.html?k-colorable)|
+|19. [Chromatic Number](https://mrpandey.github.io/d3graphTheory/unit.html?chromatic-number)|20. [Trees](https://mrpandey.github.io/d3graphTheory/unit.html?trees)|21. [Rooted Trees](https://mrpandey.github.io/d3graphTheory/unit.html?rooted-trees)|
 
 The project is still expanding. New topics are added from time to time.
 
