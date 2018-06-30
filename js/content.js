@@ -269,7 +269,7 @@ var contentData =
 		"prev":		"?walk",
 		"next":		"?connectivity",
 		"script":	"app.js",
-		"star":		"y",
+		"star":		"n",
 		"style":	"app.css"
 	},
 
@@ -311,7 +311,7 @@ var contentData =
 		"prev":		"?connectivity",
 		"next":		"?eulerian-trail",
 		"script":	"app.js",
-		"star":		"n",
+		"star":		"y",
 		"style":	"app.css"
 	},
 
@@ -332,7 +332,7 @@ var contentData =
 		"prev":		"?eulerian-circuit",
 		"next":		"?graph-coloring",
 		"script":	"app.js",
-		"star":		"n",
+		"star":		"y",
 		"style":	"app.css"
 	},
 
@@ -395,7 +395,7 @@ var contentData =
 		"prev":		"?k-colorable",
 		"next":		"?trees",
 		"script":	"app.js",
-		"star":		"n",
+		"star":		"y",
 		"style":	"app.css"
 	},
 
