@@ -435,9 +435,30 @@ var contentData =
 		"svg-output": "",
 
 		"prev":		"?trees",
-		"next":		"",
+		"next":		"?spanning-tree",
 		"script":	"app.js",
 		"star":		"n",
+		"style":	"app.css"
+	},
+
+	"spanning-tree": {
+
+		"content-title": "Spanning Tree of a Graph",
+
+		"theory-content":		"<p><b>Spanning tree<\/b> of a graph is a subgraph of it which forms a tree and contains (or spans) all the vertices of the graph.<\/p><p>So if the given graph \\(G\\) has \\(n\\) vertices, we're looking for a subgraph of \\(G\\) which<\/p><ul> <li>has \\(n\\) vertices<\/li><li>has \\(n-1\\) edges<\/li><li>is connected<\/li><\/ul> <div class=\"note\"> <span class=\"note-word\">Note:<\/span> The graph itself must be connected in order to obtain its spanning tree. <\/div><p>So if the graph is connected, we just need to delete some of its edges so that there is no cycle and it remains connected.<\/p><p>In these excercises, your aim is to reduce the number of edges to \\(n-1\\) while keeping the graph connected.<\/p><p>On solving the problems, you will realize that spanning tree of a graph isn't unique.<\/p>",
+
+		"interface-title":		"App interface:",
+
+		"interface-content":		"<ul><li>To delete an edge <b>right click<\/b> on it.<\/li><\/ul>",
+
+		"svg-buttons":		"<button type=\"button\" id=\"prev-prob\" class=\"btn btn-default\">Prev<\/button><button type=\"button\" id=\"next-prob\" class=\"btn btn-default\">Next<\/button>",
+
+		"svg-output": "<div id=\"output-text\"><\/div><div class=\"text-center\"><ul class=\"pagination\" id=\"prob-list\"><li><a>1<\/a><\/li><li><a>2<\/a><\/li><li><a>3<\/a><\/li><li><a>4<\/a><\/li><\/ul><\/div>",
+
+		"prev":		"?rooted-trees",
+		"next":		"",
+		"script":	"app.js",
+		"star":		"y",
 		"style":	"app.css"
 	}
 
