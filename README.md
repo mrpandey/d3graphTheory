@@ -38,6 +38,7 @@ The whole content is broken in several units. So far these units have been added
 |13. [Open vs Closed Walks](https://mrpandey.github.io/d3graphTheory/unit.html?open-vs-closed)|14. [Connectivity](https://mrpandey.github.io/d3graphTheory/unit.html?connectivity)|15. [Eulerian Circuit](https://mrpandey.github.io/d3graphTheory/unit.html?eulerian-circuit)|
 |16. [Eulerian Trail](https://mrpandey.github.io/d3graphTheory/unit.html?eulerian-trail)|17. [Graph Coloring](https://mrpandey.github.io/d3graphTheory/unit.html?graph-coloring)|18. [k-Colorable Graph](https://mrpandey.github.io/d3graphTheory/unit.html?k-colorable)|
 |19. [Chromatic Number](https://mrpandey.github.io/d3graphTheory/unit.html?chromatic-number)|20. [Trees](https://mrpandey.github.io/d3graphTheory/unit.html?trees)|21. [Rooted Trees](https://mrpandey.github.io/d3graphTheory/unit.html?rooted-trees)|
+|22. [Spanning Tree of a Graph](https://mrpandey.github.io/d3graphTheory/unit.html?spanning-tree)|
 
 The project is still expanding. New topics are added from time to time.
 
@@ -48,7 +49,7 @@ These topics are planned to be added.
 - [x] Chromatic Number
 - [x] Trees
 - [x] Rooted Trees
-- [ ] Spanning Tree
+- [x] Spanning Tree
 - [ ] Prim's Algorithm
 - [ ] Kruskal's Algorithm
 
