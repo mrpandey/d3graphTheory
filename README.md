@@ -46,6 +46,7 @@ The project is still expanding. New topics are added from time to time.
 
 These topics are planned to be added.
 
+- [ ] Planar Graphs
 - [x] Chromatic Number
 - [x] Trees
 - [x] Rooted Trees
