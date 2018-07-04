@@ -154,23 +154,6 @@ $(document).ready(function(){
     }
   }
 
-  //change navbar style on scrolling
-
-  var homeNav = $("#home-navbar");
-  if (window.scrollY > 160) {
-    homeNav.removeClass("transparent");
-  }
-
-  window.addEventListener("scroll", function() {
-      if (window.scrollY > 160) {
-        homeNav.removeClass("transparent");
-      }
-      else {
-        homeNav.addClass("transparent");
-      }
-  }, false);
-
-
   //expand #content-list
   var moreList = $("#more-list .btn");
 
@@ -185,7 +168,28 @@ $(document).ready(function(){
     }
   });
 
-  //smooth hash scroll of anchors
+  //set random href to a#random-loader
+  var unitLinks = $("a.list-wrap");
+  var numOfUnits = unitLinks.length;
+  var randIdx = Math.floor(Math.random()*numOfUnits);
+  $("a#random-loader").attr("href", unitLinks[randIdx].getAttribute("href"));
+
+  //change navbar style on scrolling
+  var homeNav = $("#home-navbar");
+  if (window.scrollY > 160) {
+    homeNav.removeClass("transparent");
+  }
+
+  window.addEventListener("scroll", function() {
+      if (window.scrollY > 160) {
+        homeNav.removeClass("transparent");
+      }
+      else {
+        homeNav.addClass("transparent");
+      }
+  }, false);
+
+  //smooth scroll for hash anchors in navbar
   var $root = $('html, body');
   $('a').click(function() {
       $root.animate({
@@ -194,14 +198,14 @@ $(document).ready(function(){
       return false;
   });
 
-  //hide donation-target by default
+  /*//hide donation-target by default
   $(".donation-target").each(function(){
     $(this).hide();
   });
-  
+
   //reveal on clicking respective buttons
   $("#upi-donation-button").click(function(){
     $("#upi-target").slideToggle();
-  });
+  });*/
 
 });
