@@ -71,5 +71,4 @@ This project is built with the help of following libraries and projects.
 
 ## License
 
-Copyright (c) 2017-18 Avinash Pandey.
-All the contents of this repository is bound by [GNU GPLv3 License](https://github.com/mrpandey/d3graphTheory/blob/master/LICENSE).
+Copyright (c) 2017-18 [Avinash Pandey](http://mrpandey.com). Licensed under [MIT License](https://github.com/mrpandey/d3graphTheory/blob/master/LICENSE).
