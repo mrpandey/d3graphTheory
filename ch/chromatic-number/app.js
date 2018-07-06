@@ -1,7 +1,4 @@
-//here the only use of
-//lastNodeId is for positionNodes()
-var currentProb = 0,
-    lastNodeId = 10;
+var currentProb = 0;
 
 //universal width and height let index.htm control svg dimensions when needed
 var w = univSvgWidth ? univSvgWidth : 616,
@@ -137,13 +134,6 @@ function resetMouseVar(){
 	mouseupNode = null;
 }
 
-//set initial positions for quick convergence
-/*function positionNodes(){
-  nodes.forEach(function(d, i) {
-    d.x = d.y = w / lastNodeId * i;
-  });
-}*/
-
 //update the simulation
 function tick() {
 
@@ -233,13 +223,7 @@ function setGraph(index){
   graphToLoad.links.forEach(function(d){
     links.push({source:d[0], target:d[1]});
   });
-  lastNodeId = graphToLoad.order;
-  //positionNodes();
   force.start();
-  links.forEach(function(d){
-    d.source.degree++;
-    d.target.degree++;
-  });
 
   //hide and show prev, next buttons
   if(index==0){
