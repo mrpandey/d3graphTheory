@@ -7,8 +7,7 @@
 [![Click to see the action](https://forthebadge.com/images/badges/check-it-out.svg)](https://mrpandey.github.io/d3graphTheory/)
 ![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)
 
-
-[![GPLv3 License](https://img.shields.io/aur/license/yaourt.svg?style=flat-square)](https://github.com/mrpandey/d3graphTheory/blob/master/LICENSE)
+[![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/mrpandey/d3graphTheory/blob/master/LICENSE)
 [![D3.js](https://img.shields.io/badge/powered%20by-D3.js-red.svg?style=flat-square)](https://d3js.org/)
 [![Submit Feedback](https://img.shields.io/badge/feedback-welcome-brightgreen.svg?style=flat-square)](https://github.com/mrpandey/d3graphTheory/issues/new)
 [![Donate](https://img.shields.io/badge/%24-donate-orange.svg?style=flat-square)](https://www.buymeacoffee.com/mrpandey)
