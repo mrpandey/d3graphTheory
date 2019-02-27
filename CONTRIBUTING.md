@@ -10,7 +10,7 @@
 
 ## How To Contribute
 
-Below are listed some ways in which you can contribute to this project.
+First of all, go through ['WORKING.md'](https://github.com/mrpandey/d3graphTheory/blob/master/WORKING.md) to know how D3 Graph Theory works (it's pretty simple actually). Now, here are some ways in which you can contribute to this project.
 
 **Note:** Whenever creating a new issue, please make sure that the issue doesn't already exists in the issues list. If the issue is already present, you can add a comment there instead of opening a new one.
 
