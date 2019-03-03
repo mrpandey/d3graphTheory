@@ -10,7 +10,7 @@
 [![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/mrpandey/d3graphTheory/blob/master/LICENSE)
 [![D3.js](https://img.shields.io/badge/powered%20by-D3.js-red.svg?style=flat-square)](https://d3js.org/)
 [![Submit Feedback](https://img.shields.io/badge/feedback-welcome-brightgreen.svg?style=flat-square)](https://github.com/mrpandey/d3graphTheory/issues/new)
-[![Donate](https://img.shields.io/badge/%24-donate-orange.svg?style=flat-square)](https://www.buymeacoffee.com/mrpandey)
+[![Donate](https://img.shields.io/badge/%24-donate-orange.svg?style=flat-square)](https://www.buymeacoffee.com/mrpandey) [![Join the chat at https://gitter.im/d3graphTheory/community](https://badges.gitter.im/d3graphTheory/community.svg)](https://gitter.im/d3graphTheory/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
 > In mathematics, graph theory is the study of graphs, which are mathematical structures used to model pairwise relations between objects. A graph in this context is made up of vertices, nodes, or points which are connected by edges, arcs, or lines.
