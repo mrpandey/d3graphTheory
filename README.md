@@ -5,24 +5,14 @@
 # D3 Graph Theory
 
 [![Click to see the action](https://forthebadge.com/images/badges/check-it-out.svg)](https://mrpandey.github.io/d3graphTheory/)
-![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)
 
-[![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/mrpandey/d3graphTheory/blob/master/LICENSE)
-[![D3.js](https://img.shields.io/badge/powered%20by-D3.js-red.svg?style=flat-square)](https://d3js.org/)
-[![Submit Feedback](https://img.shields.io/badge/feedback-welcome-brightgreen.svg?style=flat-square)](https://github.com/mrpandey/d3graphTheory/issues/new)
-[![Donate](https://img.shields.io/badge/%24-donate-orange.svg?style=flat-square)](https://www.buymeacoffee.com/mrpandey) [![Join the chat at https://gitter.im/d3graphTheory/community](https://badges.gitter.im/d3graphTheory/community.svg)](https://gitter.im/d3graphTheory/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
+[![Donate](https://img.shields.io/badge/%24-donate-orange.svg?style=flat-square)](https://www.buymeacoffee.com/mrpandey)
+[![Join the chat at https://gitter.im/d3graphTheory/community](https://img.shields.io/badge/chat-on%20gitter-f3015d.svg?style=flat-square)](https://gitter.im/d3graphTheory/community)
 
 > In mathematics, graph theory is the study of graphs, which are mathematical structures used to model pairwise relations between objects. A graph in this context is made up of vertices, nodes, or points which are connected by edges, arcs, or lines.
 > -- <cite>Wikipedia</cite>
 
 D3 Graph Theory is a front-end project aimed at anyone who wants to learn graph theory. It provides a quick and interactive introduction to the subject. The visuals used in the project makes it an effective learning tool.
-
-## How to Use
-
-Follow these steps:
-1. Smile :smile:
-2. Just <b><a href="https://mrpandey.github.io/d3graphTheory/" target="_blank">click here</a></b> to see it running in your browser.
 
 ## Topics Covered So Far
 
