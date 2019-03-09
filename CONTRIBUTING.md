@@ -1,6 +1,6 @@
 # Contributing Guidelines
 
-[![Submit a new issue](https://img.shields.io/badge/add-new%20issue-green.svg?style=flat-square)](https://github.com/mrpandey/d3graphTheory/issues/new)
+[![Submit a new issue](https://img.shields.io/badge/add-new%20issue-269f42.svg?style=flat-square)](https://github.com/mrpandey/d3graphTheory/issues/new)
 [![Join the chat at https://gitter.im/d3graphTheory/community](https://img.shields.io/badge/chat-on%20gitter-f3015d.svg?style=flat-square)](https://gitter.im/d3graphTheory/community)
 
 #### Table of Contents
@@ -29,7 +29,11 @@ You can suggest a new feature or improvements for an existing one. You can do th
 
 You can fork/clone this repository, commit some changes and then submit them as a pull request. These changes could be to resolve an issue or could be some of your own changes.
 
-Before you make plan to make some of your own changes, it is recommended that you open an issue first or have a discussion on [gitter](https://gitter.im/d3graphTheory/community).
+Before you make plan to make some major changes, it is recommended that you open an issue first or have a discussion on [gitter](https://gitter.im/d3graphTheory/community).
+
+### 4. Documentation
+
+If you spot errors in markdown files or think that they can be better, you can directly submit a pull request.
 
 ## Contributor Agreement
 

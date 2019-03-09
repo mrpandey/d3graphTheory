@@ -24,8 +24,8 @@ The content of D3 Graph Theory is broken into several *units* (or chapters). The
 
 ### 4. js/content.js
 
-This file contains text-content and data about all the units in `json` format.
+This file contains text-content and data of all the units in `json` format. The text-contents of each unit are minified and JSON-escaped.
 
 ### 5. js/control.js
 
-This script is responsible for loading content into `unit.html`. URL to each unit is of form `unit.html?unit-name`. The script extracts `unit-name` from query string and accordingly loads the text from `content.js` and visualizations from `ch/unit-name`.
+This script is responsible for loading content into `unit.html`. URL of each unit is of the form `unit.html?unit-name`. The script extracts `unit-name` from query string and accordingly loads the text from `content.js` and visualizations from `ch/unit-name/`.
