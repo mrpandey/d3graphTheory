@@ -1,4 +1,5 @@
-$(document).ready(function(){
+$(document).ready(function() {
+  "use strict";
 
   /*
     GRAPH STUFF BEGINS
@@ -64,7 +65,7 @@ $(document).ready(function(){
          .attr("y2", function(d) { return d.target.y; });
 
     //delete edges after fixed number of ticks
-    links.forEach(function(l, i){
+    links.forEach(function(l, i) {
       if(l.tickCounter < 100) {
         l.tickCounter++;
       }
@@ -82,7 +83,7 @@ $(document).ready(function(){
         root.py = p1[1];
         force.resume();
       })
-      .on("contextmenu", function(){d3.event.preventDefault();});
+      .on("contextmenu", function() {d3.event.preventDefault();});
 
   //collision detection
   function collide(node) {
@@ -113,14 +114,14 @@ $(document).ready(function(){
     };
   }
 
-  function updateEdges(){
+  function updateEdges() {
     edges = edges.data(links);
     edges.enter().append("line");
     edges.exit().remove();
     force.start();
   }
 
-  $(window).on('resize', function(){
+  $(window).on('resize', function() {
     width = Math.max($(window).width(), 640);
     height = Math.min($(window).height(), width);
     svg.attr("width", width)
@@ -139,10 +140,10 @@ $(document).ready(function(){
   //generate content-list from content.js
   var contentList = $("#content-list");
 
-  if(contentData){
+  if(contentData) {
     var i = 1;
-    for(var unit in contentData){
-      if(contentData.hasOwnProperty(unit)){
+    for(var unit in contentData) {
+      if(contentData.hasOwnProperty(unit)) {
         var starItem = '';
         if(contentData[unit]['star']=="y") starItem = ' star-item';
         var newEntry = '<div class="list-container col-xs-6 col-md-4"><a href="unit.html?' + unit;
@@ -157,7 +158,7 @@ $(document).ready(function(){
   //expand #content-list
   var moreList = $("#more-list .btn");
 
-  moreList.click(function(){
+  moreList.click(function() {
     if($(this).text() == "Show All") {
       contentList.css( "max-height", 10000);
       $(this).text("Show Less");
@@ -199,12 +200,12 @@ $(document).ready(function(){
   });
 
   /*//hide donation-target by default
-  $(".donation-target").each(function(){
+  $(".donation-target").each(function() {
     $(this).hide();
   });
 
   //reveal on clicking respective buttons
-  $("#upi-donation-button").click(function(){
+  $("#upi-donation-button").click(function() {
     $("#upi-target").slideToggle();
   });*/
 
