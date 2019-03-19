@@ -1,0 +1,10 @@
+{
+  "esversion": 6,
+  "browser": true,
+  "globals": {
+    "univSvgWidth": true,
+    "univSvgHeight": true,
+    "d3": true,
+    "MathJax": true
+  }
+}
