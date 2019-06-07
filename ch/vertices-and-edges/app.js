@@ -45,16 +45,10 @@ var force = d3
 
 var colors = d3.schemeCategory10;
 
-var mousedownNode = null,
-  mouseupNode = null;
+var mousedownNode = null;
 
 var clrBtn = d3.select("#clear-graph");
 clrBtn.on("click", clearGraph);
-
-function resetMouseVar() {
-  mousedownNode = null;
-  mouseupNode = null;
-}
 
 //empties the graph
 function clearGraph() {
@@ -93,7 +87,7 @@ function tick() {
 function addNode() {
   var e = d3.event;
   if (e.button == 0) {
-    var coords = d3.mouse(e.target);
+    var coords = d3.mouse(e.currentTarget);
     var newNode = { x: coords[0], y: coords[1], id: ++lastNodeId };
     nodes.push(newNode);
     restart();
@@ -146,7 +140,7 @@ function beginDragLine(d) {
 }
 
 function updateDragLine() {
-  var coords = d3.mouse(d3.event.target);
+  var coords = d3.mouse(d3.event.currentTarget);
   if (!mousedownNode) return;
   dragLine.attr(
     "d",
@@ -163,7 +157,7 @@ function updateDragLine() {
 
 function hideDragLine() {
   dragLine.classed("hidden", true);
-  resetMouseVar();
+  mousedownNode = null;
   restart();
 }
 
