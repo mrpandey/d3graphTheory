@@ -51,6 +51,9 @@ var force = d3
   .force("y", d3.forceY(h / 2))
   .on("tick", tick);
 
+force.nodes(nodes);
+force.force("link").links(links);
+
 var colors = d3.schemeCategory10;
 
 var mousedownNode = null;
@@ -238,21 +241,20 @@ function restart() {
   });
   edges.exit().remove();
 
-  edges = edges
+  var ed = edges
     .enter()
     .append("line")
     .attr("class", "edge")
     .on("mousedown", function() {
       d3.event.stopPropagation();
     })
-    .on("contextmenu", removeEdge)
-    .on("mouseover", function(d) {
-      var thisEdge = d3.select(this);
-      if (thisEdge.select("title").empty()) {
-        thisEdge.append("title").text("v" + d.source.id + "-v" + d.target.id);
-      }
-    })
-    .merge(edges);
+    .on("contextmenu", removeEdge);
+
+  ed.append("title").text(function(d) {
+    return "v" + d.source.id + "-v" + d.target.id;
+  });
+
+  edges = ed.merge(edges);
 
   //vertices are known by id
   vertices = vertices.data(nodes, function(d) {
