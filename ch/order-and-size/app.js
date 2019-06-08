@@ -45,6 +45,9 @@ var force = d3
   .force("y", d3.forceY(h / 2))
   .on("tick", tick);
 
+force.nodes(nodes);
+force.force("link").links(links);
+
 var colors = d3.schemeCategory10;
 
 var mousedownNode = null;
@@ -227,21 +230,20 @@ function restart() {
     return "v" + d.source.id + "-v" + d.target.id;
   });
   edges.exit().remove();
-  edges = edges
+  var ed = edges
     .enter()
     .append("line")
     .attr("class", "edge")
     .on("mousedown", function() {
       d3.event.stopPropagation();
     })
-    .on("contextmenu", removeEdge)
-    .on("mouseover", function(d) {
-      var thisEdge = d3.select(this);
-      if (thisEdge.select("title").empty()) {
-        thisEdge.append("title").text("v" + d.source.id + "-v" + d.target.id);
-      }
-    })
-    .merge(edges);
+    .on("contextmenu", removeEdge);
+
+  ed.append("title").text(function(d) {
+    return "v" + d.source.id + "-v" + d.target.id;
+  });
+
+  edges = ed.merge(edges);
 
   //vertices are known by id
   vertices = vertices.data(nodes, function(d) {
@@ -249,7 +251,7 @@ function restart() {
   });
   vertices.exit().remove();
 
-  vertices = vertices
+  var ve = vertices
     .enter()
     .append("circle")
     .attr("r", rad)
@@ -259,14 +261,13 @@ function restart() {
     })
     .on("mousedown", beginDragLine)
     .on("mouseup", endDragLine)
-    .on("contextmenu", removeNode)
-    .on("mouseover", function(d) {
-      var thisVertex = d3.select(this);
-      if (thisVertex.select("title").empty()) {
-        thisVertex.append("title").text("v" + d.id);
-      }
-    })
-    .merge(vertices);
+    .on("contextmenu", removeNode);
+
+  ve.append("title").text(function(d) {
+    return "v" + d.id;
+  });
+
+  vertices = ve.merge(vertices);
 
   force.nodes(nodes);
   force.force("link").links(links);
