@@ -1,18 +1,19 @@
 svg {
   cursor: crosshair;
   display: block;
-  margin:auto;
+  margin: auto;
 }
 
 .edge {
   stroke: #888;
-  stroke-width:2px;
+  stroke-width: 2px;
   stroke-linecap: round;
   stroke-linejoin: round;
   cursor: default;
 }
 
-.edge:hover, .dragLine {
+.edge:hover,
+.dragLine {
   stroke: #333;
   stroke-width: 3px;
 }
@@ -27,7 +28,7 @@ svg {
 }
 
 .dragLine.hidden {
-	stroke-width:0;
+  stroke-width: 0;
 }
 
 .vertex text {
