@@ -69,7 +69,6 @@ var force = d3
 force.nodes(nodes);
 force.force("link").links(links);
 
-// var colors = d3.scale.category10();
 var colors = d3.schemeCategory10;
 
 var mousedownNode = null;
