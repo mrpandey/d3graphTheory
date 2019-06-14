@@ -1,3 +1,4 @@
+"use strict";
 //node ids are in order in which nodes come in existence
 var nodes = [
   { id: 1, degree: 3 },
