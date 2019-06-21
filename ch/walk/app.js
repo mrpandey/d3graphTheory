@@ -423,8 +423,10 @@ function reverseWalk() {
   var currentStart = d3.select(".walk-start");
   var currentEnd = d3.select(".walk-end");
   if (currentStart.attr("id") != currentEnd.attr("id")) {
-    currentStart.classed({ "walk-start": false, "walk-end": true });
-    currentEnd.classed({ "walk-end": false, "walk-start": true });
+    currentStart.classed("walk-start", false);
+    currentStart.classed("walk-end", true);
+    currentEnd.classed("walk-start", true);
+    currentEnd.classed("walk-end", false);
   }
   showGraphLatex();
 }

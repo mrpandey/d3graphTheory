@@ -7,7 +7,7 @@ svg {
 .edge {
   stroke: #aaa;
   stroke-width: 3px;
-  cursor: default;
+  cursor: pointer;
 }
 
 .edge:hover,
