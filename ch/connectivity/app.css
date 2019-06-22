@@ -48,8 +48,10 @@ svg {
 
 .walk-start {
   stroke: #ff0;
+  stroke-width: 5px;
 }
 
 .walk-end {
   stroke: #8f3;
+  stroke-width: 5px;
 }
