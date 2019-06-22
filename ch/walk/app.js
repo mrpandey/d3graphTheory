@@ -320,7 +320,7 @@ function restart() {
 
   force.nodes(nodes);
   force.force("link").links(links);
-  force.alpha(0.8).restart();
+  force.alpha(0.2).restart();
 }
 
 //further interface

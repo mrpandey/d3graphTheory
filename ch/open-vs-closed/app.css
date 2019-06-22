@@ -1,16 +1,17 @@
 svg {
   cursor: crosshair;
   display: block;
-  margin:auto;
+  margin: auto;
 }
 
 .edge {
   stroke: #aaa;
-  stroke-width:3px;
-  cursor: default;
+  stroke-width: 3px;
+  cursor: pointer;
 }
 
-.edge:hover, .dragLine {
+.edge:hover,
+.dragLine {
   stroke: #333;
   stroke-width: 3px;
 }
@@ -25,7 +26,7 @@ svg {
 }
 
 .dragLine.hidden {
-	stroke-width:0;
+  stroke-width: 0;
 }
 
 .vertex text {
@@ -42,13 +43,15 @@ svg {
 
 .walk-vertex {
   stroke: #333;
-  stroke-width:3px;
+  stroke-width: 3px;
 }
 
 .walk-start {
   stroke: #ff0;
+  stroke-width: 5px;
 }
 
 .walk-end {
   stroke: #8f3;
+  stroke-width: 5px;
 }
