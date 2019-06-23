@@ -185,7 +185,7 @@ function removeEdge(d, i) {
 
 function beginDragLine(d) {
   var e = d3.event;
-  //stop propagation at .vertex in restart() so that addNode isn't fired
+  //stop propagation at .vertex so that addNode isn't fired
   e.stopPropagation();
   //to prevent dragging of svg in firefox
   e.preventDefault();
