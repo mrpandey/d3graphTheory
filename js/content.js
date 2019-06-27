@@ -451,7 +451,7 @@ var contentData =
 
     "interface-content": "<ul><li>To delete an edge <b>right click<\/b> on it.<\/li><\/ul>",
 
-    "svg-buttons": "<button type=\"button\" id=\"prev-prob\" class=\"btn btn-default\">Prev<\/button><button type=\"button\" id=\"next-prob\" class=\"btn btn-default\">Next<\/button>",
+    "svg-buttons": "<button type=\"button\" id=\"prev-prob\" class=\"btn btn-default\">Prev<\/button> <button type=\"button\" id=\"next-prob\" class=\"btn btn-default\">Next<\/button>",
 
     "svg-output": "<div id=\"output-text\"><\/div><div class=\"text-center\"><ul class=\"pagination\" id=\"prob-list\"><li><a>1<\/a><\/li><li><a>2<\/a><\/li><li><a>3<\/a><\/li><li><a>4<\/a><\/li><\/ul><\/div>",
 
