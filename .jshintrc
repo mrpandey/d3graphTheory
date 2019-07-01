@@ -3,8 +3,9 @@
   "browser": true,
   "strict": "global",
   "globals": {
-    "univSvgWidth": false,
-    "univSvgHeight": false,
+    "univSvgWidth": true,
+    "univSvgHeight": true,
+    "contentData": false,
     "d3": false,
     "MathJax": false,
     "jQuery": false,

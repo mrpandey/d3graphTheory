@@ -1,4 +1,5 @@
-var contentData =
+"use strict";
+var contentData = // jshint ignore:line
 {
   "vertices-and-edges": {
 

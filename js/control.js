@@ -1,6 +1,6 @@
-$(document).ready(function() {
-  "use strict";
+"use strict";
 
+$(document).ready(function() {
   //to set dimensions of svg
   univSvgWidth =
     ($("nav.navbar-static-top > div.container").outerWidth() * 2) / 3 - 48;
@@ -94,8 +94,6 @@ $(document).ready(function() {
 });
 
 function resizeContent() {
-  "use strict";
-
   //need to resize map-overlay too
   if (!$("#lightbox").hasClass("hidden")) {
     var listHeight =
@@ -118,8 +116,6 @@ function resizeContent() {
 }
 
 function loadContent(query) {
-  "use strict";
-
   var currentChap = contentData[query];
 
   document.title = currentChap["content-title"] + " - D3 Graph Theory";
@@ -137,21 +133,15 @@ function loadContent(query) {
   $("#svg-output").html(currentChap["svg-output"]);
 
   //set prev
-  if (currentChap["prev"])
-    $("#below-app .prev").attr("href", currentChap["prev"]);
+  if (currentChap.prev) $("#below-app .prev").attr("href", currentChap.prev);
   else $("#below-app .prev").addClass("hidden");
   //set next
-  if (currentChap["next"])
-    $("#below-app .next").attr("href", currentChap["next"]);
+  if (currentChap.next) $("#below-app .next").attr("href", currentChap.next);
   else $("#below-app .next").addClass("hidden");
 
   //load app styling
   $("head").append(
-    '<link href="ch/' +
-      query +
-      "/" +
-      currentChap["style"] +
-      '" rel="stylesheet">'
+    '<link href="ch/' + query + "/" + currentChap.style + '" rel="stylesheet">'
   );
 
   //load app script
@@ -159,7 +149,7 @@ function loadContent(query) {
     '<script type="text/javascript" src="ch/' +
       query +
       "/" +
-      currentChap["script"] +
+      currentChap.script +
       '"></script>'
   );
 }
