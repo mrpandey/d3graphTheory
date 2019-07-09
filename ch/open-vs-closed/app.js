@@ -1,53 +1,54 @@
+"use strict";
 //node ids are in order in which nodes come in existence
 var nodes = [
-            {id:1, degree:5, x:262, y:246},
-            {id:2, degree:5, x:359, y:314},
-            {id:3, degree:5, x:362, y:252},
-            {id:4, degree:5, x:324, y:168},
-            {id:5, degree:5, x:272, y:133},
-            {id:6, degree:5, x:319, y:222},
-            {id:7, degree:5, x:462, y:265},
-            {id:8, degree:5, x:415, y:177},
-            {id:9, degree:5, x:378, y:85},
-            {id:10, degree:5, x:371, y:146},
-            {id:11, degree:5, x:411, y:230},
-            {id:12, degree:5, x:472, y:150},
+  { id: 1, degree: 5, x: 262, y: 246 },
+  { id: 2, degree: 5, x: 359, y: 314 },
+  { id: 3, degree: 5, x: 362, y: 252 },
+  { id: 4, degree: 5, x: 324, y: 168 },
+  { id: 5, degree: 5, x: 272, y: 133 },
+  { id: 6, degree: 5, x: 319, y: 222 },
+  { id: 7, degree: 5, x: 462, y: 265 },
+  { id: 8, degree: 5, x: 415, y: 177 },
+  { id: 9, degree: 5, x: 378, y: 85 },
+  { id: 10, degree: 5, x: 371, y: 146 },
+  { id: 11, degree: 5, x: 411, y: 230 },
+  { id: 12, degree: 5, x: 472, y: 150 }
 ];
 
 var links = [
-            {source:0, target:1},
-            {source:0, target:2},
-            {source:0, target:3},
-            {source:0, target:4},
-            {source:0, target:5},
-            {source:1, target:2},
-            {source:2, target:3},
-            {source:3, target:4},
-            {source:4, target:5},
-            {source:5, target:1},
+  { source: 0, target: 1 },
+  { source: 0, target: 2 },
+  { source: 0, target: 3 },
+  { source: 0, target: 4 },
+  { source: 0, target: 5 },
+  { source: 1, target: 2 },
+  { source: 2, target: 3 },
+  { source: 3, target: 4 },
+  { source: 4, target: 5 },
+  { source: 5, target: 1 },
 
-            {source:6, target:1},
-            {source:6, target:2},
-            {source:7, target:2},
-            {source:7, target:3},
-            {source:8, target:3},
-            {source:8, target:4},
-            {source:9, target:4},
-            {source:9, target:5},
-            {source:10, target:5},
-            {source:10, target:1},
+  { source: 6, target: 1 },
+  { source: 6, target: 2 },
+  { source: 7, target: 2 },
+  { source: 7, target: 3 },
+  { source: 8, target: 3 },
+  { source: 8, target: 4 },
+  { source: 9, target: 4 },
+  { source: 9, target: 5 },
+  { source: 10, target: 5 },
+  { source: 10, target: 1 },
 
-            {source:6, target:7},
-            {source:7, target:8},
-            {source:8, target:9},
-            {source:9, target:10},
-            {source:10, target:6},
+  { source: 6, target: 7 },
+  { source: 7, target: 8 },
+  { source: 8, target: 9 },
+  { source: 9, target: 10 },
+  { source: 10, target: 6 },
 
-            {source:11, target:6},
-            {source:11, target:7},
-            {source:11, target:8},
-            {source:11, target:9},
-            {source:11, target:10}
+  { source: 11, target: 6 },
+  { source: 11, target: 7 },
+  { source: 11, target: 8 },
+  { source: 11, target: 9 },
+  { source: 11, target: 10 }
 ];
 
 var walk = [];
@@ -56,58 +57,59 @@ var walk = [];
 var lastNodeId = nodes.length;
 
 var w = univSvgWidth ? univSvgWidth : 616,
-    h = univSvgHeight ? univSvgHeight : 400,
-    rad = 10;
+  h = univSvgHeight ? univSvgHeight : 400,
+  rad = 10;
 
 positionNodes();
 setWalkDegree();
 
-var svg = d3.select("#svg-wrap")
-            .append("svg")
-            .attr("width", w)
-            .attr("height", h);
+var svg = d3
+  .select("#svg-wrap")
+  .append("svg")
+  .attr("width", w)
+  .attr("height", h);
 
-var dragLine = svg.append("path")
-									.attr("class", "dragLine hidden")
-									.attr("d", "M0,0L0,0");
+var dragLine = svg
+  .append("path")
+  .attr("class", "dragLine hidden")
+  .attr("d", "M0,0L0,0");
 
-var edges = svg.append("g")
-								.selectAll(".edge");
+var edges = svg.append("g").selectAll(".edge");
 
-var vertices = svg.append("g")
-									.selectAll(".vertex");
+var vertices = svg.append("g").selectAll(".vertex");
 
-var force = d3.layout.force()
-                    .nodes(nodes)
-                    .links(links)
-                    .size([w, h])
-                    .linkDistance(80)
-                    .linkStrength(1)
-                    .charge(-565)
-                    .chargeDistance((w+h)/2)
-                    .gravity(0.1)
-                    .on("tick",tick)
-                    .start();
+var force = d3
+  .forceSimulation()
+  .force(
+    "charge",
+    d3
+      .forceManyBody()
+      .strength(-300)
+      .distanceMax((w + h) / 2)
+  )
+  .force(
+    "link",
+    d3
+      .forceLink()
+      .distance(100)
+      .strength(0.95)
+  )
+  .force("x", d3.forceX(w / 2))
+  .force("y", d3.forceY(h / 2))
+  .on("tick", tick);
 
-var colors = d3.scale.category10();
+force.nodes(nodes);
+force.force("link").links(links);
 
-var mousedownNode = null, mouseupNode = null;
+var colors = d3.schemeCategory10;
+var mousedownNode = null;
 
-var clrBtn = d3.select("#clear-graph"),
-    clrWalkBtn = d3.select("#clear-walk"),
-    reverseWalkBtn = d3.select("#reverse-walk");
-
-clrBtn.on("click", clearGraph);
-clrWalkBtn.on("click", clearWalk);
-reverseWalkBtn.on("click", reverseWalk);
-
-function resetMouseVar(){
-	mousedownNode = null;
-	mouseupNode = null;
-}
+d3.select("#clear-graph").on("click", clearGraph);
+d3.select("#clear-walk").on("click", clearWalk);
+d3.select("#reverse-walk").on("click", reverseWalk);
 
 //empties the graph
-function clearGraph(){
+function clearGraph() {
   clearWalk();
   nodes.splice(0);
   links.splice(0);
@@ -117,220 +119,294 @@ function clearGraph(){
 
 //randomize the node positions a bit
 //so it looks cool while loading
-function positionNodes(){
+function positionNodes() {
   nodes.forEach(function(d, i) {
-    d.x += Math.random()*100 - 50;
-    d.y += Math.random()*100 - 50;
+    d.x += Math.random() * 100 - 50;
+    d.y += Math.random() * 100 - 50;
   });
 }
 
-function setWalkDegree(){
-  nodes.forEach(function(v){v.walkDegree=0;});
+function setWalkDegree() {
+  nodes.forEach(function(v) {
+    v.walkDegree = 0;
+  });
 }
 
 //update the simulation
 function tick() {
+  edges
+    .attr("x1", function(d) {
+      return d.source.x;
+    })
+    .attr("y1", function(d) {
+      return d.source.y;
+    })
+    .attr("x2", function(d) {
+      return d.target.x;
+    })
+    .attr("y2", function(d) {
+      return d.target.y;
+    });
 
-  edges.attr("x1", function(d) { return d.source.x; })
-       .attr("y1", function(d) { return d.source.y; })
-       .attr("x2", function(d) { return d.target.x; })
-       .attr("y2", function(d) { return d.target.y; });
-
-  //here vertices are g.vertex elements
-  vertices.attr('transform', function(d) {
-    return 'translate(' + d.x + ',' + d.y + ')';
-  });
-
+  vertices
+    .attr("cx", function(d) {
+      return d.x;
+    })
+    .attr("cy", function(d) {
+      return d.y;
+    });
 }
 
-function addNode(){
-  if(d3.event.button==0){
-    var coords = d3.mouse(this);
-    var newNode = {x:coords[0], y:coords[1], id: ++lastNodeId, degree:0, walkDegree:0};
+function addNode() {
+  var e = d3.event;
+  if (e.button == 0) {
+    var coords = d3.mouse(e.currentTarget);
+    var newNode = {
+      x: coords[0],
+      y: coords[1],
+      id: ++lastNodeId,
+      degree: 0,
+      walkDegree: 0
+    };
     nodes.push(newNode);
     restart();
   }
 }
 
 //d is data, i is index according to selection
-function removeNode(d, i){
+function removeNode(d, i) {
+  var e = d3.event;
   //to make ctrl-drag works for mac/osx users
-  if(d3.event.ctrlKey) return;
-  if(d3.select(this.parentNode).classed("walk-vertex")) return;
-  var linksToRemove = links.filter(function(l){
-    return l.source===d || l.target===d;
+  if (e.ctrlKey) return;
+  if (d3.select(e.currentTarget).classed("walk-vertex")) return;
+  var linksToRemove = links.filter(function(l) {
+    return l.source === d || l.target === d;
   });
   linksToRemove.map(function(l) {
     l.source.degree--;
     l.target.degree--;
     links.splice(links.indexOf(l), 1);
   });
-  nodes.splice(nodes.indexOf(d),1);
-  d3.event.preventDefault();
+  nodes.splice(nodes.indexOf(d), 1);
+  e.preventDefault();
   restart();
 }
 
-function removeEdge(d, i){
-  if(d3.select(this).classed("walk-edge")) return;
+function removeEdge(d, i) {
+  var e = d3.event;
+  if (d3.select(e.currentTarget).classed("walk-edge")) return;
   d.source.degree--;
   d.target.degree--;
-  links.splice(links.indexOf(d),1);
-  d3.event.preventDefault();
+  links.splice(links.indexOf(d), 1);
+  e.preventDefault();
   restart();
 }
 
-function beginDragLine(d){
-  //event must propagate till g.vertex so that force.drag could work
+function beginDragLine(d) {
+  var e = d3.event;
   //stop propagation at .vertex in restart() so that addNode isn't fired
-
+  e.stopPropagation();
   //to prevent dragging of svg in firefox
-	d3.event.preventDefault();
-	if(d3.event.ctrlKey || d3.event.button!=0) return;
-	mousedownNode = d;
-	dragLine.classed("hidden", false)
-					.attr("d", "M" + mousedownNode.x + "," + mousedownNode.y +
-						"L" + mousedownNode.x + "," + mousedownNode.y);
+  e.preventDefault();
+  if (e.ctrlKey || e.button != 0) return;
+  mousedownNode = d;
+  dragLine
+    .classed("hidden", false)
+    .attr(
+      "d",
+      "M" +
+        mousedownNode.x +
+        "," +
+        mousedownNode.y +
+        "L" +
+        mousedownNode.x +
+        "," +
+        mousedownNode.y
+    );
 }
 
-function updateDragLine(){
-	if(!mousedownNode) return;
-	dragLine.attr("d", "M" + mousedownNode.x + "," + mousedownNode.y +
-									"L" + d3.mouse(this)[0] + "," + d3.mouse(this)[1]);
+function updateDragLine() {
+  if (!mousedownNode) return;
+  var coords = d3.mouse(d3.event.currentTarget);
+  dragLine.attr(
+    "d",
+    "M" +
+      mousedownNode.x +
+      "," +
+      mousedownNode.y +
+      "L" +
+      coords[0] +
+      "," +
+      coords[1]
+  );
 }
 
-function hideDragLine(){
-	dragLine.classed("hidden", true);
-	resetMouseVar();
-	restart();
+function hideDragLine() {
+  dragLine.classed("hidden", true);
+  mousedownNode = null;
+  restart();
 }
 
 //no need to call hideDragLine in endDragLine
 //mouseup on vertices propagates to svg which calls hideDragLine
-function endDragLine(d){
-	if(!mousedownNode || mousedownNode===d) return;
-	//return if link already exists
-	for(var i=0; i<links.length; i++){
-		var l = links[i];
-		if((l.source===mousedownNode && l.target===d) || (l.source===d && l.target===mousedownNode)){
-			return;
-		}
-	}
+function endDragLine(d) {
+  if (!mousedownNode || mousedownNode === d) return;
+  //return if link already exists
+  for (var i = 0; i < links.length; i++) {
+    var l = links[i];
+    if (
+      (l.source === mousedownNode && l.target === d) ||
+      (l.source === d && l.target === mousedownNode)
+    ) {
+      return;
+    }
+  }
   mousedownNode.degree++;
   d.degree++;
-	var newLink = {source: mousedownNode, target:d};
-	links.push(newLink);
+  var newLink = { source: mousedownNode, target: d };
+  links.push(newLink);
 }
 
 //one response per ctrl keydown
 var lastKeyDown = -1;
 
-function keydown(){
-	if(lastKeyDown !== -1) return;
-	lastKeyDown = d3.event.key;
+function keydown() {
+  d3.event.preventDefault();
+  if (lastKeyDown !== -1) return;
+  lastKeyDown = d3.event.key;
 
-	if(lastKeyDown === "Control"){
-		vertices.call(force.drag);
-	}
+  if (lastKeyDown === "Control") {
+    vertices.call(
+      d3
+        .drag()
+        .on("start", function dragstarted(d) {
+          if (!d3.event.active) force.alphaTarget(1).restart();
+          d.fx = d.x;
+          d.fy = d.y;
+        })
+        .on("drag", function(d) {
+          d.fx = d3.event.x;
+          d.fy = d3.event.y;
+        })
+        .on("end", function(d) {
+          if (!d3.event.active) force.alphaTarget(0);
+          d.fx = null;
+          d.fy = null;
+        })
+    );
+  }
 }
 
-function keyup(){
-	lastKeyDown = -1;
-	if(d3.event.key === "Control"){
-		vertices.on("mousedown.drag", null);
-	}
+function keyup() {
+  lastKeyDown = -1;
+  if (d3.event.key === "Control") {
+    vertices.on("mousedown.drag", null);
+  }
 }
 
 //updates the graph by updating links, nodes and binding them with DOM
 //interface is defined through several events
-function restart(){
-  edges = edges.data(links, function(d){return "v"+d.source.id+"-v"+d.target.id;});
-
-  edges.enter()
-        .append("line")
-        .attr("class","edge")
-        .on("mousedown", function(){d3.event.stopPropagation();})
-        .on("contextmenu", removeEdge)
-        .on("click", extendWalk)
-        .append("title")
-        .text(function(d){return "v"+d.source.id+"-v"+d.target.id;});
-
+function restart() {
+  edges = edges.data(links, function(d) {
+    return "v" + d.source.id + "-v" + d.target.id;
+  });
   edges.exit().remove();
 
+  var ed = edges
+    .enter()
+    .append("line")
+    .attr("class", "edge")
+    .on("mousedown", function() {
+      d3.event.stopPropagation();
+    })
+    .on("click", extendWalk)
+    .on("contextmenu", removeEdge);
+
+  ed.append("title").text(function(d) {
+    return "v" + d.source.id + "-v" + d.target.id;
+  });
+
+  edges = ed.merge(edges);
+
   //vertices are known by id
-  vertices = vertices.data(nodes, function(d){return d.id;});
+  vertices = vertices.data(nodes, function(d) {
+    return d.id;
+  });
+  vertices.exit().remove();
 
-  var g = vertices.enter()
-                  .append("g")
-                  .attr("class", "vertex")
-                  .attr("id", function(d){return "v"+d.id;})
-                  //so that force.drag and addNode don't interfere
-                  //mousedown is initiated on circle which is stopped at .vertex
-                  .on("mousedown", function(){d3.event.stopPropagation();});
-
-  g.append("circle")
+  var ve = vertices
+    .enter()
+    .append("circle")
     .attr("r", rad)
-    .style("fill", function(d){
-      return colors(d.id);
+    .attr("class", "vertex")
+    .attr("id", function(d) {
+      return "v" + d.id;
+    })
+    .style("fill", function(d, i) {
+      return colors[d.id % 10];
     })
     .on("mousedown", beginDragLine)
     .on("mouseup", endDragLine)
-    .on("contextmenu", removeNode)
-    .append("title")
-    .text(function(d){
-      return "v"+d.id;
-    });
+    .on("contextmenu", removeNode);
 
-  vertices.exit().remove();
-  force.start();
+  ve.append("title").text(function(d) {
+    return "v" + d.id;
+  });
+
+  vertices = ve.merge(vertices);
+
+  force.nodes(nodes);
+  force.force("link").links(links);
+  force.alpha(0.2).restart();
 }
 
 //further interface
-svg.on("mousedown", addNode)
-	  .on("mousemove", updateDragLine)
-	  .on("mouseup", hideDragLine)
-	  .on("contextmenu", function(){d3.event.preventDefault();})
-	  .on("mouseleave", hideDragLine);
+svg
+  .on("mousedown", addNode)
+  .on("mousemove", updateDragLine)
+  .on("mouseup", hideDragLine)
+  .on("contextmenu", function() {
+    d3.event.preventDefault();
+  })
+  .on("mouseleave", hideDragLine);
 
 d3.select(window)
-  .on('keydown', keydown)
-  .on('keyup', keyup);
+  .on("keydown", keydown)
+  .on("keyup", keyup);
 
 restart();
 showGraphLatex();
 
 //managing walk
 
-function extendWalk(d){
-  var thisEdge = d3.select(this),
-      sourceVertex = d3.select("#v"+d.source.id),
-      targetVertex = d3.select("#v"+d.target.id);
+function extendWalk(d) {
+  var thisEdge = d3.select(d3.event.currentTarget),
+    sourceVertex = d3.select("#v" + d.source.id),
+    targetVertex = d3.select("#v" + d.target.id);
 
   //remove the last added edge
-  if(thisEdge.classed("walk-edge")){
-
-    if(walk.length==1 && walk[0]===d){
+  if (thisEdge.classed("walk-edge")) {
+    if (walk.length == 1 && walk[0] === d) {
       clearWalk();
       return;
     }
 
-    if(walk.length>1 && walk[walk.length-1]===d){
+    if (walk.length > 1 && walk[walk.length - 1] === d) {
       walk.pop();
       thisEdge.classed("walk-edge", false);
 
-      if(sourceVertex.classed("walk-end")){
+      if (sourceVertex.classed("walk-end")) {
         sourceVertex.classed("walk-end", false);
-        if(d.source.walkDegree==1){
+        if (d.source.walkDegree == 1) {
           sourceVertex.classed("walk-vertex", false);
         }
-        targetVertex.classed("walk-end",true);
-      }
-
-      else if(targetVertex.classed("walk-end")){
+        targetVertex.classed("walk-end", true);
+      } else if (targetVertex.classed("walk-end")) {
         targetVertex.classed("walk-end", false);
-        if(d.target.walkDegree==1){
+        if (d.target.walkDegree == 1) {
           targetVertex.classed("walk-vertex", false);
         }
-        sourceVertex.classed("walk-end",true);
+        sourceVertex.classed("walk-end", true);
       }
 
       d.source.walkDegree--;
@@ -341,7 +417,7 @@ function extendWalk(d){
   }
 
   //add edge
-  if(walk.length==0){
+  if (walk.length == 0) {
     walk.push(d);
     thisEdge.classed("walk-edge", true);
     sourceVertex.classed("walk-start walk-vertex", true);
@@ -349,9 +425,7 @@ function extendWalk(d){
     d.source.walkDegree++;
     d.target.walkDegree++;
     showGraphLatex();
-  }
-
-  else if(sourceVertex.classed("walk-end")){
+  } else if (sourceVertex.classed("walk-end")) {
     walk.push(d);
     thisEdge.classed("walk-edge", true);
     sourceVertex.classed("walk-end", false);
@@ -359,9 +433,7 @@ function extendWalk(d){
     d.source.walkDegree++;
     d.target.walkDegree++;
     showGraphLatex();
-  }
-
-  else if(targetVertex.classed("walk-end")){
+  } else if (targetVertex.classed("walk-end")) {
     walk.push(d);
     thisEdge.classed("walk-edge", true);
     targetVertex.classed("walk-end", false);
@@ -382,15 +454,16 @@ function clearWalk() {
   showGraphLatex();
 }
 
-function reverseWalk(){
-  if(walk.length==0)
-    return;
+function reverseWalk() {
+  if (walk.length == 0) return;
   walk.reverse();
   var currentStart = d3.select(".walk-start");
   var currentEnd = d3.select(".walk-end");
-  if(currentStart.attr("id")!=currentEnd.attr("id")){
-    currentStart.classed({"walk-start":false, "walk-end":true});
-    currentEnd.classed({"walk-end":false, "walk-start":true});
+  if (currentStart.attr("id") != currentEnd.attr("id")) {
+    currentStart.classed("walk-start", false);
+    currentStart.classed("walk-end", true);
+    currentEnd.classed("walk-start", true);
+    currentEnd.classed("walk-end", false);
   }
   showGraphLatex();
 }
@@ -398,51 +471,41 @@ function reverseWalk(){
 //prints latex in svg-output
 function showGraphLatex() {
   var l = "";
-  if(walk.length==0){
+  if (walk.length == 0) {
     l += "\\[\\text{Create a Walk}\\]";
-  }
-  else {
-
+  } else {
     var vertexRep = false;
 
     l += "\\[\\text{Walk : }";
     var currentVertex = d3.select(".walk-start").datum();
     l += "v_{" + currentVertex.id + "}";
 
-    walk.forEach(function(e, i){
+    walk.forEach(function(e, i) {
+      if (e.source === currentVertex) currentVertex = e.target;
+      else if (e.target === currentVertex) currentVertex = e.source;
 
-      if(e.source===currentVertex)
-        currentVertex = e.target;
-      else if(e.target===currentVertex)
-        currentVertex = e.source;
-
-      if(currentVertex.walkDegree>2)
-        vertexRep = true;
+      if (currentVertex.walkDegree > 2) vertexRep = true;
 
       l += "\\to v_{" + currentVertex.id + "}";
-      if((i+1)%10==0)
-        l += "\\\\";
+      if ((i + 1) % 10 == 0) l += "\\\\";
     });
 
     l += "\\]";
 
-    if(d3.select(".walk-start").attr("id")===d3.select(".walk-end").attr("id")){
+    if (
+      d3.select(".walk-start").attr("id") === d3.select(".walk-end").attr("id")
+    ) {
       l += "\\[\\text{This walk is closed.}\\]";
-      if(vertexRep)
-        l += "\\[\\text{It is an example of Circuit.}\\]";
-      else
-        l += "\\[\\text{It is both a Circuit and a Cycle.}\\]";
-    }
-    else{
+      if (vertexRep) l += "\\[\\text{It is an example of Circuit.}\\]";
+      else l += "\\[\\text{It is both a Circuit and a Cycle.}\\]";
+    } else {
       l += "\\[\\text{This walk is open.}\\]";
-      if(vertexRep)
-        l += "\\[\\text{It is an example of Trail.}\\]";
-      else
-        l += "\\[\\text{It is both a Trail and a Path.}\\]";
+      if (vertexRep) l += "\\[\\text{It is an example of Trail.}\\]";
+      else l += "\\[\\text{It is both a Trail and a Path.}\\]";
     }
   }
 
   document.getElementById("svg-output").textContent = l;
   //recall mathjax
-  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+  MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
 }

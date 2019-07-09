@@ -1,15 +1,15 @@
 svg {
   cursor: default;
   display: block;
-  margin:auto;
+  margin: auto;
 }
 
 .edge {
   stroke: #888;
-  stroke-width:2px;
+  stroke-width: 2px;
   stroke-linecap: round;
   stroke-linejoin: round;
-  cursor: default;
+  cursor: pointer;
 }
 
 .edge:hover {

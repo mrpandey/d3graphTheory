@@ -1,3 +1,4 @@
+"use strict";
 //node ids are in order in which nodes come in existence
 var nodes = [];
 
@@ -55,24 +56,32 @@ var edges = svg.append("g")
 var vertices = svg.append("g")
 									.selectAll(".vertex");
 
-var force = d3.layout.force()
-                    .nodes(nodes)
-                    .links(links)
-                    .size([w, h])
-                    .linkDistance(80)
-                    .linkStrength(1)
-                    .charge(-600)
-                    .chargeDistance((w+h)/2)
-                    .gravity(0.1)
-                    .on("tick",tick)
-                    .start();
+var force = d3
+  .forceSimulation()
+  .force(
+    "charge",
+    d3
+      .forceManyBody()
+      .strength(-400)
+      .distanceMax((w + h) / 2)
+  )
+  .force(
+    "link",
+    d3
+      .forceLink()
+      .distance(100)
+      .strength(0.75)
+  )
+  .force("x", d3.forceX(w / 2).strength(0.05))
+  .force("y", d3.forceY(h / 2).strength(0.05))
+  .on("tick", tick);
 
-var colors = d3.scale.category10();
+force.nodes(nodes);
+force.force("link").links(links);
 
-var mousedownNode = null, mouseupNode = null;
+var colors = d3.schemeCategory10;
 
 d3.select("#clear-walk").on("click", clearWalk);
-
 d3.select("#reverse-walk").on("click", reverseWalk);
 
 d3.select("#prev-prob")
@@ -94,11 +103,6 @@ paginationLinks.selectAll("a")
                   if(i<problems.length)
                     setGraph(i);
                 });
-
-function resetMouseVar(){
-	mousedownNode = null;
-	mouseupNode = null;
-}
 
 //set initial positions for quick convergence
 function positionNodes(){
@@ -129,61 +133,96 @@ function tick() {
 //one response per ctrl keydown
 var lastKeyDown = -1;
 
-function keydown(){
-	if(lastKeyDown !== -1) return;
-	lastKeyDown = d3.event.key;
+function keydown() {
+  d3.event.preventDefault();
+  if (lastKeyDown !== -1) return;
+  lastKeyDown = d3.event.key;
 
-	if(lastKeyDown === "Control"){
-		vertices.call(force.drag);
-	}
+  if (lastKeyDown === "Control") {
+    vertices.call(
+      d3
+        .drag()
+        .on("start", function dragstarted(d) {
+          if (!d3.event.active) force.alphaTarget(1).restart();
+          d.fx = d.x;
+          d.fy = d.y;
+        })
+        .on("drag", function(d) {
+          d.fx = d3.event.x;
+          d.fy = d3.event.y;
+        })
+        .on("end", function(d) {
+          if (!d3.event.active) force.alphaTarget(0);
+          d.fx = null;
+          d.fy = null;
+        })
+    );
+  }
 }
 
-function keyup(){
-	lastKeyDown = -1;
-	if(d3.event.key === "Control"){
-		vertices.on("mousedown.drag", null);
-	}
+function keyup() {
+  lastKeyDown = -1;
+  if (d3.event.key === "Control") {
+    vertices.on("mousedown.drag", null);
+  }
 }
 
 //updates the graph by updating links, nodes and binding them with DOM
 //interface is defined through several events
-function restart(){
-  edges = edges.data(links, function(d){return "v"+d.source.id+"-v"+d.target.id;});
-
-  edges.enter()
-        .append("line")
-        .attr("class","edge")
-        .on("click", extendWalk)
-        .append("title")
-        .text(function(d){return "v"+d.source.id+"-v"+d.target.id;});
-
+function restart() {
+  edges = edges.data(links, function(d) {
+    return "v" + d.source.id + "-v" + d.target.id;
+  });
   edges.exit().remove();
 
-  //vertices are known by id
-  vertices = vertices.data(nodes, function(d){return d.id;});
+  var ed = edges
+    .enter()
+    .append("line")
+    .attr("class", "edge")
+    .on("click", extendWalk);
 
-  var g = vertices.enter()
-                  .append("g")
-                  .attr("class", "vertex")
-                  .attr("id", function(d){return "v"+d.id;});
+  ed.append("title").text(function(d) {
+    return "v" + d.source.id + "-v" + d.target.id;
+  });
+
+  edges = ed.merge(edges);
+
+  //vertices are known by id
+  vertices = vertices.data(nodes, function(d) {
+    return d.id;
+  });
+  vertices.exit().remove();
+
+  var g = vertices
+    .enter()
+    .append("g")
+    .attr("class", "vertex")
+    .attr("id", function(d) {
+      return "v" + d.id;
+    });
 
   g.append("circle")
     .attr("r", rad)
-    .style("fill", function(d){
-      return colors(d.id);
+    .style("fill", function(d, i) {
+      return colors[d.id % 10];
     })
     .append("title")
-    .text(function(d){
-      return "v"+d.id;
+    .text(function(d) {
+      return "v" + d.id;
     });
 
   g.append("text")
     .attr("x", 0)
     .attr("y", 4)
-    .text(function(d){return d.degree;});
+    .text(function(d) {
+      return d.degree;
+    });
 
-  vertices.exit().remove();
-  force.start();
+  vertices = g.merge(vertices);
+
+  force.nodes(nodes);
+  force.force("link").links(links);
+  force.alpha(0.8).restart();
 }
 
 svg.on("mouseleave", restart)
@@ -198,7 +237,7 @@ setGraph(0);
 
 //managing walk
 function extendWalk(d){
-  var thisEdge = d3.select(this),
+  var thisEdge = d3.select(d3.event.currentTarget),
       sourceVertex = d3.select("#v"+d.source.id),
       targetVertex = d3.select("#v"+d.target.id);
 
@@ -284,8 +323,10 @@ function reverseWalk(){
   var currentStart = d3.select(".walk-start");
   var currentEnd = d3.select(".walk-end");
   if(currentStart.attr("id")!=currentEnd.attr("id")){
-    currentStart.classed({"walk-start":false, "walk-end":true});
-    currentEnd.classed({"walk-end":false, "walk-start":true});
+    currentStart.classed("walk-start", false);
+    currentStart.classed("walk-end", true);
+    currentEnd.classed("walk-start", true);
+    currentEnd.classed("walk-end", false);
   }
 }
 
@@ -304,14 +345,18 @@ function setGraph(index){
   graphToLoad.links.forEach(function(d){
     links.push({source:d[0], target:d[1]});
   });
+
   lastNodeId = graphToLoad.order;
   positionNodes();
-  force.start();
+  force.nodes(nodes);
+  force.force("link").links(links);
+  force.alpha(0.8).restart();
   links.forEach(function(d){
     d.source.degree++;
     d.target.degree++;
   });
   restart();
+
   //style prev and next
   if(index==0){
     $("#prev-prob").addClass("hidden");

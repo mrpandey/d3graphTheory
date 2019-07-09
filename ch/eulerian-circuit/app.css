@@ -1,11 +1,11 @@
 svg {
   display: block;
-  margin:auto;
+  margin: auto;
 }
 
 .edge {
   stroke: #aaa;
-  stroke-width:3px;
+  stroke-width: 3px;
   cursor: pointer;
 }
 
@@ -37,15 +37,17 @@ svg {
 
 .walk-vertex {
   stroke: #333;
-  stroke-width:3px;
+  stroke-width: 3px;
 }
 
 .walk-start {
   stroke: #ff0;
+  stroke-width: 5px;
 }
 
 .walk-end {
   stroke: #8f3;
+  stroke-width: 5px;
 }
 
 #prob-list a {

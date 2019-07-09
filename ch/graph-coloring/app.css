@@ -9,7 +9,7 @@ svg {
   stroke-width:2px;
   stroke-linecap: round;
   stroke-linejoin: round;
-  cursor: default;
+  cursor: pointer;
 }
 
 .edge:hover, .dragLine {
