@@ -19,7 +19,7 @@ This stylesheet applies to `unit.html` irrespective of the content loaded into i
 
 The content of D3 Graph Theory is broken into several *units* (or chapters). The `ch/` directory contains the visualizations for each unit. Visualization of a unit is contained in directory `ch/unit-name/`, which in turn contains following two files
 
-- **`app.js`:** the visualization of the unit implemented using [d3.js](https://d3js.org/)
+- **`app.js`:** the visualization of the unit implemented using [d3.js v5](https://d3js.org/)
 - **`app.css`:** styles specifically meant for this visualization
 
 ### 4. js/content.js
