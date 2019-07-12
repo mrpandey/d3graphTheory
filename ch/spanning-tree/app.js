@@ -316,13 +316,13 @@ function restart(al) {
   force.alpha(al).restart();
 }
 
-svg.on("contextmenu", function() {
-  d3.event.preventDefault();
-});
-
 d3.select(window)
   .on("keydown", keydown)
   .on("keyup", keyup);
+
+d3.select("#svg-wrap").on("contextmenu", function() {
+  d3.event.preventDefault();
+});
 
 setGraph(0);
 
