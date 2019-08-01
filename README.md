@@ -4,10 +4,9 @@
 
 # D3 Graph Theory
 
-[![Click to see the action](https://forthebadge.com/images/badges/check-it-out.svg)](https://mrpandey.github.io/d3graphTheory/)
+[![Click to see the action](https://forthebadge.com/images/badges/check-it-out.svg)](https://d3gt.com/)
 
-[![Donate](https://img.shields.io/badge/%24-donate-orange.svg?style=flat-square)](https://www.buymeacoffee.com/mrpandey)
-[![Join the chat at https://gitter.im/d3graphTheory/community](https://img.shields.io/badge/chat-on%20gitter-f3015d.svg?style=flat-square)](https://gitter.im/d3graphTheory/community)
+[![Donate](https://img.shields.io/badge/%24-donate-orange.svg?style=flat-square)](https://www.paypal.me/mrpandey/)
 
 > In mathematics, graph theory is the study of graphs, which are mathematical structures used to model pairwise relations between objects. A graph in this context is made up of vertices, nodes, or points which are connected by edges, arcs, or lines.
 > -- <cite>Wikipedia</cite>
@@ -20,14 +19,14 @@ The whole content is broken in several units. So far these units have been added
 
 | Table | Of | Contents |
 | --- | --- | --- |
-|1. [Vertices and Edges](https://mrpandey.github.io/d3graphTheory/unit.html?vertices-and-edges)|2. [Order and Size of a Graph](https://mrpandey.github.io/d3graphTheory/unit.html?order-and-size)|3. [Degree of a Vertex](https://mrpandey.github.io/d3graphTheory/unit.html?degree-of-vertex)|
-|4. [Degree Sequence of a Graph](https://mrpandey.github.io/d3graphTheory/unit.html?degree-sequence)|5. [Graphic Sequence](https://mrpandey.github.io/d3graphTheory/unit.html?graphic-sequence)|6. [Havel-Hakimi Algorithm](https://mrpandey.github.io/d3graphTheory/unit.html?havel-hakimi)|
-|7. [Pigeonhole Principle](https://mrpandey.github.io/d3graphTheory/unit.html?pigeonhole)|8. [Regular Graph](https://mrpandey.github.io/d3graphTheory/unit.html?regular-graph)|9. [Complete Graph](https://mrpandey.github.io/d3graphTheory/unit.html?complete-graph)|
-|10. [Bipartite Graph](https://mrpandey.github.io/d3graphTheory/unit.html?bipartite)|11. [Complete Bipartite Graph](https://mrpandey.github.io/d3graphTheory/unit.html?complete-bipartite)|12. [Walk](https://mrpandey.github.io/d3graphTheory/unit.html?walk)|
-|13. [Open vs Closed Walks](https://mrpandey.github.io/d3graphTheory/unit.html?open-vs-closed)|14. [Connectivity](https://mrpandey.github.io/d3graphTheory/unit.html?connectivity)|15. [Eulerian Circuit](https://mrpandey.github.io/d3graphTheory/unit.html?eulerian-circuit)|
-|16. [Eulerian Trail](https://mrpandey.github.io/d3graphTheory/unit.html?eulerian-trail)|17. [Graph Coloring](https://mrpandey.github.io/d3graphTheory/unit.html?graph-coloring)|18. [k-Colorable Graph](https://mrpandey.github.io/d3graphTheory/unit.html?k-colorable)|
-|19. [Chromatic Number](https://mrpandey.github.io/d3graphTheory/unit.html?chromatic-number)|20. [Trees](https://mrpandey.github.io/d3graphTheory/unit.html?trees)|21. [Rooted Trees](https://mrpandey.github.io/d3graphTheory/unit.html?rooted-trees)|
-|22. [Spanning Tree of a Graph](https://mrpandey.github.io/d3graphTheory/unit.html?spanning-tree)|
+|1. [Vertices and Edges](https://d3gt.com/unit.html?vertices-and-edges)|2. [Order and Size of a Graph](https://d3gt.com/unit.html?order-and-size)|3. [Degree of a Vertex](https://d3gt.com/unit.html?degree-of-vertex)|
+|4. [Degree Sequence of a Graph](https://d3gt.com/unit.html?degree-sequence)|5. [Graphic Sequence](https://d3gt.com/unit.html?graphic-sequence)|6. [Havel-Hakimi Algorithm](https://d3gt.com/unit.html?havel-hakimi)|
+|7. [Pigeonhole Principle](https://d3gt.com/unit.html?pigeonhole)|8. [Regular Graph](https://d3gt.com/unit.html?regular-graph)|9. [Complete Graph](https://d3gt.com/unit.html?complete-graph)|
+|10. [Bipartite Graph](https://d3gt.com/unit.html?bipartite)|11. [Complete Bipartite Graph](https://d3gt.com/unit.html?complete-bipartite)|12. [Walk](https://d3gt.com/unit.html?walk)|
+|13. [Open vs Closed Walks](https://d3gt.com/unit.html?open-vs-closed)|14. [Connectivity](https://d3gt.com/unit.html?connectivity)|15. [Eulerian Circuit](https://d3gt.com/unit.html?eulerian-circuit)|
+|16. [Eulerian Trail](https://d3gt.com/unit.html?eulerian-trail)|17. [Graph Coloring](https://d3gt.com/unit.html?graph-coloring)|18. [k-Colorable Graph](https://d3gt.com/unit.html?k-colorable)|
+|19. [Chromatic Number](https://d3gt.com/unit.html?chromatic-number)|20. [Trees](https://d3gt.com/unit.html?trees)|21. [Rooted Trees](https://d3gt.com/unit.html?rooted-trees)|
+|22. [Spanning Tree of a Graph](https://d3gt.com/unit.html?spanning-tree)|
 
 The project is still expanding. New topics are added from time to time.
 
