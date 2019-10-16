@@ -1,165 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116288086-2"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-116288086-2"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'UA-116288086-2');
+      gtag("config", "UA-116288086-2");
     </script>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
-    <meta name="description" content="Graph theory tutorials and visualizations. Interactive, visual, concise and fun. Learn more in less time while playing around.">
-    <meta name="author" content="Avinash Pandey">
+    <meta
+      name="description"
+      content="Graph theory tutorials and visualizations. Interactive, visual, concise and fun. Learn more in less time while playing around."
+    />
+    <meta name="author" content="Avinash Pandey" />
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="D3 Graph Theory - Interactive Graph Theory Tutorials">
-    <meta name="twitter:image" content="https://i.imgur.com/MAvlQgj.png">
-    <meta name="twitter:description" content="Graph theory tutorials and visualizations. Interactive, visual, concise and fun. Experience colors jumping in your face.">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="D3 Graph Theory - Interactive Graph Theory Tutorials"
+    />
+    <meta name="twitter:image" content="https://i.imgur.com/MAvlQgj.png" />
+    <meta
+      name="twitter:description"
+      content="Graph theory tutorials and visualizations. Interactive, visual, concise and fun. Experience colors jumping in your face."
+    />
 
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="D3 Graph Theory - Interactive Graph Theory Tutorials">
-    <meta property="og:description" content="Graph theory tutorials and visualizations. Interactive, visual, concise and fun. Learn more in less time.">
-    <meta property="og:url" content="https://d3gt.com/">
-    <meta property="og:image" content="https://i.imgur.com/MAvlQgj.png">
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="D3 Graph Theory - Interactive Graph Theory Tutorials"
+    />
+    <meta
+      property="og:description"
+      content="Graph theory tutorials and visualizations. Interactive, visual, concise and fun. Learn more in less time."
+    />
+    <meta property="og:url" content="https://d3gt.com/" />
+    <meta property="og:image" content="https://i.imgur.com/MAvlQgj.png" />
 
     <title>D3 Graph Theory</title>
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
     <!-- Use this local copy in case of any trouble with cdn
     <link href="css/bootstrap.min.css" rel="stylesheet"-->
 
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <!-- Overlay for displaying contents -->
     <div id="lightbox" class="hidden">
-        <div id="map-overlay">
-            <div id="map-header">
-            <button type="button" id="map-close" class="close" aria-label="Close">
-            <span aria-hidden="true" class="glyphicon glyphicon-remove-circle"></span>
-                </button>
-            <h2>Contents</h2>
-            <hr class="under-title">
+      <div id="map-overlay">
+        <div id="map-header">
+          <button type="button" id="map-close" class="close" aria-label="Close">
+            <span
+              aria-hidden="true"
+              class="glyphicon glyphicon-remove-circle"
+            ></span>
+          </button>
+          <h2>Contents</h2>
+          <hr class="under-title" />
         </div>
         <div id="map-list">
-            <ol>
-            </ol>
+          <ol></ol>
         </div>
-        </div>
+      </div>
     </div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">D3 Graph Theory</a>
-            <ul class="nav navbar-nav">
-                <li id="map-open" style="background-color: #bfe;"><a href="javascript:void(0)">Contents</a></li>
-                <li><a href="https://github.com/mrpandey/d3graphTheory" target="_blank">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li>
-                <li><a href="https://www.paypal.me/mrpandey/3usd" target="_blank">Donate <span class="glyphicon glyphicon-new-window"></span></a></li>
-            </ul>
-        </div>
+      <div class="container">
+        <a class="navbar-brand" href="index.html">D3 Graph Theory</a>
+        <ul class="nav navbar-nav">
+          <li id="map-open" style="background-color: #bfe;">
+            <a href="javascript:void(0)">Contents</a>
+          </li>
+          <li>
+            <a href="https://github.com/mrpandey/d3graphTheory" target="_blank"
+              >GitHub <span class="glyphicon glyphicon-new-window"></span
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.paypal.me/mrpandey/3usd" target="_blank"
+              >Donate <span class="glyphicon glyphicon-new-window"></span
+            ></a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <div class="container-fluid" id="status-container">
-        <div class="text-center">
-            <h1>Loading...</h1>
-        </div>
+      <div class="text-center">
+        <h1>Loading...</h1>
+      </div>
     </div>
 
     <!-- App Content -->
     <div id="app-container" class="container hidden">
-
-        <div class="row">
-            <div id="theory-area" class="col-md-4 col-sm-12">
-                <h2 id="content-title" class="text-center"></h2>
-                <hr class="under-title">
-                <div id="theory-content">
-                </div>
-                <div id="app-interface">
-                    <div id="interface-title">
-                        <h4></h4>
-                    </div>
-                    <div id="interface-content">
-                                  </div>
-                </div>
+      <div class="row">
+        <div id="theory-area" class="col-md-4 col-sm-12">
+          <h2 id="content-title" class="text-center"></h2>
+          <hr class="under-title" />
+          <div id="theory-content"></div>
+          <div id="app-interface">
+            <div id="interface-title">
+              <h4></h4>
             </div>
-
-            <div id="app-area" class="col-md-8 col-sm-12">
-                <div id="svg-buttons" class="text-center">
-                </div>
-                <div id="svg-wrap">
-                </div>
-                <div id="svg-output">
-                </div>
-            </div>
-
-        </div>
-        <!-- /.row -->
-
-        <div class="row" id="below-app">
-            <div class="col-md-2 col-sm-3 col-xs-3 text-left prev-wrap">
-                <a href="" class="map-flow prev"><span class="glyphicon glyphicon-menu-left"></span> Prev</a>
-            </div>
-            <div class="col-md-6 col-md-offset-1 col-sm-6 col-xs-6">
-            </div>
-            <div class="col-md-2 col-md-offset-1 col-sm-3 col-xs-3 text-right next-wrap">
-                <a href="" class="map-flow next">Next <span class="glyphicon glyphicon-menu-right"></span></a>
-            </div>
+            <div id="interface-content"></div>
+          </div>
         </div>
 
+        <div id="app-area" class="col-md-8 col-sm-12">
+          <div id="svg-buttons" class="text-center"></div>
+          <div id="svg-wrap"></div>
+          <div id="svg-output"></div>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <div class="row" id="below-app">
+        <div class="col-md-2 col-sm-3 col-xs-3 text-left prev-wrap">
+          <a href="" class="map-flow prev"
+            ><span class="glyphicon glyphicon-menu-left"></span> Prev</a
+          >
+        </div>
+        <div class="col-md-6 col-md-offset-1 col-sm-6 col-xs-6"></div>
+        <div
+          class="col-md-2 col-md-offset-1 col-sm-3 col-xs-3 text-right next-wrap"
+        >
+          <a href="" class="map-flow next"
+            >Next <span class="glyphicon glyphicon-menu-right"></span
+          ></a>
+        </div>
+      </div>
     </div>
     <!-- /.container -->
 
     <footer id="myFooter">
-        <div class="second-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <span class="logo"><a href="index.html">D3 Graph Theory</a></span>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <span><a href="http://mrpandey.com/" target="_blank" style="color:#edde45;">My Website</a> |</span>
-                        <span><a href="https://www.paypal.me/mrpandey/3usd" target="_blank" style="color:#fd971f;">Donate</a> |</span>
-                        <span><a href="https://github.com/mrpandey" target="_blank" style="color:#a6e22a;">My GitHub</a></span>
-                    </div>
-                    <div class="col-md-4 social-icons text-right">
-                        <ul class="share-buttons">
-                            <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fd3gt.com%2F&quote=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="img/icons/social-inverted/facebook.png" /></a></li>
-                            <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fd3gt.com%2F&text=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials:%20https%3A%2F%2Fd3gt.com%2F&hashtags=d3js,graph-theory,maths&via=mrpandey360" target="_blank" title="Tweet"><img alt="Tweet" src="img/icons/social-inverted/twitter.png" /></a></li>
-                            <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fd3gt.com%2F&media=https%3A%2F%2Fraw.githubusercontent.com%2Fmrpandey%2Fd3graphTheory%2Fmaster%2Fimg%2Fbanner.png&description=Interactive%20and%20colorful%20graph%20theory%20tutorials.%20Visual%2C%20concise%20and%20fun.&hashtags=graph-theory,tutorials,d3js,maths,computer-science" target="_blank" title="Save"><img alt="Save" src="img/icons/social-inverted/pinterest.png" /></a></li>
-                            <!--li><a href="http://www.reddit.com/submit?url=https%3A%2F%2Fd3gt.com%2F&title=D3%20Graph%20Theory" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="img/icons/social-inverted/reddit.png" /></a></li-->
-                            <li><a href="http://www.tumblr.com/share?v=3&u=https%3A%2F%2Fd3gt.com%2F&quote=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials&tags=graph-theory,tutorials,maths,d3js,computer-science" target="_blank" title="Post to Tumblr"><img alt="Post to Tumblr" src="img/icons/social-inverted/tumblr.png" /></a></li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="second-bar">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <span class="logo"><a href="index.html">D3 Graph Theory</a></span>
             </div>
+            <div class="col-md-4 text-center">
+              <span
+                ><a
+                  href="http://mrpandey.com/"
+                  target="_blank"
+                  style="color:#edde45;"
+                  >My Website</a
+                >
+                |</span
+              >
+              <span
+                ><a
+                  href="https://www.paypal.me/mrpandey/3usd"
+                  target="_blank"
+                  style="color:#fd971f;"
+                  >Donate</a
+                >
+                |</span
+              >
+              <span
+                ><a
+                  href="https://github.com/mrpandey"
+                  target="_blank"
+                  style="color:#a6e22a;"
+                  >My GitHub</a
+                ></span
+              >
+            </div>
+            <div class="col-md-4 social-icons text-right">
+              <ul class="share-buttons">
+                <li>
+                  <a
+                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fd3gt.com%2F&quote=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials"
+                    title="Share on Facebook"
+                    target="_blank"
+                    ><img
+                      alt="Share on Facebook"
+                      src="img/icons/social-inverted/facebook.png"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fd3gt.com%2F&text=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials:%20https%3A%2F%2Fd3gt.com%2F&hashtags=d3js,graph-theory,maths&via=mrpandey360"
+                    target="_blank"
+                    title="Tweet"
+                    ><img
+                      alt="Tweet"
+                      src="img/icons/social-inverted/twitter.png"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fd3gt.com%2F&media=https%3A%2F%2Fraw.githubusercontent.com%2Fmrpandey%2Fd3graphTheory%2Fmaster%2Fimg%2Fbanner.png&description=Interactive%20and%20colorful%20graph%20theory%20tutorials.%20Visual%2C%20concise%20and%20fun.&hashtags=graph-theory,tutorials,d3js,maths,computer-science"
+                    target="_blank"
+                    title="Save"
+                    ><img
+                      alt="Save"
+                      src="img/icons/social-inverted/pinterest.png"
+                  /></a>
+                </li>
+                <!--li><a href="http://www.reddit.com/submit?url=https%3A%2F%2Fd3gt.com%2F&title=D3%20Graph%20Theory" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="img/icons/social-inverted/reddit.png" /></a></li-->
+                <li>
+                  <a
+                    href="http://www.tumblr.com/share?v=3&u=https%3A%2F%2Fd3gt.com%2F&quote=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials&tags=graph-theory,tutorials,maths,d3js,computer-science"
+                    target="_blank"
+                    title="Post to Tumblr"
+                    ><img
+                      alt="Post to Tumblr"
+                      src="img/icons/social-inverted/tumblr.png"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </footer>
 
-    <script >
-        //to set svg dimensions throughout the app
-        var univSvgWidth;
-        var univSvgHeight;
+    <script>
+      //to set svg dimensions throughout the app
+      var univSvgWidth;
+      var univSvgHeight;
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
     <!-- Use this local copy in case of any trouble with cdn
     <script  src="js/jquery-3.2.1.min.js"></script>
     -->
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
     <!-- Use this local copy in case of any trouble with cdn
     <script  src="js/bootstrap.min.js"></script>
     -->
@@ -169,11 +266,9 @@
     <script  src="js/d3.v5.min.js"></script>
     -->
 
-    <script  src="js/content.js"></script>
-    <script  src="js/control.js"></script>
+    <script src="js/content.js"></script>
+    <script src="js/control.js"></script>
 
-    <script  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full"></script>
-
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full"></script>
+  </body>
 </html>

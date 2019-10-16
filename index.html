@@ -1,342 +1,570 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116288086-2"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-116288086-2"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'UA-116288086-2');
+      gtag("config", "UA-116288086-2");
     </script>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
-    <meta name="description" content="Graph theory tutorials and visualizations. Interactive, visual, concise and fun. Learn more in less time while playing around.">
-    <meta name="author" content="Avinash Pandey">
+    <meta
+      name="description"
+      content="Graph theory tutorials and visualizations. Interactive, visual, concise and fun. Learn more in less time while playing around."
+    />
+    <meta name="author" content="Avinash Pandey" />
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="D3 Graph Theory - Interactive Graph Theory Tutorials">
-    <meta name="twitter:image" content="https://i.imgur.com/MAvlQgj.png">
-    <meta name="twitter:description" content="Graph theory tutorials and visualizations. Interactive, visual, concise and fun. Experience colors jumping in your face.">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="D3 Graph Theory - Interactive Graph Theory Tutorials"
+    />
+    <meta name="twitter:image" content="https://i.imgur.com/MAvlQgj.png" />
+    <meta
+      name="twitter:description"
+      content="Graph theory tutorials and visualizations. Interactive, visual, concise and fun. Experience colors jumping in your face."
+    />
 
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="D3 Graph Theory - Interactive Graph Theory Tutorials">
-    <meta property="og:description" content="Graph theory tutorials and visualizations. Interactive, visual, concise and fun. Learn more in less time.">
-    <meta property="og:url" content="https://d3gt.com/">
-    <meta property="og:image" content="https://i.imgur.com/MAvlQgj.png">
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="D3 Graph Theory - Interactive Graph Theory Tutorials"
+    />
+    <meta
+      property="og:description"
+      content="Graph theory tutorials and visualizations. Interactive, visual, concise and fun. Learn more in less time."
+    />
+    <meta property="og:url" content="https://d3gt.com/" />
+    <meta property="og:image" content="https://i.imgur.com/MAvlQgj.png" />
 
     <title>D3 Graph Theory - Interactive Graph Theory Tutorials</title>
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
     <!-- Use this local copy in case of any trouble with cdn
     <link href="css/bootstrap.min.css" rel="stylesheet"-->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Cookie"
+      rel="stylesheet"
+    />
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
 
-    <link href="css/home-app.css" rel="stylesheet">
+    <link href="css/home-app.css" rel="stylesheet" />
+  </head>
 
-</head>
-
-<body>
-
-    <nav id="home-navbar" class="navbar navbar-default navbar-fixed-top transparent">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">D3 Graph Theory</a>
-            <ul class="nav navbar-nav">
-                <li><a href="#about">About</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contents">Contents</a></li>
-                <li><a href="#donate">Donate</a></li>
-                <li><a href="https://github.com/mrpandey/d3graphTheory" target="_blank">GitHub <i class="fa fa-external-link"></i></a></li>
-            </ul>
-        </div>
+  <body>
+    <nav
+      id="home-navbar"
+      class="navbar navbar-default navbar-fixed-top transparent"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html">D3 Graph Theory</a>
+        <ul class="nav navbar-nav">
+          <li><a href="#about">About</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contents">Contents</a></li>
+          <li><a href="#donate">Donate</a></li>
+          <li>
+            <a href="https://github.com/mrpandey/d3graphTheory" target="_blank"
+              >GitHub <i class="fa fa-external-link"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <div id="home-container">
+      <div id="home-screen">
+        <div id="home-graph"></div>
 
-        <div id="home-screen">
+        <div id="intro-container">
+          <div id="intro">
+            <span id="intro-title">D3 Graph Theory</span><br />
+            <span id="intro-tagline">Learn graph theory interactively.</span
+            ><br /><br /><br />
+            <span id="intro-button"><a href="unit.html">START</a></span>
+          </div>
+        </div>
+      </div>
 
-            <div id="home-graph"></div>
+      <div
+        id="share-wrap-top"
+        class="text-center"
+        style="margin-top:40px; line-height: 150%;"
+      >
+        <a
+          href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fd3gt.com%2F&text=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials:%20https%3A%2F%2Fd3gt.com%2F&hashtags=d3js,graph-theory,maths&via=mrpandey360"
+          target="_blank"
+          style="background:#0c7abf;"
+          ><i class="fa fa-twitter"></i>&nbsp;&nbsp;Tweet</a
+        >
 
-            <div id="intro-container">
-                <div id="intro">
-                    <span id="intro-title">D3 Graph Theory</span><br>
-                    <span id="intro-tagline">Learn graph theory interactively.</span><br><br><br>
-                    <span id="intro-button"><a href="unit.html">START</a></span>
-                </div>
-            </div>
+        <a
+          href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fd3gt.com%2F&quote=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials"
+          target="_blank"
+          style="background:#42609c;"
+          ><i class="fa fa-facebook"></i>&nbsp;&nbsp;Share</a
+        >
 
+        <a
+          href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fd3gt.com%2F&media=https%3A%2F%2Fraw.githubusercontent.com%2Fmrpandey%2Fd3graphTheory%2Fmaster%2Fimg%2Fbanner.png&description=Interactive%20and%20colorful%20graph%20theory%20tutorials.%20Visual%2C%20concise%20and%20fun.&hashtags=graph-theory,tutorials,d3js,maths,computer-science"
+          target="_blank"
+          style="background:#ad081b;"
+          ><i class="fa fa-pinterest"></i>&nbsp;&nbsp;Save</a
+        >
+      </div>
+
+      <div id="about" class="container">
+        <div class="section-heading text-center">
+          <h1>About</h1>
         </div>
 
-        <div id="share-wrap-top" class="text-center" style="margin-top:40px; line-height: 150%;">
-            <a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fd3gt.com%2F&text=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials:%20https%3A%2F%2Fd3gt.com%2F&hashtags=d3js,graph-theory,maths&via=mrpandey360" target="_blank" style="background:#0c7abf;"><i class="fa fa-twitter"></i>&nbsp;&nbsp;Tweet</a>
-
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fd3gt.com%2F&quote=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials" target="_blank" style="background:#42609c;"><i class="fa fa-facebook"></i>&nbsp;&nbsp;Share</a>
-
-            <a href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fd3gt.com%2F&media=https%3A%2F%2Fraw.githubusercontent.com%2Fmrpandey%2Fd3graphTheory%2Fmaster%2Fimg%2Fbanner.png&description=Interactive%20and%20colorful%20graph%20theory%20tutorials.%20Visual%2C%20concise%20and%20fun.&hashtags=graph-theory,tutorials,d3js,maths,computer-science" target="_blank" style="background:#ad081b;"><i class="fa fa-pinterest"></i>&nbsp;&nbsp;Save</a>
+        <div class="row section-content">
+          <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+            <div class="quote-wrap">
+              <div class="quote">
+                In mathematics, graph theory is the study of graphs, which are
+                mathematical structures used to model pairwise relations between
+                objects. A graph in this context is made up of vertices, nodes,
+                or points which are connected by edges, arcs, or lines.
+              </div>
+              <div class="quote-cite">&mdash; Wikipedia</div>
+            </div>
+            <p>
+              D3 Graph Theory is a project aimed at anyone who wants to learn
+              graph theory. It provides quick and interactive introduction to
+              the subject. The visuals used in the project makes it an effective
+              learning tool.
+            </p>
+            <p>
+              And yes, it is an open-source project. Check the code at
+              <a
+                href="https://github.com/mrpandey/d3graphTheory"
+                target="_blank"
+                >GitHub</a
+              >.
+            </p>
+          </div>
         </div>
 
-        <div id="about" class="container">
+        <div class="row text-center jump-on">
+          <div class="col-xs-8 col-xs-offset-2">
+            <a href="unit.html">BEGIN</a>
+          </div>
+        </div>
+      </div>
 
-            <div class="section-heading text-center">
-                <h1>About</h1>
-            </div>
-
-            <div class="row section-content">
-                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
-                    <div class="quote-wrap">
-                        <div class="quote">
-                            In mathematics, graph theory is the study of graphs, which are mathematical structures used to model pairwise relations between objects. A graph in this context is made up of vertices, nodes, or points which are connected by edges, arcs, or lines.
-                        </div>
-                        <div class="quote-cite">&mdash; Wikipedia</div>
-                    </div>
-                    <p>
-                        D3 Graph Theory is a project aimed at anyone who wants to learn graph theory. It provides quick and interactive introduction to the subject. The visuals used in the project makes it an effective learning tool.
-                    </p>
-                    <p>
-                        And yes, it is an open-source project. Check the code at <a href="https://github.com/mrpandey/d3graphTheory" target="_blank">GitHub</a>.
-                    </p>
-                </div>
-            </div>
-
-            <div class="row text-center jump-on">
-                <div class="col-xs-8 col-xs-offset-2">
-                    <a href="unit.html">BEGIN</a>
-                </div>
-            </div>
-
+      <div id="faq" class="container">
+        <div class="section-heading text-center">
+          <h1>FAQ</h1>
         </div>
 
-        <div id="faq" class="container">
-
-            <div class="section-heading text-center">
-                <h1>FAQ</h1>
+        <div class="row section-content">
+          <div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2">
+            <div class="faq-entry">
+              <h4>Free?</h4>
+              <p>Yes. By the way, it's also open-source.</p>
             </div>
 
-            <div class="row section-content">
+            <div class="faq-entry">
+              <h4>Difficulty level?</h4>
+              <p>
+                Easy. Visuals make it easy for an average Joe to go through the
+                material.
+              </p>
+            </div>
+          </div>
 
-                <div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2">
-
-                    <div class="faq-entry">
-                        <h4>Free?</h4>
-                        <p>Yes. By the way, it's also open-source.</p>
-                    </div>
-
-                    <div class="faq-entry">
-                        <h4>Difficulty level?</h4>
-                        <p>Easy. Visuals make it easy for an average Joe to go through the material.</p>
-                    </div>
-
-                </div>
-
-                <div class="col-xs-5 col-sm-4">
-
-                    <div class="faq-entry">
-                        <h4>Any pre-requisites?</h4>
-                        <p>None. Very basic combinatorics and set theory might be useful, but not required.</p>
-                    </div>
-
-                    <div class="faq-entry">
-                        <h4>Is any certificate provided?</h4>
-                        <p>Sorry, no certificates. It's just you and the material.</p>
-                    </div>
-
-                </div>
-
+          <div class="col-xs-5 col-sm-4">
+            <div class="faq-entry">
+              <h4>Any pre-requisites?</h4>
+              <p>
+                None. Very basic combinatorics and set theory might be useful,
+                but not required.
+              </p>
             </div>
 
-            <div class="row text-center jump-on">
-                <div class="col-xs-8 col-xs-offset-2">
-                    <a href="unit.html">ENOUGH TALK</a>
-                </div>
+            <div class="faq-entry">
+              <h4>Is any certificate provided?</h4>
+              <p>Sorry, no certificates. It's just you and the material.</p>
             </div>
-
+          </div>
         </div>
 
-        <div id="contents" class="container">
-
-            <div class="section-heading text-center">
-                <h1>Contents</h1>
-            </div>
-
-            <div class="row section-content">
-                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
-                    <p>
-                        The material is divided into several small units. Each unit contains concise theory and a canvas where you can draw things. Going through small units gives the learner a sense of achievement at each step.
-                    </p>
-
-                    <div id="content-list" class="row">
-                        <!-- div.list-containers are dynamically appended -->
-                    </div>
-
-                    <div id="more-list" class="row">
-                        <div class="col-sm-12">
-                            <div class="btn btn-primary btn-block">Show All</div>
-                        </div>
-                    </div>
-
-                    <p>
-                        <b>Note:</b> The project is still expanding. New units are added and existing ones modified from time to time.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="row text-center jump-on">
-                <div class="col-xs-8 col-xs-offset-2">
-                    <a id="random-loader" href="unit.html"><i class="fa fa-random"></i> LOAD A RANDOM UNIT</a>
-                </div>
-            </div>
-
+        <div class="row text-center jump-on">
+          <div class="col-xs-8 col-xs-offset-2">
+            <a href="unit.html">ENOUGH TALK</a>
+          </div>
         </div>
-        <!--Contents Ends-->
+      </div>
 
-        <div id="donate" class="container">
+      <div id="contents" class="container">
+        <div class="section-heading text-center">
+          <h1>Contents</h1>
+        </div>
 
-            <div class="section-heading text-center">
-                <h1>Support The Developer</h1>
+        <div class="row section-content">
+          <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+            <p>
+              The material is divided into several small units. Each unit
+              contains concise theory and a canvas where you can draw things.
+              Going through small units gives the learner a sense of achievement
+              at each step.
+            </p>
+
+            <div id="content-list" class="row">
+              <!-- div.list-containers are dynamically appended -->
             </div>
 
-            <div class="row section-content">
+            <div id="more-list" class="row">
+              <div class="col-sm-12">
+                <div class="btn btn-primary btn-block">Show All</div>
+              </div>
+            </div>
 
-                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
-                    <p>
-                        D3 Graph Theory is developed and maintained by a one-man team. And the project is and will remain free and open-source.
-                    </p>
-                    <p>
-                        So, if you liked this project, please consider a small donation. It provides incentive to the developer and helps him expand and create more such projects.
-                    </p>
+            <p>
+              <b>Note:</b> The project is still expanding. New units are added
+              and existing ones modified from time to time.
+            </p>
+          </div>
+        </div>
 
-                    <!--div class="donation text-center">
+        <div class="row text-center jump-on">
+          <div class="col-xs-8 col-xs-offset-2">
+            <a id="random-loader" href="unit.html"
+              ><i class="fa fa-random"></i> LOAD A RANDOM UNIT</a
+            >
+          </div>
+        </div>
+      </div>
+      <!--Contents Ends-->
+
+      <div id="donate" class="container">
+        <div class="section-heading text-center">
+          <h1>Support The Developer</h1>
+        </div>
+
+        <div class="row section-content">
+          <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+            <p>
+              D3 Graph Theory is developed and maintained by a one-man team. And
+              the project is and will remain free and open-source.
+            </p>
+            <p>
+              So, if you liked this project, please consider a small donation.
+              It provides incentive to the developer and helps him expand and
+              create more such projects.
+            </p>
+
+            <!--div class="donation text-center">
                         <a id="dbox-donation-button" href="https://donorbox.org/d3graphtheory" target="_blank" style="background:#5cb85c url(https://d1iczxrky3cnb2.cloudfront.net/white_logo.png) no-repeat 56px center; color: #fff; text-decoration: none;font-family: Verdana,sans-serif;display: inline-block;font-size: 16px; padding: 17px 64px 17px 94px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; box-shadow: 0 2px 0 0 #408040; text-shadow: 0 1px rgba(0, 0, 0, 0.3);" >Donate</a>
                     </div-->
 
-                    <div class="donation text-center">
-                        <a id="paypal-donation-button" class="donation-button" href="https://www.paypal.me/mrpandey/3usd" target="_blank" style="background:#ffc439; color:#444; text-decoration: none; font-family: Verdana,sans-serif; display: inline-block; font-size: 14px; padding: 17px 50px; border-radius: 4px; box-shadow: 2px 2px 0 0 #aaa; text-shadow: 0 0px rgba(0, 0, 0, 0.3);" >Donate with &nbsp;&nbsp;<img src="https://d1sssn74k2rfxk.cloudfront.net/assets/paypal-logo-5a20b072b1e631083fe3102a4e58e316.png" style="width:80px; height:auto;" alt="PayPal"></a>
-                    </div>
-
-                </div>
+            <div class="donation text-center">
+              <a
+                id="paypal-donation-button"
+                class="donation-button"
+                href="https://www.paypal.me/mrpandey/3usd"
+                target="_blank"
+                style="background:#ffc439; color:#444; text-decoration: none; font-family: Verdana,sans-serif; display: inline-block; font-size: 14px; padding: 17px 50px; border-radius: 4px; box-shadow: 2px 2px 0 0 #aaa; text-shadow: 0 0px rgba(0, 0, 0, 0.3);"
+                >Donate with &nbsp;&nbsp;<img
+                  src="https://d1sssn74k2rfxk.cloudfront.net/assets/paypal-logo-5a20b072b1e631083fe3102a4e58e316.png"
+                  style="width:80px; height:auto;"
+                  alt="PayPal"
+              /></a>
             </div>
+          </div>
+        </div>
+      </div>
 
+      <div id="share" class="container">
+        <div class="section-heading text-center">
+          <h1>Spread the Word</h1>
         </div>
 
-        <div id="share" class="container">
-
-            <div class="section-heading text-center">
-                <h1>Spread the Word</h1>
+        <div class="row section-content">
+          <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+            <p>
+              Help the project reach more people. Share this with your friends
+              and colleagues. Spread the word!!
+            </p>
+            <div class="text-center">
+              <ul class="share-buttons">
+                <li>
+                  <a
+                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fd3gt.com%2F&quote=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials"
+                    title="Share on Facebook"
+                    target="_blank"
+                    ><img
+                      alt="Share on Facebook"
+                      src="img/icons/social-color-large/facebook.png"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fd3gt.com%2F&text=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials:%20https%3A%2F%2Fd3gt.com%2F&hashtags=d3js,graph-theory,maths&via=mrpandey360"
+                    target="_blank"
+                    title="Tweet"
+                    ><img
+                      alt="Tweet"
+                      src="img/icons/social-color-large/twitter.png"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fd3gt.com%2F&media=https%3A%2F%2Fraw.githubusercontent.com%2Fmrpandey%2Fd3graphTheory%2Fmaster%2Fimg%2Fbanner.png&description=Interactive%20and%20colorful%20graph%20theory%20tutorials.%20Visual%2C%20concise%20and%20fun.&hashtags=graph-theory,tutorials,d3js,maths,computer-science"
+                    target="_blank"
+                    title="Save"
+                    ><img
+                      alt="Save"
+                      src="img/icons/social-color-large/pinterest.png"
+                  /></a>
+                </li>
+                <!--li><a href="http://www.reddit.com/submit?url=https%3A%2F%2Fd3gt.com%2F&title=D3%20Graph%20Theory" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="img/icons/social-color-large/reddit.png" /></a></li-->
+                <li>
+                  <a
+                    href="http://www.tumblr.com/share?v=3&u=https%3A%2F%2Fd3gt.com%2F&quote=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials&tags=graph-theory,tutorials,maths,d3js,computer-science"
+                    target="_blank"
+                    title="Post to Tumblr"
+                    ><img
+                      alt="Post to Tumblr"
+                      src="img/icons/social-color-large/tumblr.png"
+                  /></a>
+                </li>
+              </ul>
             </div>
-
-            <div class="row section-content">
-
-                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
-                    <p>
-                        Help the project reach more people. Share this with your friends and colleagues. Spread the word!!
-                    </p>
-                    <div class="text-center">
-                        <ul class="share-buttons">
-                            <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fd3gt.com%2F&quote=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="img/icons/social-color-large/facebook.png" /></a></li>
-                            <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fd3gt.com%2F&text=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials:%20https%3A%2F%2Fd3gt.com%2F&hashtags=d3js,graph-theory,maths&via=mrpandey360" target="_blank" title="Tweet"><img alt="Tweet" src="img/icons/social-color-large/twitter.png" /></a></li>
-                            <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fd3gt.com%2F&media=https%3A%2F%2Fraw.githubusercontent.com%2Fmrpandey%2Fd3graphTheory%2Fmaster%2Fimg%2Fbanner.png&description=Interactive%20and%20colorful%20graph%20theory%20tutorials.%20Visual%2C%20concise%20and%20fun.&hashtags=graph-theory,tutorials,d3js,maths,computer-science" target="_blank" title="Save"><img alt="Save" src="img/icons/social-color-large/pinterest.png" /></a></li>
-                            <!--li><a href="http://www.reddit.com/submit?url=https%3A%2F%2Fd3gt.com%2F&title=D3%20Graph%20Theory" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="img/icons/social-color-large/reddit.png" /></a></li-->
-                            <li><a href="http://www.tumblr.com/share?v=3&u=https%3A%2F%2Fd3gt.com%2F&quote=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials&tags=graph-theory,tutorials,maths,d3js,computer-science" target="_blank" title="Post to Tumblr"><img alt="Post to Tumblr" src="img/icons/social-color-large/tumblr.png" /></a></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-
+          </div>
         </div>
-
+      </div>
     </div>
 
     <footer id="myFooter">
+      <div class="container first-bar">
+        <div class="row">
+          <div class="col-sm-3 col-sm-offset-1">
+            <h5>About Developer</h5>
+            <p>
+              I am Avinash Pandey. Maths student. Algorithm lover. Avid
+              programmer. Open source enthusiast.
+            </p>
+            <p>
+              If you liked this project, please consider a
+              <a
+                href="https://www.paypal.me/mrpandey/3usd"
+                target="_blank"
+                style="color:#f92672;"
+                >small donation</a
+              >.
+            </p>
+            <p>
+              <i class="fa fa-github" style="color:#66d9ef;"></i>&nbsp;&nbsp;<a
+                href="https://github.com/mrpandey"
+                target="_blank"
+                style="color:#66d9ef;"
+                >My GitHub Profile</a
+              >
+              <br />
+              <i class="fa fa-globe" style="color:#66d9ef;"></i>&nbsp;&nbsp;<a
+                href="http://mrpandey.com/"
+                target="_blank"
+                style="color:#66d9ef;"
+                >mrpandey.com</a
+              >
+            </p>
+          </div>
 
-        <div class="container first-bar">
-            <div class="row">
+          <div class="col-sm-3 col-sm-offset-1">
+            <h5>About Code</h5>
+            <p>
+              The code is open source and licensed under
+              <a
+                href="https://github.com/mrpandey/d3graphTheory/blob/master/LICENSE"
+                target="_blank"
+                style="color:#f92672;"
+                >MIT License</a
+              >.
+            </p>
+            <p>
+              Made using
+              <a href="https://d3js.org" target="_blank" style="color:#66d9ef;"
+                >D3.js</a
+              >,
+              <a
+                href="http://getbootstrap.com/"
+                target="_blank"
+                style="color:#a6e22e;"
+                >bootstrap</a
+              >,
+              <a
+                href="https://jquery.com/"
+                target="_blank"
+                style="color:#fd971f;"
+                >jQuery</a
+              >
+              and
+              <a
+                href="https://www.mathjax.org/"
+                target="_blank"
+                style="color:#66d9ef;"
+                >MathJax</a
+              >. Hosted on
+              <a
+                href="https://pages.github.com/"
+                target="_blank"
+                style="color:#edde45;"
+                >GitHub Pages</a
+              >.
+            </p>
+            <p>
+              Based on
+              <a
+                href="https://mrpandey.github.io/graphPlayground/"
+                target="_blank"
+                style="color:#edde45;"
+                >graphPlayground</a
+              >.
+            </p>
+            <p style="padding-top:8px;">
+              <iframe
+                src="https://ghbtns.com/github-btn.html?user=mrpandey&repo=d3graphTheory&type=star&count=true"
+                style="overflow:hidden; border:0;"
+                width="100"
+                height="20"
+              ></iframe>
+              <iframe
+                src="https://ghbtns.com/github-btn.html?user=mrpandey&repo=d3graphTheory&type=fork&count=true"
+                style="overflow:hidden; border:0;"
+                width="100"
+                height="20"
+              ></iframe>
+            </p>
+          </div>
 
-                    <div class="col-sm-3 col-sm-offset-1">
-                            <h5>About Developer</h5>
-                            <p>
-                                I am Avinash Pandey. Maths student. Algorithm lover. Avid programmer. Open source enthusiast.
-                            </p>
-                            <p>
-                                If you liked this project, please consider a <a href="https://www.paypal.me/mrpandey/3usd" target="_blank" style="color:#f92672;">small donation</a>.
-                            </p>
-                            <p>
-                                <i class="fa fa-github" style="color:#66d9ef;"></i>&nbsp;&nbsp;<a href="https://github.com/mrpandey" target="_blank" style="color:#66d9ef;">My GitHub Profile</a>
-                                <br>
-                                <i class="fa fa-globe" style="color:#66d9ef;"></i>&nbsp;&nbsp;<a href="http://mrpandey.com/" target="_blank" style="color:#66d9ef;">mrpandey.com</a>
-                            </p>
-                    </div>
-
-                    <div class="col-sm-3 col-sm-offset-1">
-                            <h5>About Code</h5>
-                            <p>
-                                The code is open source and licensed under <a href="https://github.com/mrpandey/d3graphTheory/blob/master/LICENSE" target="_blank" style="color:#f92672;">MIT License</a>.
-                            </p>
-                            <p>
-                                Made using <a href="https://d3js.org" target="_blank" style="color:#66d9ef;">D3.js</a>, <a href="http://getbootstrap.com/" target="_blank" style="color:#a6e22e;">bootstrap</a>, <a href="https://jquery.com/" target="_blank" style="color:#fd971f;">jQuery</a> and <a href="https://www.mathjax.org/" target="_blank" style="color:#66d9ef;">MathJax</a>. Hosted on <a href="https://pages.github.com/" target="_blank" style="color:#edde45;">GitHub Pages</a>.
-                            </p>
-                            <p>
-                                Based on <a href="https://mrpandey.github.io/graphPlayground/" target="_blank" style="color:#edde45;">graphPlayground</a>.
-                            </p>
-                            <p style="padding-top:8px;">
-                                <iframe src="https://ghbtns.com/github-btn.html?user=mrpandey&repo=d3graphTheory&type=star&count=true" style="overflow:hidden; border:0;" width="100" height="20"></iframe>
-                                <iframe src="https://ghbtns.com/github-btn.html?user=mrpandey&repo=d3graphTheory&type=fork&count=true" style="overflow:hidden; border:0;" width="100" height="20"></iframe>
-                            </p>
-                    </div>
-
-                    <div class="col-sm-3 col-sm-offset-1">
-                            <h5>Attributions</h5>
-                            <ul>
-                                    <li><a href="http://rkirsling.github.io/modallogic/" target="_blank">Modal Logic Playground</a></li>
-                                    <li><a href="http://jacquerie.github.io/hh/" target="_blank">Havel-Hakimi</a></li>
-                                    <li><a href="http://iconsandcoffee.com/" target="_blank">iconsandcoffee.com</a></li>
-                                    <li><a href="https://ghbtns.com/" target="_blank">Github buttons</a></li>
-                            </ul>
-                    </div>
-
-            </div>
+          <div class="col-sm-3 col-sm-offset-1">
+            <h5>Attributions</h5>
+            <ul>
+              <li>
+                <a href="http://rkirsling.github.io/modallogic/" target="_blank"
+                  >Modal Logic Playground</a
+                >
+              </li>
+              <li>
+                <a href="http://jacquerie.github.io/hh/" target="_blank"
+                  >Havel-Hakimi</a
+                >
+              </li>
+              <li>
+                <a href="http://iconsandcoffee.com/" target="_blank"
+                  >iconsandcoffee.com</a
+                >
+              </li>
+              <li>
+                <a href="https://ghbtns.com/" target="_blank">Github buttons</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
 
-        <div class="second-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7 col-md-offset-1">
-                        <span class="logo"><a href="index.html">D3 Graph Theory</a></span>
-                        <span class="copyright">Copyright (c) 2017-18, Avinash Pandey.</span>
-                    </div>
-                    <div class="col-md-4 social-icons">
-                        <ul class="share-buttons">
-                            <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fd3gt.com%2F&quote=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="img/icons/social-inverted/facebook.png" /></a></li>
-                            <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fd3gt.com%2F&text=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials:%20https%3A%2F%2Fd3gt.com%2F&hashtags=d3js,graph-theory,maths&via=mrpandey360" target="_blank" title="Tweet"><img alt="Tweet" src="img/icons/social-inverted/twitter.png" /></a></li>
-                            <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fd3gt.com%2F&media=https%3A%2F%2Fraw.githubusercontent.com%2Fmrpandey%2Fd3graphTheory%2Fmaster%2Fimg%2Fbanner.png&description=Interactive%20and%20colorful%20graph%20theory%20tutorials.%20Visual%2C%20concise%20and%20fun.&hashtags=graph-theory,tutorials,d3js,maths,computer-science" target="_blank" title="Save"><img alt="Save" src="img/icons/social-inverted/pinterest.png" /></a></li>
-                            <!--li><a href="http://www.reddit.com/submit?url=https%3A%2F%2Fd3gt.com%2F&title=D3%20Graph%20Theory" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="img/icons/social-inverted/reddit.png" /></a></li-->
-                            <li><a href="http://www.tumblr.com/share?v=3&u=https%3A%2F%2Fd3gt.com%2F&quote=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials&tags=graph-theory,tutorials,maths,d3js,computer-science" target="_blank" title="Post to Tumblr"><img alt="Post to Tumblr" src="img/icons/social-inverted/tumblr.png" /></a></li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="second-bar">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-1">
+              <span class="logo"><a href="index.html">D3 Graph Theory</a></span>
+              <span class="copyright"
+                >Copyright (c) 2017-18, Avinash Pandey.</span
+              >
             </div>
+            <div class="col-md-4 social-icons">
+              <ul class="share-buttons">
+                <li>
+                  <a
+                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fd3gt.com%2F&quote=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials"
+                    title="Share on Facebook"
+                    target="_blank"
+                    ><img
+                      alt="Share on Facebook"
+                      src="img/icons/social-inverted/facebook.png"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fd3gt.com%2F&text=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials:%20https%3A%2F%2Fd3gt.com%2F&hashtags=d3js,graph-theory,maths&via=mrpandey360"
+                    target="_blank"
+                    title="Tweet"
+                    ><img
+                      alt="Tweet"
+                      src="img/icons/social-inverted/twitter.png"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fd3gt.com%2F&media=https%3A%2F%2Fraw.githubusercontent.com%2Fmrpandey%2Fd3graphTheory%2Fmaster%2Fimg%2Fbanner.png&description=Interactive%20and%20colorful%20graph%20theory%20tutorials.%20Visual%2C%20concise%20and%20fun.&hashtags=graph-theory,tutorials,d3js,maths,computer-science"
+                    target="_blank"
+                    title="Save"
+                    ><img
+                      alt="Save"
+                      src="img/icons/social-inverted/pinterest.png"
+                  /></a>
+                </li>
+                <!--li><a href="http://www.reddit.com/submit?url=https%3A%2F%2Fd3gt.com%2F&title=D3%20Graph%20Theory" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="img/icons/social-inverted/reddit.png" /></a></li-->
+                <li>
+                  <a
+                    href="http://www.tumblr.com/share?v=3&u=https%3A%2F%2Fd3gt.com%2F&quote=D3%20Graph%20Theory%20-%20Interactive%20Graph%20Theory%20Tutorials&tags=graph-theory,tutorials,maths,d3js,computer-science"
+                    target="_blank"
+                    title="Post to Tumblr"
+                    ><img
+                      alt="Post to Tumblr"
+                      src="img/icons/social-inverted/tumblr.png"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-
+      </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
     <!-- Use this local copy in case of any trouble with cdn
     <script  src="js/jquery-3.2.1.min.js"></script>
     -->
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
     <!-- Use this local copy in case of any trouble with cdn
     <script  src="js/bootstrap.min.js"></script>
     -->
@@ -346,10 +574,7 @@
     <script  src="js/d3.v5.min.js"></script>
     -->
 
-    <script  src="js/content.js"></script>
-    <script  src="js/home-app.js"></script>
-
-
-</body>
-
+    <script src="js/content.js"></script>
+    <script src="js/home-app.js"></script>
+  </body>
 </html>
