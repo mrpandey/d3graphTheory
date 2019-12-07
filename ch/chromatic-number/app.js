@@ -70,7 +70,7 @@ var problems = [
 
   {
     order: 6,
-    colors: [6, 8, 1, 6, 8, 4],
+    colors: [6, 8, 1, 4, 8, 4],
     coords: [
       [cx, cy],
       [cx, cy - 200],
