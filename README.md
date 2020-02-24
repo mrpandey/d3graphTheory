@@ -59,4 +59,4 @@ This project is built with the help of following libraries and projects.
 
 ## License
 
-Copyright (c) 2017-19 [Avinash Pandey](http://mrpandey.com). Licensed under [MIT License](https://github.com/mrpandey/d3graphTheory/blob/master/LICENSE).
+Copyright (c) 2017 [Avinash Pandey](http://mrpandey.com). Licensed under [MIT License](https://github.com/mrpandey/d3graphTheory/blob/master/LICENSE).
