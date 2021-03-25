@@ -1,23 +1,21 @@
 <p align="center">
-  <img src="img/banner.png" style="max-width:100%;">
+  <img src="img/D42.png" style="max-width:100%;">
 </p>
 
-# D3 Graph Theory
+# D42 Introdução a Teoria de Grafos
 
-[![Click to see the action](https://forthebadge.com/images/badges/check-it-out.svg)](https://d3gt.com/)
+D42 (*Degree 42*) é um recurso Educacional para introdução a teoria de grafos.
+Este projeto é um fork do projeto de código aberto [D3 Graph Theory](https://github.com/mrpandey/d3graphTheory).
+O seu conteúdo foi traduzido para português (PT-BR), com o intuito de ser utilizado
+como recurso educacional para introdução a teoria de grafos no disciplina de
+Matemática Discreta na UFSJ.
 
-[![Donate](https://img.shields.io/badge/%24-donate-orange.svg?style=flat-square)](https://www.paypal.me/mrpandey/)
 
-> In mathematics, graph theory is the study of graphs, which are mathematical structures used to model pairwise relations between objects. A graph in this context is made up of vertices, nodes, or points which are connected by edges, arcs, or lines.
-> -- <cite>Wikipedia</cite>
+## Topicos cobertos por esse projeto
 
-D3 Graph Theory is a front-end project aimed at anyone who wants to learn graph theory. It provides a quick and interactive introduction to the subject. The visuals used in the project makes it an effective learning tool.
+Seções do projeto:
 
-## Topics Covered So Far
-
-The whole content is broken in several units. So far these units have been added.
-
-| Table | Of | Contents |
+| Tabela | de | Conteudo |
 | --- | --- | --- |
 |1. [Vertices and Edges](https://d3gt.com/unit.html?vertices-and-edges)|2. [Order and Size of a Graph](https://d3gt.com/unit.html?order-and-size)|3. [Degree of a Vertex](https://d3gt.com/unit.html?degree-of-vertex)|
 |4. [Degree Sequence of a Graph](https://d3gt.com/unit.html?degree-sequence)|5. [Graphic Sequence](https://d3gt.com/unit.html?graphic-sequence)|6. [Havel-Hakimi Algorithm](https://d3gt.com/unit.html?havel-hakimi)|
@@ -28,35 +26,11 @@ The whole content is broken in several units. So far these units have been added
 |19. [Chromatic Number](https://d3gt.com/unit.html?chromatic-number)|20. [Trees](https://d3gt.com/unit.html?trees)|21. [Rooted Trees](https://d3gt.com/unit.html?rooted-trees)|
 |22. [Spanning Tree of a Graph](https://d3gt.com/unit.html?spanning-tree)|
 
-The project is still expanding. New topics are added from time to time.
 
-## Upcoming Topics
 
-These topics are planned to be added.
+## Licença
 
-- [ ] Planar Graphs
-- [x] Chromatic Number
-- [x] Trees
-- [x] Rooted Trees
-- [x] Spanning Tree
-- [ ] Prim's Algorithm
-- [ ] Kruskal's Algorithm
 
-So, keep checking for updates. :smile:
-
-## Attributions
-
-This project is built with the help of following libraries and projects.
-
-* [D3.js](https://github.com/d3/d3)
-* [MathJax](https://github.com/mathjax/MathJax)
-* [JQuery](https://github.com/jquery/jquery)
-* [Bootstrap](https://github.com/twbs/bootstrap)
-* [Modal Logic Playground](https://github.com/rkirsling/modallogic)
-* [Havel-Hakimi](https://github.com/jacquerie/hh)
-* [iconsanscoffee.com](http://iconsandcoffee.com/)
-* [GitHub Buttons](https://ghbtns.com/)
-
-## License
+## Licença Original
 
 Copyright (c) 2017 [Avinash Pandey](http://mrpandey.com). Licensed under [MIT License](https://github.com/mrpandey/d3graphTheory/blob/master/LICENSE).
