@@ -49,7 +49,7 @@ $(document).ready(function() {
       return d.radius;
     })
     .style("fill", function(d, i) {
-      return color[i % 12];
+      return color[i % 2];
     });
 
   var force = d3

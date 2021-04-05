@@ -220,6 +220,12 @@ function keyup() {
   }
 }
 
+function alive(){
+  log.console('teste');
+  if (d3.event.button==0){
+    window.alert('Click');
+  }
+}
 //updates the graph by updating links, nodes and binding them with DOM
 //interface is defined through several events
 function restart() {
@@ -259,6 +265,7 @@ function restart() {
     })
     .on("mousedown", beginDragLine)
     .on("mouseup", endDragLine)
+    .on("contextmenu", alive)
     .on("contextmenu", removeNode);
 
   ve.append("title").text(function(d) {
