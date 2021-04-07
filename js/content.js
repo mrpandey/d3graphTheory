@@ -199,7 +199,7 @@ var contentData =
       <div class='note'> <span class='note-word'>Note:</span> Um sequência que contem somente zeros é um grafo. </div>\
       <p> <b>Exemplo 2:</b> A sequência \\((4,3,2,1)\\) não é um grafo. Precisamos de pelo menos quatro outros vértices para satisfazer o grau do vértice tendo \\(4\\) como seu grau. Mas somente temos três. </p>\
       <p> <b>Exemplo 3:</b> A sequência \\((4,3,3,2,2,1)\\) não é um grafo. Lembre-se que a soma dos graus é <b>duas vezes</b> o número de arestas. Portanto, a soma de um sequência de graus deve ser uniforme. Isso não ocorre aqui. </p>\
-      <p> A seguintes sequências são gráficas. Tente desenhar um grafo para cada um deles. Você pode ver a resposta clicando no link ao lado deles. </p>\
+      <p> A seguintes sequências de graus resultam em grafo. Tente desenhar um grafo para cada um deles. Você pode ver a resposta clicando no link ao lado deles. </p>\
       <p> \\((5,1,1,1,1,1)\\) <span class='graph-event-link' id='prob0'> Veja solução</span> </p>\
       <p> \\((2,2,2,2,2)\\) <span class='graph-event-link' id='prob1'> Veja solução</span> </p>\
       <p> \\((4,4,4,4,4,0)\\) <span class='graph-event-link' id='prob2'> Veja solução</span> </p>\
