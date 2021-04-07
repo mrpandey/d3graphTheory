@@ -121,6 +121,52 @@ function tick() {
   circle.attr('transform', (d) => `translate(${d.x},${d.y})`);
 }
 
+showGraphLatex();
+//handling output area
+function showGraphLatex() {
+  var v = "\\[V=\\{";
+  for (let i = 0; i < nodes.length; i++) {
+    if (i == 0) v += "v_{" + nodes[i].id + "}";
+    else v += "," + "v_{" + nodes[i].id + "}";
+    //add line break
+    if ((i + 1) % 15 == 0) v += "\\\\";
+  }
+  v += "\\}\\]";
+
+  var e = "\\[E=\\{";
+  var tamanho = links.length;
+  console.log(links);
+  tamanho = tamanho;
+  for (let i = 0; i < tamanho; i++) {
+    if(links[i].left == true && links[i].right==true){
+      e += "v_{" + links[i].target.id + "}"+ "v_{" + links[i].source.id + "},";
+      e += "v_{" + links[i].source.id + "}"+ "v_{" + links[i].target.id + "},";
+    }
+    if(links[i].left){
+      e += "v_{" + links[i].target.id + "}"+ "v_{" + links[i].source.id + "},";
+    }else{
+      e += "v_{" + links[i].source.id + "}"+ "v_{" + links[i].target.id + "},";
+    }
+
+    //add line break
+    if ((i + 1) % 10 == 0) e += "\\\\";
+  }
+  e += "\\}\\]";
+
+  document.getElementById("svg-output").textContent = v + e;
+  //recall mathjax
+  MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+}
+
+var clrBtn = d3.select("#clear-graph");
+clrBtn.on("click", clearGraph);
+//empties the graph
+function clearGraph() {
+  nodes.splice(0);
+  links.splice(0);
+  lastNodeId = 0;
+  restart();
+}
 // update graph (called when needed)
 function restart() {
   // path (link) group
@@ -163,9 +209,15 @@ function restart() {
   // remove old nodes
   circle.exit().remove();
 
+  function removeEdge(d, i){
+    links.splice(links.indexOf(d), 1);
+    d3.event.preventDefault();
+    restart();
+    showGraphLatex();
+  }
+
   // add new nodes
   const g = circle.enter().append('svg:g');
-
   g.append('svg:circle')
     .attr('class', 'node')
     .attr('r', 12)
@@ -195,7 +247,6 @@ function restart() {
         .style('marker-end', 'url(#end-arrow)')
         .classed('hidden', false)
         .attr('d', `M${mousedownNode.x},${mousedownNode.y}L${mousedownNode.x},${mousedownNode.y}`);
-
       restart();
     })
     .on('mouseup', function (d) {
@@ -233,7 +284,9 @@ function restart() {
       selectedLink = link;
       selectedNode = null;
       restart();
-    });
+      showGraphLatex();
+    })
+    .on('contextmenu', removeNode);
 
   // show node IDs
   g.append('svg:text')
@@ -250,6 +303,21 @@ function restart() {
     .force('link').links(links);
 
   force.alphaTarget(0.3).restart();
+}
+
+function removeNode(d) {
+  //to make ctrl-drag works for mac/osx users
+  if (d3.event.ctrlKey) return;
+  nodes.splice(nodes.indexOf(d), 1);
+  var linksToRemove = links.filter(function(l) {
+    return l.source === d || l.target === d;
+  });
+  linksToRemove.map(function(l) {
+    links.splice(links.indexOf(l), 1);
+  });
+  d3.event.preventDefault();
+  restart();
+  showGraphLatex();
 }
 
 function mousedown() {

@@ -265,7 +265,6 @@ function restart() {
     })
     .on("mousedown", beginDragLine)
     .on("mouseup", endDragLine)
-    .on("contextmenu", alive)
     .on("contextmenu", removeNode);
 
   ve.append("title").text(function(d) {

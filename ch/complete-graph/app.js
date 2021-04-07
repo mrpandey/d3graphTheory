@@ -346,7 +346,7 @@ function showGraphLatex() {
     return b - a;
   });
 
-  var l = "\\[\\text{Degree Sequence}=(";
+  var l = "\\[\\text{Sequência de Graus}=(";
   degSeq.forEach(function(d, i) {
     if (i !== degSeq.length - 1) l += d + ",";
     else l += d;
@@ -357,7 +357,7 @@ function showGraphLatex() {
     size = links.length;
   if (order > 0 && 2 * size == order * (order - 1)) {
     l +=
-      "\\[\\text{It's a complete graph (}" +
+      "\\[\\text{É um grafo completo (}" +
       "K_{" +
       degSeq.length +
       "} \\text{).}\\]";

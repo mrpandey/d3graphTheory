@@ -418,16 +418,16 @@ function showGraphLatex(isBipartite) {
     //complete or not
     if (links.length == countA * countB) {
       l =
-        "\\[\\text{Complete Bipartite (\\(K_{" +
+        "\\[\\text{Bipartido Completo (\\(K_{" +
         countA +
         "," +
         countB +
         "}\\))} \\\\";
       l += "|E|=" + countA + "\\cdot" + countB + "=" + links.length + "\\]";
-    } else l = "\\[\\text{Bipartite, but not complete.}\\]";
+    } else l = "\\[\\text{Bipartido, mas não é completo.}\\]";
   } else if (isBipartite != false) {
-    l = "\\[\\text{Draw something bipartite.}\\]";
-  } else l = "\\[\\text{Not Bipartite}\\]";
+    l = "\\[\\text{Desenhe um grafo bipartido.}\\]";
+  } else l = "\\[\\text{Não é Bipartido}\\]";
 
   document.getElementById("svg-output").textContent = l;
   //recall mathjax

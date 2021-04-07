@@ -78,7 +78,7 @@ var contentData =
 
     "order-and-size": {
       "content-title": "Ordem e Tamanho",
-    "theory-content": "<p><b> A ordem <\ / b> de um grafo é o número de vértices que ele possui.<\/p>\
+    "theory-content": "<p><b> A ordem <\/b> de um grafo é o número de vértices que ele possui.<\/p>\
     <p><b>Tamanho <\/b> de um grafo é o número de arestas que ele possui.<\/p>\
     <p> Agora desenhe algums grafos para se acostumar com os termos. <\/p>\
     <p> Agora limpe o grafo e desenhe alguns vértices (digamos \\(n\\)). Tente atingir o tamanho máximo com esses vértices. Tente isso para diferentes valores de \\(n\\) <\/p>\
@@ -113,14 +113,17 @@ var contentData =
 
       "theory-content":"Grafo dirigido, digrafo ou direcionado G consiste de dois conjuntos finitos:<br>\
       <ul>\
-      <li>Vértices \\(V\\) (G)</li>\
-      <li>Arestas dirigidas \\E(G)\\, onde cada aresta é associada a um par ordenado de vértices chamados de nós terminais</li>\
-      <li>Se a aresta e é associada ao par \\(u, v\\) de vértices, diz-se que e é a aresta dirigida de u para v</li>\
+      <li> De vertices V, e arestas E. Podendo ser representado por G=(V,E)</li>\
+      <li>As arestas representadas por E são direcionadas.</li>\
+      <li>Se a aresta é associada ao par \\(1, 2\\) de vértices, diz-se que a aresta é dirigida de 1 para 2</li>\
+      <li>Sendo a relação (1, 2), diferente de (2,1)</li>\
     </ul>\
       ",
       "interface-title": "Manual:",
 
-      "interface-content": instrucao,
+      "interface-content": "<ul><li>Para adicionar um vértice <b>clique com o botão esquerdo</b>\
+      no espaço em branco.</li><li>Para adicionar uma aresta <b>arraste</b>\
+       de um vértice para outro.</li></ul>",
       "svg-buttons":
         '<button type="button" id="clear-graph" class="btn btn-default">Limpar Tudo</button>',
 
@@ -132,11 +135,12 @@ var contentData =
       star: "n",
       style: "app.css"
     },
+
     "degree-of-vertex": {
       "content-title": "Grau",
 
       "theory-content":
-        "<p><b>Grau</b> de um vértice é o número de arestas que incidem sobre ele.Isso nos diz o número de vértices adjacentes a ele.</p>\
+        "<p><b>Grau</b> de um vértice é o número de arestas que incidem sobre ele. Isso nos diz o número de vértices adjacentes a ele.</p>\
     <p> Na representação cada grafo está desenhando com seu grau. Faça algumas mudanças e veja a mudança dos graus. </p>\
     <p> Grau de um vértice \\(v\\) é apresentado por \\(deg(v)\\). Os vértices com grau\\(deg(v)=0\\) são chamados de vértices isolados. </p>\
     <p> Os vértices com grau <b>zero</b> não possuem nenhum outro vértice ligado com eles. </p>\
@@ -158,12 +162,12 @@ var contentData =
     },
 
     "degree-sequence": {
-      "content-title": "Sequencia de Graus de um Grafo",
+      "content-title": "Sequência de Graus de um Grafo",
 
       "theory-content":"<p><b>Degree sequence</b> de um grafo é um lista com os graus de todos os vértices. Normalmente a lista de graus é apresentada em uma ordem <b>decrescente</b>, do maior grau para o menor. </p>\
-      <div class='note'> <span class='note-word'>Note:</span> A sequencia dos graus (degree sequence) é sempre não crescente. Cada Grafo possui <b>uma sequência de graus única.</b> </div>\
+      <div class='note'> <span class='note-word'>Note:</span> A sequência dos graus (degree sequence) é sempre não crescente. Cada Grafo possui <b>uma sequência de graus única.</b> </div>\
       <p> No digrama, o texto dentro de cada vértice representa o grau. Desenhe algum grafos e veja a sua sequência dos graus. </p>\
-      <p> Você pode observar que a soma da sequencia dos graus é sempre duas vezes o tamanho do grafo. Em fato isso é a prova do teorema matematico abaixo. </p>\
+      <p> Você pode observar que a soma da sequência dos graus é sempre duas vezes o tamanho do grafo. Em fato isso é a prova do teorema matematico abaixo. </p>\
       <div class='result'>\
          <span class='result-word'>Teorema:</span> A soma dos graus de todos os vértices de um grafo é duas vezes o tamanho do grafo. \
          <p> Matematicamente, \\[\\sum deg(v_i)=2|E|\\] onde, \\(|E|\\) representa o número de arestas no grafo (tamanho do grafo). </p>\
@@ -186,22 +190,22 @@ var contentData =
     },
 
     "graphic-sequence": {
-      "content-title": "Sequencia do Grafo",
+      "content-title": "Determinando a existência de um Grafo",
 
-      "theory-content":"<p>Uma sequência de números é uma <b>graphic sequence</b> se nós podemos construir um grafo seguindo a sequência dos graus. </p>\
-      <p>Ok, isso pode ter ficado um pouco confuso. Então o que é uma graphic sequence? </p>\
-      <p> Vamos dizer que você tem uma lista de números. Atribua cada número a um vértice isolado. Agora, você pode conectar esses vértices de forma que cada vértice seja adjacente a tantos vértices quanto o número atribuído a ele? Em caso afirmativo, a lista de números é gráfica. Caso contrário, não. As coisas ficarão claras em breve. </p>\
-      <p> <b>Exemplo 1:</b> A sequencia \\((3,3,2,1,1,0)\\) é um grafo. No diagrama, você pode ver que os vértices têm esses números como seus graus. Note que removendo o elemento \\(0\\) a sequencia permanece. </p>\
-      <div class='note'> <span class='note-word'>Note:</span> Um sequencia que contem somente zeros é um grafo. </div>\
-      <p> <b>Exemplo 2:</b> A sequencia \\((4,3,2,1)\\) não é um grafo. Precisamos de pelo menos quatro outros vértices para satisfazer o grau do vértice tendo \\(4\\) como seu grau. Mas somente temos três. </p>\
-      <p> <b>Exemplo 3:</b> A sequencia \\((4,3,3,2,2,1)\\) não é um grafo. Lembre-se que a soma dos graus é <b>duas vezes</b> o número de arestas. Portanto, a soma de um sequência de graus deve ser uniforme. Isso não ocorre aqui. </p>\
+      "theory-content":"<p>Uma sequência de números é uma <b>sequência de graus</b> se nós podemos construir um grafo seguindo a sequência dos graus. </p>\
+      <p>Ok, isso pode ter ficado um pouco confuso. Então o que é uma sequência de graus? </p>\
+      <p> Vamos dizer que você tem uma lista de números. Atribua cada número a um vértice isolado. Agora, você pode conectar esses vértices de forma que cada vértice seja adjacente a tantos vértices quanto o número atribuído a ele? Em caso afirmativo, a lista de números é uma sequência de graus. Caso contrário, não. As coisas ficarão claras em breve. </p>\
+      <p> <b>Exemplo 1:</b> A sequência \\((3,3,2,1,1,0)\\) é um grafo. No diagrama, você pode ver que os vértices têm esses números como seus graus. Note que removendo o elemento \\(0\\) a sequência permanece. </p>\
+      <div class='note'> <span class='note-word'>Note:</span> Um sequência que contem somente zeros é um grafo. </div>\
+      <p> <b>Exemplo 2:</b> A sequência \\((4,3,2,1)\\) não é um grafo. Precisamos de pelo menos quatro outros vértices para satisfazer o grau do vértice tendo \\(4\\) como seu grau. Mas somente temos três. </p>\
+      <p> <b>Exemplo 3:</b> A sequência \\((4,3,3,2,2,1)\\) não é um grafo. Lembre-se que a soma dos graus é <b>duas vezes</b> o número de arestas. Portanto, a soma de um sequência de graus deve ser uniforme. Isso não ocorre aqui. </p>\
       <p> A seguintes sequências são gráficas. Tente desenhar um grafo para cada um deles. Você pode ver a resposta clicando no link ao lado deles. </p>\
       <p> \\((5,1,1,1,1,1)\\) <span class='graph-event-link' id='prob0'> Veja solução</span> </p>\
       <p> \\((2,2,2,2,2)\\) <span class='graph-event-link' id='prob1'> Veja solução</span> </p>\
       <p> \\((4,4,4,4,4,0)\\) <span class='graph-event-link' id='prob2'> Veja solução</span> </p>\
       <p> \\((3,3,2,2,2)\\) <span class='graph-event-link' id='prob3'> Veja solução</span> </p>\
       <p> \\((5,3,3,3,2,2)\\) <span class='graph-event-link' id='prob4'> Veja solução</span> </p>\
-      <div class='note'> <span class='note-word'>Note:</span> Um grafo possui uma sequência única de graus. Mas mais de um grafo diferente pode ser possível para a mesma <b>graphic sequence</b>. </div>",
+      <div class='note'> <span class='note-word'>Note:</span> Um grafo possui uma sequência única de graus. Mas mais de um grafo diferente pode ser possível para a mesma <b>sequência de graus</b>. </div>",
 
       "interface-title": "Manual:",
 
@@ -326,12 +330,12 @@ var contentData =
       <p> A figura mostra um grafo bipartido onde o conjunto \\(A\\) (laranja) consiste em \\(2\\) vértices e o conjunto \\(B\\)(verde) consiste em \\(3\\) vértices.</p>\
       <p> Se os dois conjuntos têm \\(p\\) e \\(q\\) número de vértices, denotamos o grafo bipartido completo por \\(K_ {p, q}\\). </p>\
       <div class='result'>\
-         <span class='result-word'>Properties: </span> The following results hold true for a complete bipartite graph \\(K_{p,q}\\). \
+         <span class='result-word'>Propriedades: </span> Os seguintes resultados são verdadeiros para um gráfico bipartido completo \\(K_{p,q}\\). \
          <p></p>\
          <ul>\
             <li>A ordem do grafo é \\(|V|=p+q\\).</li>\
             <li>O tamanho do grafo é \\(|E|=pq\\).<br>Isso pode ser usado para verificar se um grafo bipartido é bipartido completo ou não.</li>\
-            <li>A <a href='?degree-sequence'>degree sequence</a> é \\((p,p,...,p,q,...,q)\\) onde \\(p\\) is repetido \\(q\\) vezes e \\(q\\) é repetido \\(p\\) vezes. É assumido aqui que\\(p>q\\).</li>\
+            <li>A <a href='?degree-sequence'>sequência de graus</a> é \\((p,p,...,p,q,...,q)\\) onde \\(p\\) is repetido \\(q\\) vezes e \\(q\\) é repetido \\(p\\) vezes. É assumido aqui que \\(p>q\\).</li>\
          </ul>\
       </div>",
 
@@ -379,17 +383,17 @@ var contentData =
     },
 
     "open-vs-closed": {
-      "content-title": "Caminho Aberto (Open) vs Caminho Fechado (Closed Walks)",
+      "content-title": "Caminho Aberto vs Caminho Fechado",
 
       "theory-content":"<p>Esta lição descreve alguns tipos especiais de caminhadas. Familiarize-se com eles e brinque. Mas observe que a terminologia a seguir pode ser diferente do seu livro didático.</p>\
       <p>Uma caminhada é considerada <b>aberto</b> se o primeiro e o último vértices são diferentes, ou seja, os vértices terminais são diferentes.</p>\
       <p>Uma caminhada é considerada <b>fechada</b> se o primeiro e o último vértices forem iguais. Isso significa que você começa a andar em um vértice e termina no mesmo.</p>\
       <p>Antes de prosseguir, experimente desenhar percursos abertos e fechados para compreendê-los melhor. Abaixo estão mais alguns termos que você precisa saber</p>\
       <p><b>Trilha</b> é uma caminhada aberta onde os vértices podem se repetir, mas não as arestas.</p>\
-      <p><b>Path</b> é uma caminhada aberta sem repetição de vértices e arestas.</p>\
+      <p><b>Trajeto</b> é uma caminhada aberta sem repetição de vértices e arestas.</p>\
       <p>Se você fizer uma trilha (ou caminho) fechada coincidindo com os vértices terminais, então o que você acaba com é chamado de circuito (ou ciclo).</p>\
-      <p><b>Circuit</b> é um passeio fechado onde os vértices podem se repetir, mas não as arestas.</p>\
-      <p><b>Cycle</b> é um passeio fechado onde nem vértices nem arestas podem se repetir. Mas como está fechado, o primeiro e o último vértices são iguais (uma repetição).</p>\
+      <p><b>Circuito</b> é um trajeto fechado onde os vértices podem se repetir, mas não as arestas.</p>\
+      <p><b>Ciclo</b> é um trajeto fechado onde nem vértices nem arestas podem se repetir. Mas como está fechado, o primeiro e o último vértices são iguais (uma repetição).</p>\
       <p>É fácil confundir esses termos uns com os outros. Portanto, brinque até ficar confortável. Lembre-se de que você não poderá repetir arestas no aplicativo.</p>\
       <div class='note'> <span class='note-word'>Note: </span> Um caminho é um tipo especial de trilha onde os vértices não se repetem. Da mesma forma, um ciclo é um tipo especial de circuito. </div>",
 
@@ -456,7 +460,7 @@ var contentData =
       "interface-content":
         "<ul> <li>Para mover um vértice <b>segure Ctrl e arraste</b> . </li> <li> Para ver o nome de um vértice/aresta, <b>passe o cursor</b> sobre ele. </li>\
         <li> Para iniciar uma caminhada, clique em qualquer aresta. </ li> <li> O <span style = 'background-color: #ff0; padding: 2px;'>\
-         primeiro </span> e <span style='background-color: #8f3; padding: 2px;'> último < / span> vértices da caminhada têm limites coloridos. </li>\
+         primeiro </span> e <span style='background-color: #8f3; padding: 2px;'> último </span> vértices da caminhada têm limites coloridos. </li>\
           <li> Para adicionar a próxima aresta da caminhada, clique em uma borda que caia no <span style = 'background-color: #8f3; padding: 2px;'> último </span>\
            vértice da caminhada. </li> <li> A <span style = 'background-color: #8f3; padding: 2px;'> última</span> aresta da caminhada pode ser removida por novamente clicando nele. </li><li> Você não será capaz de deletar vértices/arestas que fazem parte da caminhada. </li></ul>",
 
@@ -592,10 +596,10 @@ var contentData =
     },
 
     "spanning-tree": {
-      "content-title": "Árvore Geradora",
+      "content-title": "Árvore abrangente",
 
       "theory-content":
-        "<p><b>Spanning tree</b> de um grafo é um subgrafo que forma uma árvore e contém (ou abrange) todos os vértices do grafo.</p>\
+        "<p><b>Arvore abrangente</b> de um grafo é um subgrafo que forma uma árvore e contém (ou abrange) todos os vértices do grafo.</p>\
         <p>Portanto, se o grafo fornecido \\(G\\) tem \\(n\\) vértices, estamos procurando um subgrafo de \\(G\\) que</p>\
         <ul>\
            <li>tem \\(n\\) vertices</li>\

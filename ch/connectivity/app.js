@@ -507,12 +507,12 @@ function showGraphLatex() {
   if (componentCount == 0) l = "\\[\\text{Draw something.}\\]";
   else if (componentCount == 1)
     l =
-      "\\[\\text{There is only one connected component in this graph. Hence, the graph is connected.}\\]";
+      "\\[\\text{Existe apenas um componente conectado neste grafo. Portanto, o grafo está conectado.}\\]";
   else
     l =
-      "\\[\\text{There are " +
+      "\\[\\text{Existe " +
       componentCount +
-      " connected components in this graph. It is a disconnected graph.}\\]";
+      " componentes conectado neste grafo. Portanto, temos um um grafo desconectado.}\\]";
 
   document.getElementById("svg-output").textContent = l;
   //recall mathjax

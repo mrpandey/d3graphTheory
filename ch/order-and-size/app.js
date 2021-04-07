@@ -296,9 +296,9 @@ function showGraphLatex() {
   var order = nodes.length,
     size = links.length;
 
-  var l = "\\[\\text{Order}=" + order + "\\]\\[\\text{Size}=" + size + "\\]";
+  var l = "\\[\\text{Ordem}=" + order + "\\]\\[\\text{Tamanho}=" + size + "\\]";
   if (2 * size === order * (order - 1)) {
-    l += "\\[\\text{Size maximized!!}\\]";
+    l += "\\[\\text{Tamanho máximo alcançado!!}\\]";
   }
   document.getElementById("svg-output").textContent = l;
   //recall mathjax

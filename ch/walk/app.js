@@ -435,9 +435,9 @@ function reverseWalk() {
 function showGraphLatex() {
   var l = "";
   if (walk.length == 0) {
-    l += "\\[\\text{Create a Walk}\\]";
+    l += "\\[\\text{Construa um caminho}\\]";
   } else {
-    l += "\\[\\text{Walk : }";
+    l += "\\[\\text{Caminho : }";
     var currentVertex = d3.select(".walk-start").datum();
     l += "v_{" + currentVertex.id + "}";
 
@@ -449,7 +449,7 @@ function showGraphLatex() {
       if ((i + 1) % 10 == 0) l += "\\\\";
     });
 
-    l += "\\]\\[\\text{Length of walk} =" + walk.length + "\\]";
+    l += "\\]\\[\\text{Tamanho do Caminho} =" + walk.length + "\\]";
   }
 
   document.getElementById("svg-output").textContent = l;

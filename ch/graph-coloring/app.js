@@ -299,11 +299,11 @@ function checkColoring(){
 function showGraphLatex () {
   var l = "";
   if(nodes.length==0)
-    l = "\\[\\text{Draw something.}\\]";
+    l = "\\[\\text{Desenhe algo.}\\]";
   else if(checkColoring())
-    l = "\\[\\text{The graph is properly colored.}\\]";
+    l = "\\[\\text{O grafo está devidamente colorido.}\\]";
   else
-    l = "\\[\\text{Not properly colored. Watch out for those red edges!}\\]";
+    l = "\\[\\text{Não está devidamente colorido. Cuidado com as arestas vermelhas!}\\]";
 
   document.getElementById("svg-output").textContent = l;
   //recall mathjax

@@ -353,7 +353,7 @@ function showGraphLatex() {
       break;
     }
   }
-  var l = "\\[\\text{Degree Sequence}=(";
+  var l = "\\[\\text{Sequência de Graus}=(";
   degSeq.forEach(function(d, i) {
     if (i !== degSeq.length - 1) l += d + ",";
     else l += d;
@@ -362,9 +362,9 @@ function showGraphLatex() {
   l += ")\\]";
   if (flag) {
     l +=
-      "\\[\\text{Graph is \\(" +
+      "\\[\\text{Grafo \\(" +
       degSeq[0] +
-      "\\)-regular of order }" +
+      "\\)-regular de ordem }" +
       degSeq.length +
       "\\]";
   }
