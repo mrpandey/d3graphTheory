@@ -373,12 +373,12 @@ function showGraphLatex() {
   else if (checkCycle()) l = "\\[\\text{There is cycle. Remove it.}\\]";
   else if (nodes.length == links.length + 1)
     l =
-      "\\[\\text{It's a tree with } |V|=" +
+      "\\[\\text{É uma árvore com } |V|=" +
       nodes.length +
       ", |E|=" +
       links.length +
       "\\]";
-  else l = "\\[\\text{This is a forest.}\\]";
+  else l = "\\[\\text{É uma floresta.}\\]";
 
   document.getElementById("svg-output").textContent = l;
   //recall mathjax

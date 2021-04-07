@@ -152,7 +152,7 @@ d3.select("#svg-wrap")
   .attr("id", "graph-overlay")
   .append("div")
   .attr("id", "overlay-text")
-  .html("Ooops!!<br>You disconnected the graph.<br>Retry.");
+  .html("Opa !! <br> Você desconectou o grafo. <br> Tente novamente.");
 
 var edges = svg.append("g").selectAll(".edge");
 
@@ -427,9 +427,9 @@ function checkAndLoad() {
 //handling output area
 function showGraphLatex(rem) {
   var l = "\\[";
-  if (rem == -1) l += "\\text{Crap!!}\\]";
-  else if (rem == 0) l += "\\text{Now that's a spanning tree}\\]";
-  else l += "\\text{Delete " + rem + " more edges.}\\]";
+  if (rem == -1) l += "\\text{:(!!}\\]";
+  else if (rem == 0) l += "\\text{Agora isso é uma árvore de abrangência}\\]";
+  else l += "\\text{Apague " + rem + " ou mais arestas.}\\]";
 
   document.getElementById("output-text").textContent = l;
   //recall mathjax
