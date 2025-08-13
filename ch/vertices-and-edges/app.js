@@ -108,6 +108,9 @@ function removeNode(d, i) {
   linksToRemove.map(function(l) {
     links.splice(links.indexOf(l), 1);
   });
+  if(nodes.length != 0)
+    lastNodeId = Math.max(...nodes.map(node => node.id));
+  else lastNodeId = 0;
   d3.event.preventDefault();
   restart();
   showGraphLatex();
